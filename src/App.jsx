@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 
 /* ================= DATA ================= */
 
-const WA_NUMBER = '6281234567890'
+const WA_NUMBER = '6283171125657'
 const waLink = (msg) =>
   `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`
 
@@ -23,7 +23,8 @@ const DEMOS = [
     sub: 'Single origin Nusantara, disangrai tiap minggu.',
     cta: 'Lihat Menu',
     feats: ['Buka 07.00–22.00', 'WiFi kencang', 'Live music Jumat'],
-    seed: 'rrweb-demo-kopi',
+    seed: 'coffe',
+    urlImages: 'https://fnb.coffee/wp-content/uploads/elementor/thumbs/Delicious-Latte-Coffee-r684p63vb7d5r3czx2sxrz95pbdp9a2rztjsqe9vy8.webp',
   },
   {
     id: 'batik',
@@ -38,6 +39,7 @@ const DEMOS = [
     cta: 'Belanja Koleksi',
     feats: ['Pewarna alami', 'Kirim se-Indonesia', 'Terima custom motif'],
     seed: 'rrweb-demo-batik',
+     urlImages: 'https://i.ytimg.com/vi/Vnc_mueZli8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLATpVwYqT8vDICxihEcdslPQrf7xg',
   },
   {
     id: 'dapur',
@@ -52,6 +54,7 @@ const DEMOS = [
     cta: 'Pesan Sekarang',
     feats: ['Antar 30 menit', 'Halal & higienis', 'Paket nasi kotak'],
     seed: 'rrweb-demo-dapur',
+    urlImages: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdumtmwDosPQGsBd45ztW4AgMYW5c-vEZ322ddoZ4Nm9iQuXYkycjepEY&s=10'
   },
 ]
 
@@ -64,21 +67,29 @@ const SERVICES = [
     tags: ['1 Halaman', 'Tombol WhatsApp', 'Form Order', 'Mobile-first'],
   },
   {
-    n: '02',
+     n: '02',
+     title: 'Website Custom',
+     price: 'mulai Rp3,5 jt',
+     desc: 'Bisnismu unik — websitenya juga harus. Kami rancang dan bangun website dengan fitur yang benar-benar pas dengan cara kerjamu: sistem booking & reservasi, member area, kalkulator harga otomatis, integrasi WhatsApp API, sampai dashboard laporan penjualan. Bukan template, dibangun dari nol, dan 100% jadi milikmu selamanya.',
+     tags: ['Fitur 100% Sesuai Kebutuhan', 'Sistem Booking / Reservasi', 'Integrasi WhatsApp API & Payment', 'Bisa Dikembangkan Bertahap'],
+     hot: true,
+   },
+  {
+    n: '03',
     title: 'Company Profile',
-    price: 'mulai Rp3,5 jt',
+    price: 'mulai Rp5,5 jt',
     desc: 'Website 5 halaman yang membuat bisnismu terlihat mapan dan terpercaya di mata pelanggan, mitra, maupun calon investor.',
     tags: ['Sampai 5 Halaman', 'Galeri & Peta', 'SEO Dasar', 'Email Bisnis'],
   },
   {
-    n: '03',
+    n: '04',
     title: 'Toko Online',
-    price: 'mulai Rp6,9 jt',
+    price: 'mulai Rp7,9 jt',
     desc: 'Katalog produk lengkap dengan keranjang, checkout, dan pembayaran. Kamu kelola produk sendiri lewat panel admin — tanpa biaya komisi marketplace.',
     tags: ['Katalog & Keranjang', 'Pembayaran QRIS', 'Panel Admin', 'Laporan Penjualan'],
   },
   {
-    n: '04',
+    n: '05',
     title: 'Maintenance & SEO',
     price: 'mulai Rp250rb/bln',
     desc: 'Website dijaga supaya tetap cepat, aman, dan update: backup rutin, perubahan konten, plus laporan performa tiap bulan.',
@@ -110,7 +121,7 @@ const WHY = [
 ]
 
 const PROCESS = [
-  { n: '01', t: 'Konsultasi', d: 'Chat / call WhatsApp. Kami dengarkan kebutuhan & budget-mu — gratis, tanpa komitmen.' },
+  { n: '01', t: 'Konsultasi', d: 'Offline: Tatap muka. Online: Chat / call WhatsApp. Kami dengarkan kebutuhan & budget-mu — gratis, tanpa komitmen.' },
   { n: '02', t: 'Desain & Konten', d: 'Kami susun struktur, copywriting, dan desain awal. Kamu boleh revisi sebelum masuk koding.' },
   { n: '03', t: 'Development', d: 'Website dibangun, responsif di HP & laptop, lalu dites menyeluruh. Progress bisa dilihat real-time.' },
   { n: '04', t: 'Launch & Pelatihan', d: 'Go-live! Kami ajari cara kelola websitenya, lalu support 3 bulan penuh.' },
@@ -126,16 +137,34 @@ const PLANS = [
       '1 halaman desain profesional',
       'Responsif di HP & laptop',
       'Gratis domain .com + hosting (1 thn)',
-      'Tombol WhatsApp & form order',
+      'Tombol integrasi WhatsApp API',
       'Revisi 2×',
-      'Pengerjaan 5–7 hari',
+      'Pengerjaan 3–7 hari',
     ],
   },
   {
+     name: 'Custom',
+     sub: 'Website Impian Bisnismu',
+     price: 3500000,
+     hot: true,
+     feats: [
+       'Sesi konsultasi & bedah kebutuhan bisnis 1-on-1',
+       'Desain eksklusif dari nol — bukan template',
+       'Fitur custom: booking, member, kalkulator, dll.',
+       'Integrasi WhatsApp API & payment gateway',
+       'Dashboard admin + laporan lengkap',
+       'Gratis domain + hosting + SSL (1 tahun)',
+       'Revisi sampai sesuai (maks. 7×)',
+       'Garansi bug-fix & support 6 bulan',
+       'Pelatihan tim + dokumentasi cara pakai',
+       'Pengerjaan 3–5 minggu',
+     ],
+   },
+  {
     name: 'Standar',
     sub: 'Company Profile',
-    price: 3500000,
-    hot: true,
+    price: 5500000,
+    hot: false,
     feats: [
       'Sampai 5 halaman',
       'Desain custom sesuai brand',
@@ -149,7 +178,7 @@ const PLANS = [
   {
     name: 'Premium',
     sub: 'Toko Online',
-    price: 6900000,
+    price: 7900000,
     hot: false,
     feats: [
       'Produk tanpa batas',
@@ -163,67 +192,33 @@ const PLANS = [
   },
 ]
 
-const CARE_PRICE = 250000
-const CARE_FEATS = ['Backup & keamanan mingguan', 'Update konten 2×/bulan', 'Laporan performa bulanan']
+const CARE_PRICE = 250000;
+const CARE_FEATS = ['Backup & keamanan mingguan', 'Update konten 2×/bulan', 'Laporan performa bulanan'];
 
 const PORTFOLIO = [
   {
-    title: 'Kopi Ruang Tunggu',
-    type: 'Landing Page · F&B',
-    year: '2025',
-    seed: 'rrweb-kopi-bandung',
-    desc: 'Kedai kopi di Bandung yang sebelumnya cuma mengandalkan story Instagram. Kami buatkan landing page dengan menu digital dan tombol order cepat.',
-    tags: ['Landing Page', 'Copywriting', 'Menu Digital'],
-    metric: '+40%',
-    metricLabel: 'pesanan online sejak launch',
-  },
-  {
-    title: 'Batik Larasati',
-    type: 'Company Profile + Katalog',
-    year: '2024',
-    seed: 'rrweb-batik-pekalongan',
-    desc: 'Perajin batik tulis Pekalongan yang ingin terlihat premium di mata reseller luar kota. Website profil + katalog tanpa harga, dengan form inquiry.',
-    tags: ['Company Profile', 'Katalog', 'Multi-bahasa'],
-    metric: '2×',
-    metricLabel: 'permintaan reseller masuk',
-  },
-  {
-    title: 'Dapur Bu Sri',
-    type: 'Toko Online · Kuliner',
-    year: '2024',
-    seed: 'rrweb-dapur-jakarta',
-    desc: 'Katering rumahan yang kewalahan mencatat order via chat. Kini pesanan masuk lewat website dengan pilihan menu harian dan jadwal antar.',
-    tags: ['Toko Online', 'Pre-order', 'Admin Panel'],
-    metric: 'Rp12 jt',
-    metricLabel: 'omzet bulan pertama via web',
-  },
+     title: 'Digital Printing',
+     type: 'Website Custom + Company Profile + Sistem Order + Admin CMS',
+     year: '2026',
+     desc: 'Website digital printing yang disebut mesin order 24 jam: pengunjung memilih produk, total harga terhitung otomatis, lalu pesanan terkirim rapi ke WhatsApp admin lengkap dengan detail ukuran, jumlah, dan opsi desain. Seluruh konten — produk, harga, galeri, testimoni, hingga jam buka — dikelola mandiri lewat admin panel tanpa menyentuh satu baris kode pun.',
+     tags: ['Website Custom', 'Sesuai Kebutuhan', 'WhatsApp Ordering', 'Admin CMS'],
+     metric: '24/7',
+     metricLabel: 'order masuk otomatis tanpa jam tutup',
+     imageUrl: 'images/digital-printing-website.jpg',
+     liveUrl: 'https://digital-printing-website-production.up.railway.app',
+   },
 ]
 
 const TESTIMONIALS = [
   {
-    name: 'Sri Wahyuni',
-    biz: 'Pemilik · Dapur Bu Sri, Jakarta',
-    text: 'Awalnya ragu, ternyata Senin konsultasi, minggu berikutnya website saya sudah jadi dan langsung bisa nerima pesanan online. Mas Rafael sabar banget jelasinnya sampai saya bisa.',
-    ini: 'SW',
-    color: '#FF4D00',
-  },
-  {
-    name: 'Dimas Pradana',
-    biz: 'Founder · Kopi Ruang Tunggu, Bandung',
-    text: 'Harganya masuk akal banget buat usaha kecil kayak saya. Desainnya nggak pasaran — pelanggan sampai bilang websitenya keren. Ada kendala, dibalas cepat terus.',
-    ini: 'DP',
-    color: '#A05C2C',
-  },
-  {
-    name: 'Ayu Larasati',
-    biz: 'Batik Larasati · Pekalongan',
-    text: 'Dari yang cuma jualan lewat marketplace, sekarang punya katalog sendiri yang kelihatan profesional. Reseller dari luar Jawa mulai berdatangan lewat website.',
-    ini: 'AL',
-    color: '#7A2E2E',
-  },
+     name: 'Joko Prasetyo',
+     biz: 'Pemilik · Digital Printing, Bekasi',
+     text: 'Awalnya ragu, percetakan kecil kok punya website sendiri. Ternyata kurang dari sebulan sudah live dan langsung jalan — pelanggan hitung harga banner sendiri, pesanan masuk ke WhatsApp lengkap dengan ukuran dan jumlah, bahkan sering masuk malam hari saat toko sudah tutup. Sekarang ganti harga atau tambah produk saya kerjakan sendiri dari HP lewat admin panel, nggak perlu nyentuh kode. Investasi yang terasa balik modal dalam hitungan bulan.',
+     image: 'images/joko-prasetyo.jpg',
+   },
 ]
 
-const TICKER = ['Landing Page', 'Company Profile', 'Toko Online', 'Redesain Website', 'Undangan Digital', 'Maintenance & SEO']
+const TICKER = ['Landing Page', 'Company Profile', 'Website Custom', 'Toko Online', 'Redesain Website', 'Undangan Digital', 'Maintenance & SEO']
 
 const fmt = (n) => n.toLocaleString('id-ID')
 
@@ -407,7 +402,8 @@ function BrowserMock() {
             <p>{d.sub}</p>
             <span className="mn-btn">{d.cta} →</span>
           </div>
-          <img src={`https://picsum.photos/seed/${d.seed}/420/300`} alt={d.brand} loading="lazy" />
+          {/* <img src={`https://picsum.photos/seed/${d.seed}/420/300`} alt={d.brand} loading="lazy" /> */}
+          <img src={d.urlImages} alt={d.brand} loading="lazy" />
         </div>
         <div className="mn-feats">
           {d.feats.map((f) => <span key={f}>✦ {f}</span>)}
@@ -506,11 +502,11 @@ function About() {
         </Rv>
         <div className="about-duo">
           <Rv delay={120} className="founder f-a">
-            <img src="https://picsum.photos/seed/rr-founder-rafael/420/480" alt="Rafael" loading="lazy" />
+            <img src="/images/rafael.jpg" alt="Rafael" loading="lazy" />
             <div className="founder-cap"><b>Rafael</b><small>Desain &amp; Front-End</small></div>
           </Rv>
           <Rv delay={260} className="founder f-b">
-            <img src="https://picsum.photos/seed/rr-founder-rendy/420/480" alt="Rendy" loading="lazy" />
+            <img src="https://fastly.picsum.photos/id/1/5000/3333.jpg?hmac=Asv2DU3rA_5D1xSe22xZK47WEAN0wjWeFOhzd13ujW4" alt="Rendy" loading="lazy" />
             <div className="founder-cap"><b>Rendy</b><small>Back-End &amp; Strategi</small></div>
           </Rv>
         </div>
@@ -522,7 +518,7 @@ function About() {
 /* ================= LAYANAN ================= */
 
 function Services() {
-  const [open, setOpen] = useState(0)
+  const [open, setOpen] = useState(1)
   return (
     <section className="sec services" id="layanan">
       <div className="wrap">
@@ -533,7 +529,12 @@ function Services() {
               <div className={`svc ${open === i ? 'open' : ''}`}>
                 <button className="svc-head" onClick={() => setOpen(open === i ? -1 : i)}>
                   <span className="svc-n">{s.n}</span>
-                  <span className="svc-t">{s.title}</span>
+                   <span className="svc-t">
+                    {s.title} {s.hot && 
+                       <em className="svc-hot">
+                         ★ UNGGULAN
+                      </em>}
+                   </span>
                   <span className="svc-price">{s.price}</span>
                   <span className="svc-x">+</span>
                 </button>
@@ -657,6 +658,11 @@ function Pricing() {
                 >
                   Pilih {p.name}
                 </a>
+                 { p.name === 'Custom' &&
+                    <div className="notes">
+                       * Harga dapat bervariasi berdasarkan Jumlah dan Kerumitan fitur yang diinginkan
+                    </div>
+                 }
               </div>
             </Rv>
           ))}
@@ -678,13 +684,13 @@ function Portfolio() {
   return (
     <section className="sec portfolio" id="portofolio">
       <div className="wrap">
-        <SecHead no="06" kicker="Portofolio" title="Karya yang sudah kami rilis" desc="Beberapa proyek pilihan — dari kedai kopi sampai katering. Scroll pelan-pelan." />
+        <SecHead no="06" kicker="Portofolio" title="Karya yang sudah kami rilis" desc="Beberapa proyek pilihan — dari Website Custom sampai Landing Page. Scroll pelan-pelan." />
         <div className="pf-list">
           {PORTFOLIO.map((p, i) => (
             <Rv key={p.title}>
               <div className={`pf-row ${i % 2 ? 'rev' : ''}`}>
                 <div className="pf-img">
-                  <img src={`https://picsum.photos/seed/${p.seed}/980/720`} alt={`Website ${p.title}`} loading="lazy" />
+                  <img src={p.imageUrl} alt={`Website ${p.title}`} loading="lazy" />
                   <span className="pf-tag">{p.type}</span>
                 </div>
                 <div className="pf-info">
@@ -723,7 +729,9 @@ function Testimonials() {
                 <span className="stars">★★★★★</span>
                 <blockquote>“{t.text}”</blockquote>
                 <figcaption>
-                  <span className="ava" style={{ background: t.color }}>{t.ini}</span>
+                  <span className="ava">
+                     <img src={t.image} alt={t.name} />
+                  </span>
                   <div><b>{t.name}</b><small>{t.biz}</small></div>
                 </figcaption>
               </figure>
@@ -754,7 +762,7 @@ function FinalCTA() {
             <a className="btn btn-ink" href={waLink('Halo RR Web Solution! Saya siap punya website 🚀 Bisa dibantu?')} target="_blank" rel="noreferrer">
               Hubungi Kami Sekarang <span className="btn-arrow">→</span>
             </a>
-            <a className="final-mail" href="mailto:halo@rrwebsolution.id">atau email: halo@rrwebsolution.id</a>
+            <a className="final-mail" href="mailto:rafaeltorang5@gmail.com">atau email: rafaeltorang5@gmail.com</a>
           </div>
         </Rv>
       </div>
@@ -775,9 +783,9 @@ function Footer() {
           </a>
           <p>Studio website milik Rafael &amp; Rendy. Kami bantu UMKM Indonesia tumbuh lewat website yang cepat, rapi, dan terjangkau.</p>
           <div className="foot-social">
-            <a href="https://instagram.com/rrwebsolution" target="_blank" rel="noreferrer">Instagram ↗</a>
-            <a href="https://tiktok.com/@rrwebsolution" target="_blank" rel="noreferrer">TikTok ↗</a>
-            <a href="https://linkedin.com/company/rrwebsolution" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a href="https://instagram.com/rafael_jasa_website_umkm" target="_blank" rel="noreferrer">Instagram ↗</a>
+            <a href="https://tiktok.com/@rafael_jasa_website_umkm" target="_blank" rel="noreferrer">TikTok ↗</a>
+            <a href="https://linkedin.com/in/rafael-jasa-website-umkm" target="_blank" rel="noreferrer">LinkedIn ↗</a>
           </div>
         </div>
         <div className="foot-col">
@@ -797,7 +805,7 @@ function Footer() {
         <div className="foot-col">
           <h4>Kontak</h4>
           <a href={waLink('Halo RR Web Solution!')} target="_blank" rel="noreferrer">WhatsApp: +62 812-3456-7890</a>
-          <a href="mailto:halo@rrwebsolution.id">Email: halo@rrwebsolution.id</a>
+          <a href="mailto:rafaeltorang5@gmail.com">Email: rafaeltorang5@gmail.com</a>
           <span>Jakarta Timur, Indonesia<br />(melayani seluruh Indonesia, remote-first)</span>
         </div>
       </div>

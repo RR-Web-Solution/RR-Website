@@ -261,7 +261,9 @@ mark { background: var(--lime); padding: 0 .35em; box-decoration-break: clone; -
 .svc-head:hover .svc-t { color: var(--acc); }
 .svc-price { font-family: var(--mono); font-size: .74rem; border: 1px solid var(--line); padding: .35rem .8rem; border-radius: 999px; white-space: nowrap; }
 .svc-x { font-size: 1.7rem; font-weight: 300; justify-self: end; transition: transform .4s; }
+
 .svc.open .svc-x { transform: rotate(45deg); color: var(--acc); }
+
 .svc-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .55s cubic-bezier(.2,.7,.2,1); }
 .svc.open .svc-body { grid-template-rows: 1fr; }
 .svc-body-in { overflow: hidden; }
@@ -388,7 +390,19 @@ mark { background: var(--lime); padding: 0 .35em; box-decoration-break: clone; -
 
 /* ============ TESTIMONI ============ */
 .testi { background: var(--paper2); }
-.testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+
+.testi-grid { 
+   display: grid; 
+   grid-template-columns: repeat(3, 1fr); 
+   gap: 26px; 
+}
+
+@media (max-width: 768px) {
+   .testi-grid { 
+      grid-template-columns: repeat(2, 1fr); 
+   }
+}
+
 .testi-card {
   position: relative; background: var(--paper); border: 1.5px solid var(--ink); border-radius: 16px;
   padding: 32px 28px 28px; box-shadow: 7px 7px 0 rgba(25,22,19,.85);
@@ -404,6 +418,7 @@ mark { background: var(--lime); padding: 0 .35em; box-decoration-break: clone; -
 .ava {
   width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center;
   color: #fff; font-family: var(--disp); font-weight: 800; font-size: .85rem; flex-shrink: 0;
+   overflow: hidden;
 }
 .testi-card figcaption b { display: block; font-size: .92rem; }
 .testi-card figcaption small { color: var(--mut); font-size: .78rem; }
@@ -486,4 +501,18 @@ mark { background: var(--lime); padding: 0 .35em; box-decoration-break: clone; -
   }
   .rv { opacity: 1; transform: none; }
   .mask > * { transform: none; }
+}
+
+.svc-hot {
+  font-family: var(--mono); font-style: normal; font-size: .58rem;
+  background: var(--acc); color: #2a0e00; padding: .3rem .6rem;
+  border-radius: 999px; vertical-align: middle; margin-left: 10px;
+  letter-spacing: .12em; white-space: nowrap;
+}
+
+.notes {
+   font-size: 11px;
+   margin-top: 12px;
+   text-align: center;
+   color: var(--acc);
 }
