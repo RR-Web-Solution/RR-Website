@@ -502,7 +502,7 @@ function About() {
         </Rv>
         <div className="about-duo">
           <Rv delay={120} className="founder f-a">
-            <img src="/images/rafael.jpg" alt="Rafael" loading="lazy" />
+            <img src="images/rafael.jpg" alt="Rafael" loading="lazy" />
             <div className="founder-cap"><b>Rafael</b><small>Desain &amp; Front-End</small></div>
           </Rv>
           <Rv delay={260} className="founder f-b">
