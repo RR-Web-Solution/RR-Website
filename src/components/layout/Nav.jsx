@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { waLink } from '../../data/content'
+import './Nav.css'
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -14,14 +15,28 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', fn)
   }, [])
 
-  const links = [
-    { to: '/#tentang', label: 'Tentang' },
-    { to: '/#layanan', label: 'Layanan' },
-    { to: '/#keunggulan', label: 'Keunggulan' },
-    { to: '/#harga', label: 'Paket' },
-    { to: '/#portofolio', label: 'Portofolio' },
-    { to: '/#kontak', label: 'Kontak' },
+  // Anchor section di landing page
+  const sectionLinks = [
+    { href: '/#tentang', label: 'Tentang' },
+    { href: '/#layanan', label: 'Layanan' },
+    { href: '/#keunggulan', label: 'Keunggulan' },
+    { href: '/#harga', label: 'Paket' },
+    { href: '/#portofolio', label: 'Portofolio' },
+    { href: '/#kontak', label: 'Kontak' },
   ]
+
+  // Handler klik anchor
+  const handleAnchorClick = (e, href) => {
+    e.preventDefault()
+    const [path, hash] = href.split('#')
+    if (pathname !== path) {
+      window.location.hash = path + '#' + hash
+    } else {
+      const el = document.getElementById(hash)
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+    setOpen(false)
+  }
 
   return (
     <header className={`nav ${scrolled ? 'scrolled' : ''}`}>
@@ -31,8 +46,14 @@ export default function Nav() {
           <span className="logo-txt">RR·WEB·<b>SOLUTION</b></span>
         </Link>
         <nav className="nav-links">
-          {links.map((l) => (
-            <Link key={l.to} to={l.to}><i />{l.label}</Link>
+          {sectionLinks.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              onClick={(e) => handleAnchorClick(e, l.href)}
+            >
+              <i />{l.label}
+            </a>
           ))}
           <Link to="/partner" className={pathname === '/partner' ? 'active' : ''}><i />Partner ✦</Link>
         </nav>
@@ -47,8 +68,14 @@ export default function Nav() {
       </div>
       {open && (
         <div className="nav-mobile">
-          {links.map((l) => (
-            <Link key={l.to} to={l.to} onClick={() => setOpen(false)}>{l.label}</Link>
+          {sectionLinks.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              onClick={(e) => handleAnchorClick(e, l.href)}
+            >
+              {l.label}
+            </a>
           ))}
           <Link to="/partner" onClick={() => setOpen(false)}>Partner ✦</Link>
         </div>

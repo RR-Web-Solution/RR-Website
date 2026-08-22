@@ -19,11 +19,11 @@ export default function Footer() {
         </div>
         <div className="foot-col">
           <h4>Menu</h4>
-          <a href="/#tentang">Tentang</a>
-          <a href="/#layanan">Layanan</a>
-          <a href="/#harga">Paket Harga</a>
-          <a href="/#portofolio">Portofolio</a>
-          <Link to="/partner">Agency Partner</Link>
+          <a href="/#tentang" onClick={(e) => { e.preventDefault(); document.getElementById('tentang')?.scrollIntoView({ behavior: 'smooth' }) }}>Tentang</a>
+<a href="/#layanan" onClick={(e) => { e.preventDefault(); document.getElementById('layanan')?.scrollIntoView({ behavior: 'smooth' }) }}>Layanan</a>
+<a href="/#harga" onClick={(e) => { e.preventDefault(); document.getElementById('harga')?.scrollIntoView({ behavior: 'smooth' }) }}>Paket Harga</a>
+<a href="/#portofolio" onClick={(e) => { e.preventDefault(); document.getElementById('portofolio')?.scrollIntoView({ behavior: 'smooth' }) }}>Portofolio</a>
+<Link to="/partner">Agency Partner</Link>
         </div>
         <div className="foot-col">
           <h4>Layanan</h4>

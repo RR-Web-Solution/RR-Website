@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Nav from './components/layout/Nav'
 import ScrollManager from './components/layout/ScrollManager'
 import LandingPage from './pages/LandingPage'
