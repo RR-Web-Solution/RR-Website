@@ -6,13 +6,13 @@ import PartnerPage from './pages/PartnerPage'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollManager />
       <Nav />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/partner" element={<PartnerPage />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
