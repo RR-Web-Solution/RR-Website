@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { waLink } from '../../data/content'
-import './Nav.css'
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
