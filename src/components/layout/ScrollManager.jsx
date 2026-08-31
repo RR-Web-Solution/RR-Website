@@ -1,14 +1,24 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
+const SECTION_IDS = ['top', 'tentang', 'layanan', 'keunggulan', 'harga', 'portofolio', 'testimoni', 'kontak']
+
 export default function ScrollManager() {
   const { pathname, hash } = useLocation()
 
   useEffect(() => {
-    // Tunggu DOM render
-    const timer = setTimeout(() => {
-      if (hash && hash.startsWith('#')) {
-        const el = document.querySelector(hash)
+    // Target bisa datang dari hash ("#/#portofolio")
+    // atau dari pathname ("#portofolio" → pathname "/portofolio")
+    const clean = (s) => s.replace(/^\/?#?/, '')
+    const id = hash
+      ? clean(hash)
+      : SECTION_IDS.includes(clean(pathname))
+        ? clean(pathname)
+        : null
+
+    const t = setTimeout(() => {
+      if (id) {
+        const el = document.getElementById(id)
         if (el) {
           el.scrollIntoView({ behavior: 'smooth', block: 'start' })
           return
@@ -16,7 +26,7 @@ export default function ScrollManager() {
       }
       window.scrollTo(0, 0)
     }, 100)
-    return () => clearTimeout(timer)
+    return () => clearTimeout(t)
   }, [pathname, hash])
 
   return null

@@ -14,6 +14,9 @@ export default function AgencyPartner() {
             <b>white-label di belakang layar</b> — nama agency Anda yang tampil, kami yang bangun.
             Margin hingga <b>2x lipat</b> di setiap project.
           </p>
+        </Reveal>
+         
+        <Reveal delay={160}>
           <ul className="partner-points">
             <li>✓ 100% white-label, terlindungi NDA</li>
             <li>✓ Kami tidak pernah menghubungi klien Anda</li>
@@ -22,6 +25,7 @@ export default function AgencyPartner() {
           </ul>
           <Link to="/partner" className="btn btn-acc">Lihat Skema Partner <span className="btn-arrow">→</span></Link>
         </Reveal>
+         
          {/*
         <Reveal delay={160}>
           <div className="partner-ticket">

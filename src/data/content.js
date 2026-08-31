@@ -167,9 +167,20 @@ export const PORTFOLIO = [
      tags: ['Website Custom', 'Sesuai Kebutuhan', 'WhatsApp Ordering', 'Admin CMS'],
      metric: '24/7',
      metricLabel: 'order masuk otomatis tanpa jam tutup',
-     imageUrl: 'images/digital-printing-website.jpg',
+     imageUrl: 'images/digital-printing-portfolio.jpg',
      liveUrl: 'https://digital-printing-website-production.up.railway.app',
    },
+   {
+    title: 'Kopi Senja',
+    type: 'Next.js 16 + Cinematic UI + Interactive Booking System',
+    year: '2026',
+    desc: 'Transformasi digital untuk UMKM coffee shop dengan pengalaman web kelas premium. Menggabungkan estetika "cinematic editorial" menggunakan Framer Motion dengan performa tinggi. Dilengkapi menu interaktif dengan filter kategori real-time, sistem reservasi meja langsung ke WhatsApp, dan optimasi SEO & Core Web Vitals (Lighthouse 95+) untuk memastikan pengunjung betah dan konversi pemesanan meningkat.',
+    tags: ['Next.js 16 App Router', 'Cinematic UI/UX', 'WhatsApp API Booking', 'Lighthouse 95+', 'SEO Optimized'],
+    metric: '95+',
+    metricLabel: 'Lighthouse Performance Score',
+    imageUrl: 'images/kopi-senja-portfolio.png',
+    liveUrl: 'https://kopisenja-eight.vercel.app',
+  },
 ]
 
 /* ---------- Testimoni ---------- */
@@ -180,6 +191,12 @@ export const TESTIMONIALS = [
      text: 'Awalnya ragu, percetakan kecil kok punya website sendiri. Ternyata kurang dari sebulan sudah live dan langsung jalan — pelanggan hitung harga banner sendiri, pesanan masuk ke WhatsApp lengkap dengan ukuran dan jumlah, bahkan sering masuk malam hari saat toko sudah tutup. Sekarang ganti harga atau tambah produk saya kerjakan sendiri dari HP lewat admin panel, nggak perlu nyentuh kode. Investasi yang terasa balik modal dalam hitungan bulan.',
      imageUrl: 'images/joko-prasetyo.jpg',
    },
+   {
+    name: 'Raka Aditya',
+    biz: 'Founder · Kopi Senja, Jakarta',
+    text: 'Awalnya kami hanya butuh website sederhana, tapi hasilnya jauh di atas ekspektasi. Desainnya terasa sangat premium dan animasinya halus, membuat brand kami terlihat jauh lebih mapan. Yang paling berdampak: fitur menu interaktif dan booking via WhatsApp sangat memudahkan operasional kami. Pelanggan sering memuji betapa mudahnya melihat menu dan reservasi dari HP. Website ini benar-benar meningkatkan citra dan konversi bisnis kami.',
+    imageUrl: 'images/raka-aditya.jpg',
+  },
 ]
 
 /* ---------- Agency Partner ---------- */

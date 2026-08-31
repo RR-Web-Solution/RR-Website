@@ -6,18 +6,21 @@ export default function Portfolio() {
   return (
     <section className="sec portfolio" id="portofolio">
       <div className="wrap">
-        <SectionHead no="06" kicker="Portofolio" title="Karya yang sudah kami rilis" desc="Beberapa proyek pilihan — dari website custom sampai landing page. Scroll pelan-pelan." />
+        <SectionHead no="06" kicker="Portofolio" title="Karya yang sudah kami rilis" desc="Beberapa proyek pilihan — dari website full custom sampai landing page premium. Scroll pelan-pelan." />
         <div className="pf-list">
           {PORTFOLIO.map((p, i) => (
             <Reveal key={p.title}>
               <div className={`pf-row ${i % 2 ? 'rev' : ''}`}>
                 <div className="pf-img">
-                  <img src={p.imageUrl} alt={`Website ${p.title}`} loading="lazy" />
+                  <img src={p.imageUrl} loading="lazy"
+                     className="pf-bg"
+                  />
+                  <img src={p.imageUrl} alt={`Website ${p.title}`} loading="lazy" className="pf-fg" />
                   <span className="pf-tag">{p.type}</span>
                 </div>
                 <div className="pf-info">
                   <p className="pf-meta">{String(i + 1).padStart(2, '0')} · {p.year}</p>
-                  <a href={p.liveUrl}>
+                  <a href={p.liveUrl} target="_blank">
                      <h3>{p.title}</h3>
                   </a>
                   <p>{p.desc}</p>

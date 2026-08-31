@@ -12,6 +12,10 @@ export default function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/partner" element={<PartnerPage />} />
+        {/* URL apa pun yang tidak dikenal
+            → render Landing, biar ScrollManager yang gulir ke section-nya.
+            Sekaligus menghapus halaman putih untuk URL apa pun. */}
+        <Route path="*" element={<LandingPage />} />
       </Routes>
     </HashRouter>
   )

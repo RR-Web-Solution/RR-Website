@@ -16,26 +16,13 @@ export default function Nav() {
 
   // Anchor section di landing page
   const sectionLinks = [
-    { href: '/#tentang', label: 'Tentang' },
-    { href: '/#layanan', label: 'Layanan' },
-    { href: '/#keunggulan', label: 'Keunggulan' },
-    { href: '/#harga', label: 'Paket' },
-    { href: '/#portofolio', label: 'Portofolio' },
-    { href: '/#kontak', label: 'Kontak' },
-  ]
-
-  // Handler klik anchor
-  const handleAnchorClick = (e, href) => {
-    e.preventDefault()
-    const [path, hash] = href.split('#')
-    if (pathname !== path) {
-      window.location.hash = path + '#' + hash
-    } else {
-      const el = document.getElementById(hash)
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-    setOpen(false)
-  }
+    { href: '#tentang', label: 'Tentang' },
+    { href: '#layanan', label: 'Layanan' },
+    { href: '#keunggulan', label: 'Keunggulan' },
+    { href: '#harga', label: 'Paket' },
+    { href: '#portofolio', label: 'Portofolio' },
+    { href: '#kontak', label: 'Kontak' },
+  ];
 
   return (
     <header className={`nav ${scrolled ? 'scrolled' : ''}`}>
@@ -71,7 +58,7 @@ export default function Nav() {
             <a
               key={l.href}
               href={l.href}
-              onClick={(e) => handleAnchorClick(e, l.href)}
+              onClick={() => setOpen(false)}
             >
               {l.label}
             </a>
