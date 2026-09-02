@@ -181,6 +181,17 @@ export const PORTFOLIO = [
     imageUrl: 'images/kopi-senja-portfolio.png',
     liveUrl: 'https://kopisenja-eight.vercel.app',
   },
+  {
+    title: 'Batik Nusantara',
+    type: 'Company Profile + Product Catalog + Admin CMS + WhatsApp Ordering',
+    year: '2026',
+    desc: 'Website company profile untuk brand batik artisanal dengan katalog produk lengkap per kategori (Tulis, Cap, Printing, Kain & Pakaian). Pengunjung bisa lihat harga, pesan langsung via WhatsApp, dan admin bisa kelola seluruh produk lewat panel admin. Mendukung dual language (ID/EN) dan dirancang mobile-first untuk kemudahan akses dari mana saja.',
+    tags: ['Company Profile', 'Katalog Produk', 'Admin CMS', 'WhatsApp Ordering', 'Multi-Language'],
+    metric: '15',
+    metricLabel: 'total produk terkelola via admin',
+    imageUrl: 'images/batik-nusantara-portfolio.jpg',
+    liveUrl: 'https://batik-comp.wasmer.app/id',
+  },
 ]
 
 /* ---------- Testimoni ---------- */
