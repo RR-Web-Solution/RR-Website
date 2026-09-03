@@ -12,11 +12,29 @@ export default function Pricing() {
         <SectionHead no="05" kicker="Paket Harga" title="Harga jelas, tanpa kejutan." desc="Semua paket sudah termasuk domain & hosting tahun pertama. Pilih yang paling pas dengan tahap bisnismu." />
         <Reveal>
           <div className="price-toggle" role="tablist" aria-label="Opsi pembayaran">
-            <button className={!care ? 'on' : ''} onClick={() => setCare(false)}>Sekali Bayar</button>
-            <button className={care ? 'on' : ''} onClick={() => setCare(true)}>+ Perawatan Bulanan</button>
+            <button
+              type="button"
+              className={!care ? 'on' : ''}
+              onClick={() => setCare(false)}
+              role="tab"
+              aria-selected={!care}
+              aria-controls="pricing-section"
+            >
+              Sekali Bayar
+            </button>
+            <button
+              type="button"
+              className={care ? 'on' : ''}
+              onClick={() => setCare(true)}
+              role="tab"
+              aria-selected={care}
+              aria-controls="pricing-section"
+            >
+              + Perawatan Bulanan
+            </button>
           </div>
         </Reveal>
-        <div className="plans">
+        <div className="plans" id="pricing-section">
           {PLANS.map((p, i) => (
             <Reveal key={p.name} delay={i * 110}>
               <div className={`plan ${p.hot ? 'hot' : ''}`}>

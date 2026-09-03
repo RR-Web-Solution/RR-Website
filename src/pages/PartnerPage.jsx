@@ -23,7 +23,7 @@ export default function PartnerPage() {
                   Ajukan Kemitraan via WhatsApp <span className="btn-arrow">→</span>
                 </a>
                 <a className="btn btn-ghost"
-                   href="/rate-card-partner.pdf"
+                   href="/RR-Devs—Rate-Card-Partner-2026.pdf"
                    download>⬇ Unduh Rate Card (PDF)</a>
               </div>
             </Reveal>

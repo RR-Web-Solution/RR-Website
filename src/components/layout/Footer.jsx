@@ -12,9 +12,9 @@ export default function Footer() {
           </Link>
           <p>Studio website milik Rafael &amp; Rendy. Kami bantu UMKM Indonesia tumbuh lewat website yang cepat, rapi, dan terjangkau.</p>
           <div className="foot-social">
-            <a href="https://instagram.com/universe.dev.id" target="_blank" rel="noreferrer">Instagram ↗</a>
-            <a href="https://tiktok.com/@universe.dev.id" target="_blank" rel="noreferrer">TikTok ↗</a>
-            <a href="https://linkedin.com/in/developer-id" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a href="https://instagram.com/universe.dev.id" target="_blank" rel="noreferrer" aria-label="Instagram RR Devs">Instagram ↗</a>
+            <a href="https://tiktok.com/@universe.dev.id" target="_blank" rel="noreferrer" aria-label="TikTok RR Devs">TikTok ↗</a>
+            <a href="https://linkedin.com/in/developer-id" target="_blank" rel="noreferrer" aria-label="LinkedIn RR Devs">LinkedIn ↗</a>
           </div>
         </div>
         <div className="foot-col">

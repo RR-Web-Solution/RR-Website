@@ -14,7 +14,18 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', fn)
   }, [])
 
-  // Anchor section di landing page
+  const handleAnchorClick = (event, href) => {
+    if (!href.startsWith('#')) return
+    const targetId = href.slice(1)
+    const target = document.getElementById(targetId)
+    if (!target) return
+    event.preventDefault()
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    if (window.history.pushState) {
+      window.history.pushState(null, '', `#${targetId}`)
+    }
+  }
+
   const sectionLinks = [
     { href: '#tentang', label: 'Tentang' },
     { href: '#layanan', label: 'Layanan' },
@@ -22,16 +33,16 @@ export default function Nav() {
     { href: '#harga', label: 'Paket' },
     { href: '#portofolio', label: 'Portofolio' },
     { href: '#kontak', label: 'Kontak' },
-  ];
+  ]
 
   return (
     <header className={`nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="wrap nav-in">
-        <Link to="/" className="logo" aria-label="RR Devs">
+        <Link to="/" className="logo" aria-label="RR Devs beranda">
           <span className="logo-mark">R<b>&amp;</b>R</span>
           <span className="logo-txt">RR·<b>DEVS</b></span>
         </Link>
-        <nav className="nav-links">
+        <nav className="nav-links" aria-label="Navigasi utama">
           {sectionLinks.map((l) => (
             <a
               key={l.href}
@@ -44,16 +55,23 @@ export default function Nav() {
           <Link to="/partner" className={pathname === '/partner' ? 'active' : ''}><i />Partner ✦</Link>
         </nav>
         <div className="nav-right">
-          <a className="btn btn-acc btn-sm" href={waLink('Halo RR Devs, saya mau konsultasi gratis soal website untuk bisnis saya 🙂')} target="_blank" rel="noreferrer">
+          <a className="btn btn-acc btn-sm" href={waLink('Halo RR Devs, saya mau konsultasi gratis soal website untuk bisnis saya 🙂')} target="_blank" rel="noreferrer" aria-label="Konsultasi gratis via WhatsApp">
             Konsultasi Gratis
           </a>
-          <button className={`burger ${open ? 'on' : ''}`} onClick={() => setOpen(!open)} aria-label="Menu">
+          <button
+            type="button"
+            className={`burger ${open ? 'on' : ''}`}
+            onClick={() => setOpen(!open)}
+            aria-label={open ? 'Tutup menu navigasi' : 'Buka menu navigasi'}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+          >
             <span /><span /><span />
           </button>
         </div>
       </div>
       {open && (
-        <div className="nav-mobile">
+        <div className="nav-mobile" id="mobile-menu">
           {sectionLinks.map((l) => (
             <a
               key={l.href}

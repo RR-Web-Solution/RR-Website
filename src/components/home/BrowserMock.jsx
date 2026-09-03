@@ -9,9 +9,16 @@ export default function BrowserMock() {
     <div className="browser">
       <div className="b-bar">
         <span className="b-dots"><i /><i /><i /></span>
-        <div className="b-tabs">
+        <div className="b-tabs" aria-label="Pilih contoh website">
           {DEMOS.map((x, idx) => (
-            <button key={x.id} className={idx === i ? 'on' : ''} onClick={() => setI(idx)}>
+            <button
+              key={x.id}
+              type="button"
+              className={idx === i ? 'on' : ''}
+              onClick={() => setI(idx)}
+              aria-pressed={idx === i}
+              aria-label={`Tampilkan contoh ${x.brand}`}
+            >
               {x.short}
             </button>
           ))}

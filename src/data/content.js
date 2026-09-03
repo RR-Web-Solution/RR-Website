@@ -7,6 +7,29 @@ export const WA_NUMBER = '6283171125657'
 export const waLink = (msg) => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`
 export const fmt = (n) => n.toLocaleString('id-ID')
 
+const makeDemoImage = ({ label, accent, bg, text }) => {
+  const svg = `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
+      <defs>
+        <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0%" stop-color="${bg}"/>
+          <stop offset="100%" stop-color="${accent}"/>
+        </linearGradient>
+      </defs>
+      <rect width="800" height="560" fill="url(#g)"/>
+      <circle cx="670" cy="120" r="120" fill="rgba(255,255,255,0.18)"/>
+      <rect x="70" y="120" width="300" height="180" rx="24" fill="rgba(255,255,255,0.16)"/>
+      <rect x="100" y="162" width="160" height="12" rx="6" fill="rgba(255,255,255,0.8)"/>
+      <rect x="100" y="184" width="230" height="12" rx="6" fill="rgba(255,255,255,0.58)"/>
+      <rect x="100" y="206" width="200" height="12" rx="6" fill="rgba(255,255,255,0.4)"/>
+      <rect x="70" y="352" width="200" height="56" rx="16" fill="rgba(255,255,255,0.82)"/>
+      <text x="95" y="390" font-size="32" font-family="Arial, sans-serif" font-weight="700" fill="${text}">${label}</text>
+    </svg>
+  `
+
+  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`
+}
+
 /* ---------- Hero: demo website di browser mockup ---------- */
 export const DEMOS = [
   {
@@ -22,7 +45,7 @@ export const DEMOS = [
     cta: 'Lihat Menu',
     feats: ['Buka 07.00–22.00', 'WiFi kencang', 'Live music Jumat'],
     seed: 'coffe',
-    urlImages: 'https://fnb.coffee/wp-content/uploads/elementor/thumbs/Delicious-Latte-Coffee-r684p63vb7d5r3czx2sxrz95pbdp9a2rztjsqe9vy8.webp',
+    urlImages: makeDemoImage({ label: 'RUANG TUNGGU', accent: '#A05C2C', bg: '#F7EFE2', text: '#201914' }),
   },
   {
     id: 'batik',
@@ -37,7 +60,7 @@ export const DEMOS = [
     cta: 'Belanja Koleksi',
     feats: ['Pewarna alami', 'Kirim se-Indonesia', 'Terima custom motif'],
     seed: 'rrweb-demo-batik',
-     urlImages: 'https://i.ytimg.com/vi/Vnc_mueZli8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLATpVwYqT8vDICxihEcdslPQrf7xg',
+    urlImages: makeDemoImage({ label: 'LARASATI', accent: '#7A2E2E', bg: '#F6ECEA', text: '#1a1010' }),
   },
   {
     id: 'dapur',
@@ -52,7 +75,7 @@ export const DEMOS = [
     cta: 'Pesan Sekarang',
     feats: ['Antar 30 menit', 'Halal & higienis', 'Paket nasi kotak'],
     seed: 'rrweb-demo-dapur',
-    urlImages: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdumtmwDosPQGsBd45ztW4AgMYW5c-vEZ322ddoZ4Nm9iQuXYkycjepEY&s=10'
+    urlImages: makeDemoImage({ label: 'DAPUR BU SRI', accent: '#C2452D', bg: '#FBF0E4', text: '#221713' }),
   },
 ]
 

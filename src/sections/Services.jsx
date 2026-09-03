@@ -14,16 +14,22 @@ export default function Services() {
           {SERVICES.map((s, i) => (
             <Reveal key={s.n} delay={i * 70}>
               <div className={`svc ${open === i ? 'open' : ''}`}>
-                <button className="svc-head" onClick={() => setOpen(open === i ? -1 : i)}>
+                <button
+                  type="button"
+                  className="svc-head"
+                  onClick={() => setOpen(open === i ? -1 : i)}
+                  aria-expanded={open === i}
+                  aria-controls={`service-panel-${i}`}
+                >
                   <span className="svc-n">{s.n}</span>
                   <span className="svc-t">
                     {s.title}
                     {s.hot && <em className="svc-hot">★ UNGGULAN</em>}
                   </span>
                   <span className="svc-price">{s.price}</span>
-                  <span className="svc-x">+</span>
+                  <span className="svc-x" aria-hidden="true">+</span>
                 </button>
-                <div className="svc-body">
+                <div className="svc-body" id={`service-panel-${i}`}>
                   <div className="svc-body-in">
                     <p>{s.desc}</p>
                     <div className="svc-tags">{s.tags.map((t) => <span key={t}>{t}</span>)}</div>
