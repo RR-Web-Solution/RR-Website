@@ -15,7 +15,7 @@ export default function Testimonials() {
                 <blockquote>“{t.text}”</blockquote>
                 <figcaption>
                   <span className="ava">
-                     <img src={t.imageUrl} alt={t.name} />
+                     <img src={t.imageUrl} alt={`Foto ${t.name}`} loading="lazy" width="96" height="96" />
                   </span>
                   <div><b>{t.name}</b><small>{t.biz}</small></div>
                 </figcaption>

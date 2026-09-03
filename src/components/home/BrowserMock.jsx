@@ -19,7 +19,7 @@ export default function BrowserMock() {
       </div>
        {/* <div className="b-url">
         <svg width="10" height="12" viewBox="0 0 10 12" fill="none"><rect x="1" y="5" width="8" height="6" rx="1" stroke="currentColor" /><path d="M3 5V3.5a2 2 0 0 1 4 0V5" stroke="currentColor" /></svg>
-        rrwebsolution.id/{d.id}
+        rrdevs.my.id/{d.id}
       </div> */}
       <div className="b-site" key={d.id} style={{ '--acc': d.accent, '--soft': d.soft }}>
         <div className="mn-nav">
@@ -35,7 +35,7 @@ export default function BrowserMock() {
             <p>{d.sub}</p>
             <span className="mn-btn">{d.cta} →</span>
           </div>
-          <img src={d.urlImages} loading="lazy" alt={d.brand} />
+          <img src={d.urlImages} loading="eager" fetchPriority="high" alt={`Contoh website ${d.brand}`} width="420" height="300" />
         </div>
         <div className="mn-feats">
           {d.feats.map((f) => <span key={f}>✦ {f}</span>)}
@@ -47,7 +47,7 @@ export default function BrowserMock() {
         <defs>
           <path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0" />
         </defs>
-        <text><textPath href="#circ">UMKM GO DIGITAL ✦ RR WEB SOLUTION ✦ </textPath></text>
+        <text><textPath href="#circ">UMKM GO DIGITAL ✦ RR DEVS ✦ </textPath></text>
         <text x="60" y="68" className="spin-core">↗</text>
       </svg>
     </div>

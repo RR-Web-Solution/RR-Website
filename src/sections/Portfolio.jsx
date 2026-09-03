@@ -12,7 +12,7 @@ export default function Portfolio() {
             <Reveal key={p.title}>
               <div className={`pf-row ${i % 2 ? 'rev' : ''}`}>
                 <div className="pf-img">
-                  <img src={p.imageUrl} loading="lazy"
+                  <img src={p.imageUrl} loading="lazy" aria-hidden="true" alt=""
                      className="pf-bg"
                   />
                   <img src={p.imageUrl} alt={`Website ${p.title}`} loading="lazy" className="pf-fg" />
@@ -20,7 +20,7 @@ export default function Portfolio() {
                 </div>
                 <div className="pf-info">
                   <p className="pf-meta">{String(i + 1).padStart(2, '0')} · {p.year}</p>
-                  <a href={p.liveUrl} target="_blank">
+                  <a href={p.liveUrl} target="_blank" rel="noreferrer">
                      <h3>{p.title}</h3>
                   </a>
                   <p>{p.desc}</p>

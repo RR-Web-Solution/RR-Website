@@ -329,7 +329,7 @@ function Nav() {
   return (
     <header className={`nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="wrap nav-in">
-        <Link to="/" className="logo" aria-label="RR Web Solution">
+        <Link to="/" className="logo" aria-label="RR Devs">
           <span className="logo-mark">R<b>&amp;</b>R</span>
           <span className="logo-txt">RR·WEB·<b>SOLUTION</b></span>
         </Link>
@@ -340,7 +340,7 @@ function Nav() {
           <Link to="/partner" className={pathname === '/partner' ? 'active' : ''}><i />Partner ✦</Link>
         </nav>
         <div className="nav-right">
-          <a className="btn btn-acc btn-sm" href={waLink('Halo RR Web Solution, saya mau konsultasi gratis soal website untuk bisnis saya 🙂')} target="_blank" rel="noreferrer">
+          <a className="btn btn-acc btn-sm" href={waLink('Halo RR Devs, saya mau konsultasi gratis soal website untuk bisnis saya 🙂')} target="_blank" rel="noreferrer">
             Konsultasi Gratis
           </a>
           <button className={`burger ${open ? 'on' : ''}`} onClick={() => setOpen(!open)} aria-label="Menu">
@@ -377,7 +377,7 @@ function BrowserMock() {
           ))}
         </div>
       </div>
-      <div className="b-url"><svg width="10" height="12" viewBox="0 0 10 12" fill="none"><rect x="1" y="5" width="8" height="6" rx="1" stroke="currentColor" /><path d="M3 5V3.5a2 2 0 0 1 4 0V5" stroke="currentColor" /></svg> rrwebsolution.id/{d.id}</div>
+      <div className="b-url"><svg width="10" height="12" viewBox="0 0 10 12" fill="none"><rect x="1" y="5" width="8" height="6" rx="1" stroke="currentColor" /><path d="M3 5V3.5a2 2 0 0 1 4 0V5" stroke="currentColor" /></svg> rrdevs.my.id/{d.id}</div>
       <div className="b-site" key={d.id} style={{ '--acc': d.accent, '--soft': d.soft }}>
         <div className="mn-nav">
           <b>{d.brand}</b>
@@ -406,7 +406,7 @@ function BrowserMock() {
           <path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0" />
         </defs>
         <text>
-          <textPath href="#circ">UMKM GO DIGITAL ✦ RR WEB SOLUTION ✦ </textPath>
+          <textPath href="#circ">UMKM GO DIGITAL ✦ RR DEVS ✦ </textPath>
         </text>
         <text x="60" y="68" className="spin-core">↗</text>
       </svg>
@@ -433,9 +433,9 @@ function Hero() {
             <span className="mask"><span>cepat &amp; terjangkau —</span></span>
             <span className="mask"><span>bisnismu siap <em><Scramble text="naik kelas." delay={650} /></em></span></span>
           </h1>
-          <span className="mask"><span className="hero-sub">RR Web Solution membantu UMKM Indonesia tampil meyakinkan di internet — dari desain sampai online, tanpa ribet.</span></span>
+          <span className="mask"><span className="hero-sub">RR Devs membantu UMKM Indonesia tampil meyakinkan di internet — dari desain sampai online, tanpa ribet.</span></span>
           <span className="mask"><span className="hero-ctas">
-            <a className="btn btn-acc" href={waLink('Halo RR Web Solution, saya mau konsultasi gratis soal website untuk bisnis saya 🙂')} target="_blank" rel="noreferrer">
+            <a className="btn btn-acc" href={waLink('Halo RR Devs, saya mau konsultasi gratis soal website untuk bisnis saya 🙂')} target="_blank" rel="noreferrer">
               Konsultasi Gratis via WhatsApp <span className="btn-arrow">→</span>
             </a>
             <a className="btn btn-ghost" href="#portofolio">Lihat Portofolio ↓</a>
@@ -480,7 +480,7 @@ function About() {
           <p className="kick"><span>(01)</span> — Tentang Kami</p>
           <h2 className="h2">Dua sahabat, satu misi: <br />UMKM Indonesia naik kelas.</h2>
           <p className="about-text">
-            RR Web Solution lahir dari dua sahabat — <b>Rafael</b> &amp; <b>Rendy</b> — yang percaya usaha kecil Indonesia{' '}
+            RR Devs lahir dari dua sahabat — <b>Rafael</b> &amp; <b>Rendy</b> — yang percaya usaha kecil Indonesia{' '}
             <mark>layak tampil sekelas brand besar</mark> di internet. Kami merancang dan membangun website untuk UMKM:
             mulai dari landing page jualan, company profile, sampai toko online penuh.
           </p>
@@ -496,7 +496,7 @@ function About() {
             <div className="founder-cap"><b>Rafael</b><small>Desain &amp; Front-End</small></div>
           </Rv>
           <Rv delay={260} className="founder f-b">
-            <img src="https://fastly.picsum.photos/id/1/5000/3333.jpg?hmac=Asv2DU3rA_5D1xSe22xZK47WEAN0wjWeFOhzd13ujW4" alt="Rendy" loading="lazy" />
+            <img src="images/raka-aditya.jpg" alt="Rendy, co-founder RR Devs" loading="lazy" width="640" height="800" />
             <div className="founder-cap"><b>Rendy</b><small>Back-End &amp; Strategi</small></div>
           </Rv>
         </div>
@@ -799,7 +799,7 @@ function FinalCTA() {
           <h2 className="final-title">Siap punya<br />website?</h2>
           <p className="final-sub">Ceritakan bisnismu 5 menit saja — kami kasih gambaran desain, estimasi biaya, dan timeline. Gratis, tanpa komitmen.</p>
           <div className="final-ctas">
-            <a className="btn btn-ink" href={waLink('Halo RR Web Solution! Saya siap punya website 🚀 Bisa dibantu?')} target="_blank" rel="noreferrer">
+            <a className="btn btn-ink" href={waLink('Halo RR Devs! Saya siap punya website 🚀 Bisa dibantu?')} target="_blank" rel="noreferrer">
               Hubungi Kami Sekarang <span className="btn-arrow">→</span>
             </a>
             <a className="final-mail" href="mailto:rafaeltorang5@gmail.com">atau email: rafaeltorang5@gmail.com</a>
@@ -845,13 +845,13 @@ function Footer() {
         </div>
         <div className="foot-col">
           <h4>Kontak</h4>
-          <a href={waLink('Halo RR Web Solution!')} target="_blank" rel="noreferrer">WhatsApp: +62 812-3456-7890</a>
+          <a href={waLink('Halo RR Devs!')} target="_blank" rel="noreferrer">WhatsApp: +62 812-3456-7890</a>
           <a href="mailto:rafaeltorang5@gmail.com">Email: rafaeltorang5@gmail.com</a>
           <span>Jakarta Timur, Indonesia<br />(melayani seluruh Indonesia, remote-first)</span>
         </div>
       </div>
       <div className="wrap foot-bottom">
-        <span>© 2025 RR Web Solution. Semua hak dilindungi.</span>
+        <span>© 2026 RR Devs. Semua hak dilindungi.</span>
         <span>Dibuat dengan ☕ oleh Rafael &amp; Rendy</span>
       </div>
     </footer>
@@ -891,7 +891,7 @@ function PartnerPage() {
               <p className="kick"><span>Rate Card</span> — Program Agency Partner</p>
               <h1 className="pp-title">Kami yang kerjakan.<br />Nama <em>agency Anda</em> yang tampil.</h1>
               <p className="pp-sub">
-                RR Web Solution menjadi tim produksi white-label untuk agency &amp; digital marketer.
+                RR Devs menjadi tim produksi white-label untuk agency &amp; digital marketer.
                 Anda pegang klien dan branding, kami eksekusi di belakang layar — dengan margin hingga 2x lipat.
               </p>
               <div className="pp-ctas">

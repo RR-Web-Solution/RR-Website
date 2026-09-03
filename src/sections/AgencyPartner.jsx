@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import Reveal from '../components/ui/Reveal'
-import { PARTNER_PREVIEW } from '../data/content'
 
 export default function AgencyPartner() {
   return (

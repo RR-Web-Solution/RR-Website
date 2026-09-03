@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="foot-brand">
           <Link to="/" className="logo">
             <span className="logo-mark">R<b>&amp;</b>R</span>
-            <span className="logo-txt">RR·WEB·<b>SOLUTION</b></span>
+            <span className="logo-txt">RR·<b>DEVS</b></span>
           </Link>
           <p>Studio website milik Rafael &amp; Rendy. Kami bantu UMKM Indonesia tumbuh lewat website yang cepat, rapi, dan terjangkau.</p>
           <div className="foot-social">
@@ -34,13 +34,13 @@ export default function Footer() {
         </div>
         <div className="foot-col">
           <h4>Kontak</h4>
-          <a href={waLink('Halo RR Web Solution!')} target="_blank" rel="noreferrer">WhatsApp: +62 831-7112-5657</a>
-          <a href="mailto:halo@rrwebsolution.id">Email: halo@rrwebsolution.id</a>
+          <a href={waLink('Halo RR Devs!')} target="_blank" rel="noreferrer">WhatsApp: +62 831-7112-5657</a>
+          <a href="mailto:rrdevs.team@gmail.com">Email: rrdevs.team@gmail.com</a>
           <span>Jakarta Timur, Indonesia<br />(melayani seluruh Indonesia, remote-first)</span>
         </div>
       </div>
       <div className="wrap foot-bottom">
-        <span>© 2025 RR Web Solution. Semua hak dilindungi.</span>
+        <span>© 2026 RR Devs. Semua hak dilindungi.</span>
         <span>Dibuat dengan ☕ oleh Rafael &amp; Rendy</span>
       </div>
     </footer>

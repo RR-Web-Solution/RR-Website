@@ -15,14 +15,16 @@ export default function PartnerPage() {
               <p className="kick"><span>Rate Card</span> — Program Agency Partner</p>
               <h1 className="pp-title">Kami yang kerjakan.<br />Nama <em>agency Anda</em> yang tampil.</h1>
               <p className="pp-sub">
-                RR Web Solution menjadi tim produksi white-label untuk agency &amp; digital marketer.
+                RR Devs menjadi tim produksi white-label untuk agency &amp; digital marketer.
                 Anda pegang klien dan branding, kami eksekusi di belakang layar — dengan margin hingga 2x lipat.
               </p>
               <div className="pp-ctas">
                 <a className="btn btn-acc" href={waLink('Halo RR! Saya agency/marketer, tertarik dengan program partner white-label. Boleh diskusi?')} target="_blank" rel="noreferrer">
                   Ajukan Kemitraan via WhatsApp <span className="btn-arrow">→</span>
                 </a>
-                <a className="btn btn-ghost" href="/rate-card-partner.pdf" download>⬇ Unduh Rate Card (PDF)</a>
+                <a className="btn btn-ghost"
+                   href="/rate-card-partner.pdf"
+                   download>⬇ Unduh Rate Card (PDF)</a>
               </div>
             </Reveal>
           </div>

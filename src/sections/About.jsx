@@ -8,7 +8,7 @@ export default function About() {
           <p className="kick"><span>(01)</span> — Tentang Kami</p>
           <h2 className="h2">Dua sahabat, satu misi: <br />UMKM Indonesia naik kelas.</h2>
           <p className="about-text">
-            RR Web Solution lahir dari dua sahabat — <b>Rafael</b> &amp; <b>Rendy</b> — yang percaya usaha kecil Indonesia{' '}
+            RR Devs lahir dari dua sahabat — <b>Rafael</b> &amp; <b>Rendy</b> — yang percaya usaha kecil Indonesia{' '}
             <mark>layak tampil sekelas brand besar</mark> di internet. Kami merancang dan membangun website untuk UMKM:
             mulai dari landing page jualan, company profile, sampai website full custom 100%.
           </p>
@@ -24,7 +24,7 @@ export default function About() {
             <div className="founder-cap"><b>Rafael</b><small>Desain &amp; Front-End</small></div>
           </Reveal>
           <Reveal delay={260} className="founder f-b">
-            <img src="https://fastly.picsum.photos/id/1/5000/3333.jpg?hmac=Asv2DU3rA_5D1xSe22xZK47WEAN0wjWeFOhzd13ujW4" alt="Rendy" loading="lazy" />
+            <img src="images/raka-aditya.jpg" alt="Rendy, co-founder RR Devs" loading="lazy" width="640" height="800" />
             <div className="founder-cap"><b>Rendy</b><small>Back-End &amp; Strategi</small></div>
           </Reveal>
         </div>

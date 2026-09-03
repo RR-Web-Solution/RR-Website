@@ -15,10 +15,10 @@ export default function FinalCTA() {
           <h2 className="final-title">Siap punya<br />website?</h2>
           <p className="final-sub">Ceritakan bisnismu 5 menit saja — kami kasih gambaran desain, estimasi biaya, dan timeline. Gratis, tanpa komitmen.</p>
           <div className="final-ctas">
-            <a className="btn btn-ink" href={waLink('Halo RR Web Solution! Saya siap punya website 🚀 Bisa dibantu?')} target="_blank" rel="noreferrer">
+            <a className="btn btn-ink" href={waLink('Halo RR Devs! Saya siap punya website 🚀 Bisa dibantu?')} target="_blank" rel="noreferrer">
               Hubungi Kami Sekarang <span className="btn-arrow">→</span>
             </a>
-            <a className="final-mail" href="mailto:halo@rrwebsolution.id">atau email: halo@rrwebsolution.id</a>
+            <a className="final-mail" href="mailto:rrdevs.team@gmail.com">atau email: rrdevs.team@gmail.com</a>
           </div>
         </Reveal>
       </div>

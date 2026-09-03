@@ -24,9 +24,9 @@ export default function Hero() {
             <span className="mask"><span>cepat &amp; terjangkau —</span></span>
             <span className="mask"><span>bisnismu siap <em><Scramble text="naik kelas." delay={650} /></em></span></span>
           </h1>
-          <span className="mask"><span className="hero-sub">RR Web Solution membantu UMKM Indonesia tampil meyakinkan di internet — dari desain sampai online, tanpa ribet.</span></span>
+          <span className="mask"><span className="hero-sub">RR Devs membantu UMKM Indonesia tampil meyakinkan di internet — dari desain sampai online, tanpa ribet.</span></span>
           <span className="mask"><span className="hero-ctas">
-            <a className="btn btn-acc" href={waLink('Halo RR Web Solution, saya mau konsultasi gratis soal website untuk bisnis saya 🙂')} target="_blank" rel="noreferrer">
+            <a className="btn btn-acc" href={waLink('Halo RR Devs, saya mau konsultasi gratis soal website untuk bisnis saya 🙂')} target="_blank" rel="noreferrer">
               Konsultasi Gratis via WhatsApp <span className="btn-arrow">→</span>
             </a>
             <a className="btn btn-ghost" href="#portofolio">Lihat Portofolio ↓</a>

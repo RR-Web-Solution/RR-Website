@@ -1,5 +1,5 @@
 /* ============================================================
-   RR WEB SOLUTION — Pusat konten.
+   RR DEVS — Pusat konten.
    Ubah teks, harga & kontak cukup di file ini.
    ============================================================ */
 
@@ -155,10 +155,28 @@ export const PLANS = [
   },
 ]
 export const CARE_PRICE = 500000
-export const CARE_FEATS = ['Backup & keamanan mingguan', 'Update konten 2×/bulan', 'Laporan performa bulanan']
+export const CARE_FEATS = [
+   'Backup & keamanan mingguan',
+   'Update konten 2×/bulan',
+   'Laporan performa bulanan',
+   'Dukungan teknis prioritas (WhatsApp)',
+   'Konsultasi strategi digital 1×/bulan',
+   'Optimasi kecepatan & SEO berkala',
+]
 
 /* ---------- Portofolio ---------- */
 export const PORTFOLIO = [
+   {
+     title: 'BarberPro',
+     type: 'Website Custom + Sistem Booking Real-Time + Notifikasi Otomatis + Dashboard Admin',
+     year: '2026',
+     desc: 'Barbershop yang masih mencatat booking lewat chat dan buku tulis selalu menghadapi masalah yang sama: pelanggan datang tanpa janji, dua orang menempati jam yang sama, dan pemilik tidak tahu omzet hari ini sampai tutup toko. BarberPro menyelesaikan semuanya: pelanggan memilih layanan, barber favorit, dan jam kosong langsung dari HP — slot yang terisi otomatis terkunci sehingga double-booking mustahil terjadi. Setiap booking baru langsung berbunyi di WhatsApp pemilik dan email pelanggan, sementara dashboard admin merangkum jadwal hari ini, estimasi pendapatan, hingga barber tersibuk. Antrean jadi teratur, kursi tidak pernah bentrok, dan pemilik akhirnya pegang kendali penuh atas bisnisnya.',
+     tags: ['Website Custom', 'Sistem Booking Real-Time', 'Notifikasi WhatsApp + Email', 'Dashboard Admin'],
+     metric: '1 mnt',
+     metricLabel: 'dari buka website sampai jadwal terkunci — tanpa chat, tanpa telepon',
+     imageUrl: 'images/barberpro-portfolio.jpg',
+     liveUrl: 'https://barberpro.rrdevs.my.id',
+   },
   {
      title: 'Digital Printing',
      type: 'Website Custom + Company Profile + Sistem Order + Admin CMS',
@@ -196,6 +214,12 @@ export const PORTFOLIO = [
 
 /* ---------- Testimoni ---------- */
 export const TESTIMONIALS = [
+   {
+     name: 'Hendra Wijaya',
+     biz: 'Pemilik · Barbershop, Depok',
+     text: 'Dulu booking lewat chat WhatsApp, saya catat manual di buku — sering keliru, dan pernah dua pelanggan datang di jam yang sama sampai salah satu marah. Sekarang pelanggan booking sendiri dari website, jam yang terisi langsung terkunci, dan tiap booking baru bunyi di HP saya lengkap dengan nama dan jamnya. Pagi hari tinggal buka dashboard: sudah tahu hari ini ada berapa pelanggan dan perkiraan omzet. Antrean di kursi tunggu jauh berkurang karena semua sudah punya jam masing-masing. Ini bukan sekadar website — rasanya seperti menambah satu staf admin yang bekerja 24 jam.',
+     imageUrl: 'images/hendra-wijaya.jpg',
+   },
   {
      name: 'Joko Prasetyo',
      biz: 'Pemilik · Digital Printing, Bekasi',
