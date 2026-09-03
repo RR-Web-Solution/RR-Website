@@ -7,7 +7,7 @@ export const WA_NUMBER = '6283171125657'
 export const waLink = (msg) => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`
 export const fmt = (n) => n.toLocaleString('id-ID')
 
-const makeDemoImage = ({ label, accent, bg, text }) => {
+const _makeDemoImage = ({ label, accent, bg, text }) => {
   const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
       <defs>
@@ -45,7 +45,7 @@ export const DEMOS = [
     cta: 'Lihat Menu',
     feats: ['Buka 07.00–22.00', 'WiFi kencang', 'Live music Jumat'],
     seed: 'coffe',
-    urlImages: makeDemoImage({ label: 'RUANG TUNGGU', accent: '#A05C2C', bg: '#F7EFE2', text: '#201914' }),
+    urlImages: '/demo-images/kopi-demo.webp',
   },
   {
     id: 'batik',
@@ -60,7 +60,7 @@ export const DEMOS = [
     cta: 'Belanja Koleksi',
     feats: ['Pewarna alami', 'Kirim se-Indonesia', 'Terima custom motif'],
     seed: 'rrweb-demo-batik',
-    urlImages: makeDemoImage({ label: 'LARASATI', accent: '#7A2E2E', bg: '#F6ECEA', text: '#1a1010' }),
+    urlImages: '/demo-images/batik-demo.webp',
   },
   {
     id: 'dapur',
@@ -75,7 +75,7 @@ export const DEMOS = [
     cta: 'Pesan Sekarang',
     feats: ['Antar 30 menit', 'Halal & higienis', 'Paket nasi kotak'],
     seed: 'rrweb-demo-dapur',
-    urlImages: makeDemoImage({ label: 'DAPUR BU SRI', accent: '#C2452D', bg: '#FBF0E4', text: '#221713' }),
+    urlImages: '/demo-images/dapur-demo.webp',
   },
 ]
 
