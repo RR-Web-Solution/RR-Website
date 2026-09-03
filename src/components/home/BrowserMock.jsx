@@ -1,15 +1,9 @@
 import { useState } from 'react'
-import { DEMOS, makeDemoImage } from '../../data/content'
+import { DEMOS } from '../../data/content'
 
 export default function BrowserMock() {
   const [i, setI] = useState(0)
-  const [imageSrc, setImageSrc] = useState(DEMOS[0].urlImages)
   const d = DEMOS[i]
-
-  const selectDemo = (idx) => {
-    setI(idx)
-    setImageSrc(DEMOS[idx].urlImages)
-  }
 
   return (
     <div className="browser">
@@ -21,7 +15,7 @@ export default function BrowserMock() {
               key={x.id}
               type="button"
               className={idx === i ? 'on' : ''}
-              onClick={() => selectDemo(idx)}
+              onClick={() => setI(idx)}
               aria-pressed={idx === i}
               aria-label={`Tampilkan contoh ${x.brand}`}
             >
@@ -48,7 +42,7 @@ export default function BrowserMock() {
             <p>{d.sub}</p>
             <span className="mn-btn">{d.cta} →</span>
           </div>
-          <img src={imageSrc} onError={() => setImageSrc(makeDemoImage({ label: d.brand, accent: d.accent, bg: d.soft, text: "#201914" }))} loading="eager" fetchPriority="high" decoding="async" alt={`Contoh website ${d.brand}`} width="420" height="300" />
+          <img src={d.urlImages} loading="eager" fetchPriority="high" alt={`Contoh website ${d.brand}`} width="420" height="300" />
         </div>
         <div className="mn-feats">
           {d.feats.map((f) => <span key={f}>✦ {f}</span>)}

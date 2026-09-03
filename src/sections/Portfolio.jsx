@@ -12,7 +12,10 @@ export default function Portfolio() {
             <Reveal key={p.title}>
               <div className={`pf-row ${i % 2 ? 'rev' : ''}`}>
                 <div className="pf-img">
-                  <img src={p.imageUrl} alt={`Website ${p.title}`} loading="lazy" decoding="async" width="900" height="675" className="pf-fg" />
+                  <img src={p.imageUrl} loading="lazy" aria-hidden="true" alt=""
+                     className="pf-bg"
+                  />
+                  <img src={p.imageUrl} alt={`Website ${p.title}`} loading="lazy" className="pf-fg" />
                   <span className="pf-tag">{p.type}</span>
                 </div>
                 <div className="pf-info">
