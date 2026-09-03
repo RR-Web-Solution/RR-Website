@@ -7,7 +7,7 @@ export const WA_NUMBER = '6283171125657'
 export const waLink = (msg) => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`
 export const fmt = (n) => n.toLocaleString('id-ID')
 
-const _makeDemoImage = ({ label, accent, bg, text }) => {
+export const makeDemoImage = ({ label, accent, bg, text }) => {
   const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
       <defs>
