@@ -190,6 +190,17 @@ export const CARE_FEATS = [
 /* ---------- Portofolio ---------- */
 export const PORTFOLIO = [
    {
+       title: 'Architect Studio',
+       type: 'Company Profile Premium + Galeri Project + Cinematic Visual Experience',
+       year: '2026',
+       desc: 'Firma arsitektur menjual satu hal yang tidak terlihat: rasa percaya. Klien kelas atas tidak membeli gambar — mereka membeli keyakinan bahwa studio ini punya selera, ketelitian, dan kelas. Masalahnya, kebanyakan website firma arsitektur justru terlihat lebih biasa daripada karya mereka: galeri foto kecil yang lambat, halaman polos tanpa cerita, dan portofolio yang masih dikirim lewat PDF. Architect Studio kami rancang untuk menutup jurang itu. Begitu halaman dibuka, pengunjung masuk ke pengalaman visual sinematik — foto bangunan berukuran penuh, animasi halus yang mengikuti scroll, dan tipografi elegan yang membuat setiap project terasa seperti pameran di galeri seni. Setiap karya punya halaman ceritanya sendiri, tim diperkenalkan dengan kelas, dan calon klien hanya butuh satu scroll untuk menghubungi studio. Dan karena brand premium tidak boleh membuat orang menunggu: website ini mencetak skor kecepatan sempurna 100/100, ringan bahkan di koneksi lambat, dan mudah ditemukan di Google.',
+       tags: ['Company Profile Premium', 'Visual Sinematik', 'Galeri + Halaman Detail Project', 'Lighthouse 100', 'SEO Ready'],
+       metric: '100',
+       metricLabel: 'skor Lighthouse Performance — sempurna, bahkan di pengujian paling ketat',
+       imageUrl: 'images/architect-studio-portfolio.jpg',
+       liveUrl: 'https://architect-studio.rrdevs.my.id',
+     },
+   {
      title: 'BarberPro',
      type: 'Website Custom + Sistem Booking Real-Time + Notifikasi Otomatis + Dashboard Admin',
      year: '2026',
