@@ -170,7 +170,7 @@ export const PLANS = [
       'Integrasi WhatsApp API',
       'Dashboard admin custom',
       'Gratis domain + hosting + SSL (1 tahun)',
-      'Revisi sampai sesuai (maks. 7×)',
+      'Revisi sampai sesuai (maks. 10×)',
       'Garansi bug-fix & support 6 bulan',
       'Pelatihan tim + dokumentasi cara pakai',
       'Pengerjaan 2–4 minggu (berdasarkan kerumitan fitur)',
