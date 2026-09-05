@@ -35,7 +35,7 @@ export default function Footer() {
         <div className="foot-col">
           <h4>Kontak</h4>
           <a href={waLink('Halo RR Devs!')} target="_blank" rel="noreferrer">WhatsApp: +62 831-7112-5657</a>
-          <a href="mailto:rrdevs.team@gmail.com">Email: rrdevs.team@gmail.com</a>
+          <a href="mailto:hello@rrdevs.my.id">Email: hello@rrdevs.my.id</a>
           <span>Jakarta Timur, Indonesia<br />(melayani seluruh Indonesia, remote-first)</span>
         </div>
       </div>

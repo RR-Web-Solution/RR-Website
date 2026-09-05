@@ -18,7 +18,7 @@ export default function FinalCTA() {
             <a className="btn btn-ink" href={waLink('Halo RR Devs! Saya siap punya website 🚀 Bisa dibantu?')} target="_blank" rel="noreferrer">
               Hubungi Kami Sekarang <span className="btn-arrow">→</span>
             </a>
-            <a className="final-mail" href="mailto:rrdevs.team@gmail.com">atau email: rrdevs.team@gmail.com</a>
+            <a className="final-mail" href="mailto:hello@rrdevs.my.id">atau email: hello@rrdevs.my.id</a>
           </div>
         </Reveal>
       </div>

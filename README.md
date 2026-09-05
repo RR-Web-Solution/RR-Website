@@ -115,7 +115,7 @@ Konfigurasi production saat ini menggunakan:
 - Sitemap: `https://rrdevs.my.id/sitemap.xml`
 - Robots: `https://rrdevs.my.id/robots.txt`
 - Social preview: `https://rrdevs.my.id/og-image.jpg`
-- Kontak email: `rrdevs.team@gmail.com`
+- Kontak email: `hello@rrdevs.my.id`
 
 Pastikan domain telah diarahkan ke hosting production, HTTPS aktif, dan URL sitemap didaftarkan ke Google Search Console setelah deployment.
 
