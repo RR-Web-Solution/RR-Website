@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { waLink } from '../../data/content'
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const { pathname } = useLocation()
+  const navigate = useNavigate()
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 24)
@@ -14,74 +15,83 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', fn)
   }, [])
 
-  const handleAnchorClick = (event, href) => {
-    if (!href.startsWith('#')) return
-    const targetId = href.slice(1)
-    const target = document.getElementById(targetId)
-    if (!target) return
-    event.preventDefault()
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    if (window.history.pushState) {
-      window.history.pushState(null, '', `#${targetId}`)
+  // ID section yang valid di LandingPage
+  const SECTION_IDS = ['tentang', 'layanan', 'keunggulan', 'harga', 'portofolio', 'testimoni', 'kontak']
+
+  const sectionLinks = [
+    { id: 'tentang', label: 'Tentang' },
+    { id: 'layanan', label: 'Layanan' },
+    { id: 'keunggulan', label: 'Keunggulan' },
+    { id: 'harga', label: 'Paket' },
+    { id: 'portofolio', label: 'Portofolio' },
+    { id: 'kontak', label: 'Kontak' },
+  ]
+
+  // Handler pintar: di homepage → scroll saja; di halaman lain → navigate dulu
+  const handleSectionClick = (e, id) => {
+    e.preventDefault()
+    setOpen(false)
+
+    if (pathname === '/' || pathname === '') {
+      // Sudah di homepage, scroll langsung
+      const el = document.getElementById(id)
+      if (el) {
+        window.scrollTo({ top: 0, behavior: 'auto' }) // reset scroll dulu
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }, 50)
+      }
+    } else {
+      // Di halaman lain: pindah ke homepage dengan hash, biar ScrollManager yang handle
+      navigate(`/#${id}`)
     }
   }
 
-  const sectionLinks = [
-    { href: '#tentang', label: 'Tentang' },
-    { href: '#layanan', label: 'Layanan' },
-    { href: '#keunggulan', label: 'Keunggulan' },
-    { href: '#harga', label: 'Paket' },
-    { href: '#portofolio', label: 'Portofolio' },
-    { href: '#kontak', label: 'Kontak' },
-  ]
+  const handleLogoClick = (e) => {
+    e.preventDefault()
+    if (pathname === '/' || pathname === '') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      navigate('/')
+    }
+  }
 
   return (
     <header className={`nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="wrap nav-in">
-        <Link to="/" className="logo" aria-label="RR Devs beranda">
+        <a href="/" onClick={handleLogoClick} className="logo" aria-label="RR Web Solution">
           <span className="logo-mark">R<b>&amp;</b>R</span>
-          <span className="logo-txt">RR·<b>DEVS</b></span>
-        </Link>
-        <nav className="nav-links" aria-label="Navigasi utama">
+          <span className="logo-txt">RR·WEB·<b>SOLUTION</b></span>
+        </a>
+        <nav className="nav-links">
           {sectionLinks.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              onClick={(e) => handleAnchorClick(e, l.href)}
-            >
+            <a key={l.id} href={`/#${l.id}`} onClick={(e) => handleSectionClick(e, l.id)}>
               <i />{l.label}
             </a>
           ))}
-          <Link to="/partner" className={pathname === '/partner' ? 'active' : ''}><i />Partner ✦</Link>
+          <Link to="/partner" className={pathname === '/partner' ? 'active' : ''}>
+            <i />Partner ✦
+          </Link>
+          <Link to="/jabodetabek" className={pathname === '/jabodetabek' ? 'active' : ''}>
+            <i />Jabodetabek ✦
+          </Link>
         </nav>
         <div className="nav-right">
-          <a className="btn btn-acc btn-sm" href={waLink('Halo RR Devs, saya mau konsultasi gratis soal website untuk bisnis saya 🙂')} target="_blank" rel="noreferrer" aria-label="Konsultasi gratis via WhatsApp">
+          <a className="btn btn-acc btn-sm" href={waLink('Halo RR Web Solution, saya mau konsultasi gratis soal website untuk bisnis saya 🙂')} target="_blank" rel="noreferrer">
             Konsultasi Gratis
           </a>
-          <button
-            type="button"
-            className={`burger ${open ? 'on' : ''}`}
-            onClick={() => setOpen(!open)}
-            aria-label={open ? 'Tutup menu navigasi' : 'Buka menu navigasi'}
-            aria-expanded={open}
-            aria-controls="mobile-menu"
-          >
+          <button className={`burger ${open ? 'on' : ''}`} onClick={() => setOpen(!open)} aria-label="Menu">
             <span /><span /><span />
           </button>
         </div>
       </div>
       {open && (
-        <div className="nav-mobile" id="mobile-menu">
+        <div className="nav-mobile">
           {sectionLinks.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              onClick={() => setOpen(false)}
-            >
-              {l.label}
-            </a>
+            <a key={l.id} href={`/#${l.id}`} onClick={(e) => handleSectionClick(e, l.id)}>{l.label}</a>
           ))}
           <Link to="/partner" onClick={() => setOpen(false)}>Partner ✦</Link>
+          <Link to="/jabodetabek" onClick={() => setOpen(false)}>Jabodetabek</Link>
         </div>
       )}
     </header>

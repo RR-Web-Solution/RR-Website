@@ -294,3 +294,119 @@ export const FLOW = [
   { pct: '40%', t: 'Staging Approval', d: 'Klien Anda review & setujui hasil' },
   { pct: '10%', t: 'Handover', d: 'Website live, aset diserahkan' },
 ]
+
+/* ============================================================
+   STUDI KASUS — halaman /jabodetabek
+   Voice rule: pakai "kami" (brand duo) kecuali cerita spesifik
+   salah satu founder (fun fact Termux).
+   ============================================================ */
+export const CASE_STUDIES = [
+  {
+    id: 'theo-teknik',
+    emoji: '❄️',
+    title: 'Theo Teknik',
+    tagline: 'Landing page service AC · Cakung, Jakarta Timur',
+    kind: 'client',
+    kindLabel: 'Client Story · Klien Nyata',
+    story: 'Theo Teknik, jasa panggilan AC di Cakung, sebelumnya cuma mengandalkan promosi mulut ke mulut. Kami bangun landing page yang menaruh WhatsApp sebagai satu-satunya jalur booking di setiap section, menampilkan daftar harga transparan di depan — karena ketakutan terbesar pelanggan jasa panggilan adalah kena tipu harga — plus bukti before-after dan testimoni asli. Hasilnya: usaha yang tadinya cuma modal nomor HP sekarang punya kehadiran digital yang meyakinkan siapa pun yang googling "service AC terdekat".',
+    highlights: [
+      'WhatsApp jadi satu-satunya jalur booking di setiap section',
+      'Daftar harga transparan di depan — mematahkan takut kena tipu',
+      'Bukti before-after + testimoni asli',
+    ],
+    stack: ['Landing Page', 'WhatsApp-first', 'Local SEO'],
+    quote: { 
+      text: 'Sejak ada web, orderan WA nambah dan pelanggan baru lebih gampang percaya. Ternyata website ngebantu bisnis saya banget. Terimakasih, Rafael', 
+      name: 'Charles Pardede', 
+      biz: 'Theo Teknik' 
+    },
+    accent: '#0369A1', 
+    shot: '/images/theo-teknik-portfolio.jpg',
+    shotNote: 'Landing page + daftar harga transparan + integrasi WhatsApp',
+    live: 'https://theo-teknik.rrdevs.my.id',
+  },
+  {
+    id: 'barberpro',
+    emoji: '🪒',
+    title: 'BarberPro',
+    tagline: 'Sistem booking barbershop anti-bentrok',
+    kind: 'demo',
+    kindLabel: 'Capability Demo',
+    story: 'BarberPro kami bangun untuk membuktikan satu hal: RR Devs sanggup bikin sistem booking production-grade, bukan ikut-ikutan tutorial. Penyakit klasik booking amatir — dua pelanggan pesan jam yang sama karena validasi cuma di tampilan — kami kunci di level database: constraint PostgreSQL yang bikin bentrok jadwal mustahil terjadi secara teknis. Lengkap dengan notifikasi WhatsApp otomatis ke pelanggan & admin, plus dashboard pendapatan dan barber tersibuk.',
+    highlights: [
+      'Constraint PostgreSQL — bentrok jadwal mustahil, bukan cuma dicegah di UI',
+      'Email konfirmasi otomatis ke client',
+      'Notifikasi WhatsApp booking terbaru ke admin',
+      'Dashboard pendapatan & barber tersibuk',
+    ],
+    stack: ['Next.js', 'PostgreSQL', 'Fonnte WA API', 'Termux · Android'],
+    // fun fact tetap pakai nama founder — spesifik, powerful, dan jujur
+    footnote: 'Dibangun 100% oleh Rafael (founder RR Devs) dari tablet Android pakai Termux — tanpa laptop.',
+    quote: null,
+    accent: '#c9a24b',
+    shot: '/images/barberpro-portfolio.jpg',
+    shotNote: `Homepage — Tampilan premium bisnis yang dipercaya pelanggan. 
+    AdminPage — Dashboard booking & pendapatan`,
+    live: 'https://barberpro.rrdevs.my.id',
+  },
+  {
+    id: 'architect-studio',
+    emoji: '🏛️',
+    title: 'Architect Studio',
+    tagline: 'Company profile rasa premium',
+    kind: 'demo',
+    kindLabel: 'Capability Demo',
+    story: 'Konsep company profile untuk firma arsitektur, kami rancang khusus untuk membuktikan RR Devs nggak cuma bisa menulis logic tapi juga paham desain kelas atas: tipografi editorial, animasi scroll yang halus, palet warna yang niat, dan performa yang tetap kencang meski visualnya berat. Ini yang kami tunjukkan ke calon klien yang butuh presence digital terasa "mahal" — arsitek, interior, konsultan, properti.',
+    highlights: [
+      'Tipografi editorial & animasi scroll halus',
+      'Palet warna premium — presence terasa "mahal"',
+      'Performa kencang meski visual berat',
+    ],
+    stack: ['Next.js', 'Framer Motion', 'Editorial Design'],
+    quote: null,
+    accent: '#a08757', 
+    shot: '/images/architect-studio-portfolio.jpg',
+    shotNote: 'Beranda — tipografi editorial',
+    live: 'https://architect-studio.rrdevs.my.id',
+  },
+  {
+    id: 'toko-percetakan',
+    emoji: '🖨️',
+    title: 'Toko Percetakan Online',
+    tagline: 'E-commerce percetakan + kalkulator harga',
+    kind: 'demo',
+    kindLabel: 'Capability Demo',
+    story: 'Simulasi lengkap sistem e-commerce untuk bisnis percetakan: kalkulator harga otomatis berdasarkan ukuran & jumlah, panel admin penuh untuk kelola produk dan testimoni tanpa sentuh kode, sampai order yang otomatis terformat rapi ke WhatsApp. Kami bangun ini untuk membuktikan sanggup pegang backend yang lebih berat (Laravel) untuk bisnis dengan operasi serumit ini.',
+    highlights: [
+      'Kalkulator harga otomatis (ukuran × jumlah)',
+      'Panel admin penuh tanpa sentuh kode',
+      'Order auto-format rapi masuk WhatsApp',
+    ],
+    stack: ['Laravel', 'MySQL', 'WhatsApp Order'],
+    quote: null,
+    accent: '#4338CA',
+    shot: '/images/digital-printing-portfolio.jpg',
+    shotNote: 'Kalkulator harga + admin panel',
+    live: 'https://digital-printing-website-production.up.railway.app',
+  },
+  {
+    id: 'kopi-senja',
+    emoji: '☕',
+    title: 'Kopi Senja',
+    tagline: 'Reservasi kedai kopi auto-WhatsApp',
+    kind: 'demo',
+    kindLabel: 'Capability Demo · Konsep',
+    story: 'Konsep F&B pribadi: reservasi meja yang auto-generate pesan WhatsApp — pelanggan pilih tanggal, jam, dan jumlah orang, sistem yang menyusun pesannya. Ditambah menu interaktif dengan filter kategori real-time serta optimasi SEO & Core Web Vitals (Lighthouse 95+). Kami labeli jujur sebagai konsep pribadi, bukan klien — karena memang kami rancang sendiri dari nol.',
+    highlights: [
+      'Reservasi auto-generate pesan WhatsApp',
+      'Menu interaktif dengan filter kategori real-time',
+      'Lighthouse 95+ (SEO & Core Web Vitals)',
+    ],
+    stack: ['Next.js 16', 'Cinematic UI', 'SEO · CWV'],
+    quote: null,
+    accent: '#A05C2C', 
+    shot: '/images/kopi-senja-portfolio.png',
+    shotNote: 'Menu interaktif + reservasi WA',
+    live: 'https://kopisenja.rrdevs.my.id',
+  },
+]
