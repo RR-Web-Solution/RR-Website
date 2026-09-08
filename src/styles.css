@@ -792,3 +792,49 @@ mark { background: var(--lime); padding: 0 .35em; box-decoration-break: clone; -
   .rv { opacity: 1; transform: none; }
   .mask > * { transform: none; }
 }
+
+/* ===== HERO MOBILE FIX ===== */
+.jkt-hero { padding: 64px 0 56px; overflow: hidden; }
+
+.jkt-title {
+  font-size: clamp(1.7rem, 7.5vw, 3.4rem);   /* min diturunkan: 2.1rem → 1.7rem */
+  text-wrap: balance;
+  overflow-wrap: break-word;                  /* cegah kata panjang meluber */
+  word-break: break-word;
+  max-width: 100%;
+}
+
+.jkt-lead {
+  font-size: clamp(.98rem, 4vw, 1.12rem);
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+/* mockup chat WA: jangan lebih lebar dari layar */
+.jkt-vis { max-width: 100%; overflow: hidden; }
+.wa-card { max-width: 100%; }
+.wa-order { white-space: normal; word-break: break-word; }   /* blok order mono bisa wrap */
+
+/* chip floating: masuk ke dalam layar di HP */
+@media (max-width: 640px) {
+  .wa-chip { font-size: .62rem; padding: .35rem .65rem; }
+  .wa-chip-a { top: -10px; right: 4px; }
+  .wa-chip-b { bottom: 8px; left: 4px; }
+  .jkt-ctas { flex-direction: column; align-items: stretch; }
+  .jkt-ctas .btn { justify-content: center; width: 100%; }
+  .jkt-areas { gap: 6px; }
+  .jkt-areas span { font-size: .62rem; padding: .3rem .6rem; }
+}
+
+/* layar super sempit (≤380px) */
+@media (max-width: 380px) {
+  .jkt-title { font-size: 1.55rem; }
+  .wa-head b { font-size: .78rem; }
+}
+
+.wrap { max-width: 1220px; margin: 0 auto; padding: 0 24px; width: 100%; }
+img, svg, video { max-width: 100%; height: auto; }
+
+@media (max-width: 640px) {
+  .wrap { padding: 0 18px; }
+}
