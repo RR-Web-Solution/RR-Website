@@ -88,21 +88,37 @@ export const SERVICES = [
     n: '01', title: 'Landing Page', price: 'mulai Rp2,5 jt',
     desc: 'Satu halaman yang fokusnya satu: membuat pengunjung menghubungi / memesan. Cocok untuk produk tunggal, promo, atau jasa lokal yang butuh presence cepat.',
     tags: ['1 Halaman', 'Tombol WhatsApp', 'Form Order', 'Mobile-first'],
+    slide: {
+    sub: '3 detik pertama menentukan semuanya. Kami bikin halaman yang membuat pengunjung langsung chat — bukan scroll lalu pergi.',
+    bullets: ['CTA WhatsApp di setiap lipatan layar', 'Copywriting menjual, bukan sekadar indah', 'Gratis domain + hosting 1 tahun', 'Live 3–7 hari — cepat balik modal'],
+   },
   },
   {
-    n: '03', title: 'Company Profile', price: 'mulai Rp4,5 jt',
+    n: '02', title: 'Company Profile', price: 'mulai Rp4,5 jt',
     desc: 'Website 5 halaman yang membuat bisnismu terlihat mapan dan terpercaya di mata pelanggan, mitra, maupun calon investor.',
     tags: ['Sampai 5 Halaman', 'Galeri & Peta', 'SEO Dasar', 'Email Bisnis'],
+    slide: {
+    sub: 'Calon klien besar googling bisnismu sebelum deal. Pastikan yang mereka temukan terlihat mapan — bukan akun medsos saja.',
+    bullets: ['Sampai 5 halaman + galeri & peta lokasi', 'SEO dasar biar mudah ditemukan Google', 'Email bisnis nama@bisnismu.com', 'Jadi 7–10 hari'],
+   },
   },
   {
-    n: '02', title: 'Website Custom', price: 'mulai Rp6,5 jt', hot: true,
+    n: '03', title: 'Website Custom', price: 'mulai Rp6,5 jt', hot: true,
     desc: 'Bisnismu unik — websitenya juga harus. Kami rancang dan bangun website dengan fitur yang benar-benar pas dengan cara kerjamu: sistem booking & reservasi, member area, kalkulator harga otomatis, integrasi WhatsApp API, sampai dashboard laporan penjualan. Bukan template, dibangun dari nol, dan 100% jadi milikmu selamanya.',
     tags: ['Fitur 100% Sesuai Kebutuhan', 'Sistem Booking / Reservasi', 'Integrasi WhatsApp API', 'Bisa Dikembangkan Bertahap'],
+    slide: {
+    sub: 'Booking, member area, kalkulator harga, dashboard — fitur yang mengikuti cara bisnismu bekerja, bukan sebaliknya.',
+    bullets: ['Dibangun dari nol, 100% milikmu selamanya', 'Integrasi WhatsApp API & pembayaran', 'Slot jadwal terkunci di level database', 'Bisa dikembangkan bertahap sesuai budget'],
+   },
   },
   {
-    n: '05', title: 'Maintenance & SEO', price: 'mulai Rp500rb/bln',
+    n: '04', title: 'Maintenance & SEO', price: 'mulai Rp500rb/bln',
     desc: 'Website dijaga supaya tetap cepat, aman, dan update: backup rutin, perubahan konten, plus laporan performa tiap bulan.',
     tags: ['Backup Mingguan', 'Update Konten', 'Keamanan', 'Laporan Bulanan'],
+    slide: {
+    sub: 'Website itu aset, bukan barang sekali pakai. Kami yang jaga supaya tetap kencang, aman, dan selalu update.',
+    bullets: ['Backup & pengawasan keamanan mingguan', 'Update konten 2×/bulan tanpa ribet', 'Laporan performa tiap bulan', 'Konsultasi strategi digital 1×/bulan'],
+   },
   },
   // {
   //   n: '04', title: 'Toko Online', price: 'mulai Rp6,9 jt',
@@ -121,10 +137,26 @@ export const WHY = [
 
 /* ---------- Proses ---------- */
 export const PROCESS = [
-  { n: '01', t: 'Konsultasi', d: 'Chat / call WhatsApp. Kami dengarkan kebutuhan & budget-mu — gratis, tanpa komitmen.' },
-  { n: '02', t: 'Desain & Konten', d: 'Kami susun struktur, copywriting, dan desain awal. Kamu boleh revisi sebelum masuk koding.' },
-  { n: '03', t: 'Development', d: 'Website dibangun, responsif di HP & laptop, lalu dites menyeluruh. Progress bisa dilihat real-time.' },
-  { n: '04', t: 'Launch & Pelatihan', d: 'Go-live! Kami ajari cara kelola websitenya, lalu support 3 bulan penuh.' },
+  {
+    n: '01', t: 'Konsultasi',
+    d: 'Chat / call WhatsApp. Kami dengarkan kebutuhan & budget-mu — gratis, tanpa komitmen.',
+    points: ['Gratis & tanpa komitmen', 'Boleh cuma tanya-tanya dulu', 'Kami balas cepat di jam kerja'],
+  },
+  {
+    n: '02', t: 'Desain & Konten',
+    d: 'Kami susun struktur, copywriting, dan desain awal. Kamu boleh revisi sebelum masuk koding.',
+    points: ['Revisi desain SEBELUM masuk koding', 'Voice bisnis kamu tetap terdengar', 'Mockup bisa kamu lihat & komentari'],
+  },
+  {
+    n: '03', t: 'Development',
+    d: 'Website dibangun, responsif di HP & laptop, lalu dites menyeluruh. Progress bisa dilihat real-time.',
+    points: ['Progress dipantau tiap hari via link preview', 'Standar performa Lighthouse 95+', 'Dites di HP & laptop sungguhan'],
+  },
+  {
+    n: '04', t: 'Launch & Pelatihan',
+    d: 'Go-live! Kami ajari cara kelola websitenya, lalu support 3 bulan penuh.',
+    points: ['Kami ajari sampai bisa kelola sendiri', 'Support gratis 3 bulan', 'DP 50% → pelunasan setelah kamu setujui'],
+  },
 ]
 
 /* ---------- Paket Harga ---------- */
@@ -253,18 +285,21 @@ export const TESTIMONIALS = [
      biz: 'Pemilik · Barbershop, Depok',
      text: 'Dulu booking lewat chat WhatsApp, saya catat manual di buku — sering keliru, dan pernah dua pelanggan datang di jam yang sama sampai salah satu marah. Sekarang pelanggan booking sendiri dari website, jam yang terisi langsung terkunci, dan tiap booking baru bunyi di HP saya lengkap dengan nama dan jamnya. Pagi hari tinggal buka dashboard: sudah tahu hari ini ada berapa pelanggan dan perkiraan omzet. Antrean di kursi tunggu jauh berkurang karena semua sudah punya jam masing-masing. Ini bukan sekadar website — rasanya seperti menambah satu staf admin yang bekerja 24 jam.',
      imageUrl: 'images/hendra-wijaya.jpg',
+     slideQuote: 'Rasanya seperti menambah satu staf admin yang bekerja 24 jam.',
    },
   {
      name: 'Joko Prasetyo',
      biz: 'Pemilik · Digital Printing, Bekasi',
      text: 'Awalnya ragu, percetakan kecil kok punya website sendiri. Ternyata kurang dari sebulan sudah live dan langsung jalan — pelanggan hitung harga banner sendiri, pesanan masuk ke WhatsApp lengkap dengan ukuran dan jumlah, bahkan sering masuk malam hari saat toko sudah tutup. Sekarang ganti harga atau tambah produk saya kerjakan sendiri dari HP lewat admin panel, nggak perlu nyentuh kode. Investasi yang terasa balik modal dalam hitungan bulan.',
      imageUrl: 'images/joko-prasetyo.jpg',
+     slideQuote: 'Investasi yang terasa balik modal dalam hitungan bulan.',
    },
    {
     name: 'Raka Aditya',
     biz: 'Founder · Kopi Senja, Jakarta',
     text: 'Awalnya kami hanya butuh website sederhana, tapi hasilnya jauh di atas ekspektasi. Desainnya terasa sangat premium dan animasinya halus, membuat brand kami terlihat jauh lebih mapan. Yang paling berdampak: fitur menu interaktif dan booking via WhatsApp sangat memudahkan operasional kami. Pelanggan sering memuji betapa mudahnya melihat menu dan reservasi dari HP. Website ini benar-benar meningkatkan citra dan konversi bisnis kami.',
     imageUrl: 'images/raka-aditya.jpg',
+    slideQuote: 'Website ini benar-benar meningkatkan citra dan konversi bisnis kami.',
   },
 ]
 
@@ -409,4 +444,11 @@ export const CASE_STUDIES = [
     shotNote: 'Menu interaktif + reservasi WA',
     live: 'https://kopisenja.rrdevs.my.id',
   },
+]
+
+/* ---------- Stats JUJUR — update tiap rilis project baru ---------- */
+export const STATS = [
+  { value: PORTFOLIO.length + 1, suffix: '', label: 'Proyek live — semua bisa dicoba' },   // 5 portofolio + Theo Teknik
+  { value: 6, suffix: '', label: 'Industri berbeda kami layani' },                          // AC, barbershop, kopi, batik, printing, arsitektur
+  { value: 3, suffix: '', label: 'Bulan support gratis tiap proyek' },
 ]

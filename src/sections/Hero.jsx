@@ -3,7 +3,7 @@ import Reveal from '../components/ui/Reveal'
 import Scramble from '../components/ui/Scramble'
 import Counter from '../components/ui/Counter'
 import BrowserMock from '../components/home/BrowserMock'
-import { waLink } from '../data/content'
+import { STATS, waLink } from '../data/content'
 
 export default function Hero() {
   const [ready, setReady] = useState(false)
@@ -33,10 +33,13 @@ export default function Hero() {
           </span></span>
           <span className="mask"><span className="hero-note">// balas cepat · Senin–Sabtu 09.00–18.00 WIB</span></span>
           <div className="hero-stats">
-            <div><b><Counter to={37} suffix="+" /></b><small>Website dirilis</small></div>
-            <div><b><Counter to={12} suffix="+" /></b><small>Jenis usaha dilayani</small></div>
-            <div><b><Counter to={98} suffix="%" /></b><small>Klien puas & repeat</small></div>
-          </div>
+           {STATS.map((s) => (
+             <div key={s.label}>
+               <b>0<Counter to={s.value} suffix={s.suffix} />+</b>
+               <small>{s.label}</small>
+             </div>
+           ))}
+         </div>
         </div>
         <Reveal delay={200} className="hero-vis">
           <BrowserMock />

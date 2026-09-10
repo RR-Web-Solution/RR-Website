@@ -1,4 +1,5 @@
 import Reveal from '../components/ui/Reveal'
+import { STATS } from '../data/content'
 
 export default function About() {
   return (
@@ -13,8 +14,10 @@ export default function About() {
             mulai dari landing page jualan, company profile, sampai website full custom 100%.
           </p>
           <p className="about-text">
-            Sejak 2023, <b>37+ website</b> telah kami rilis untuk kedai kopi, kuliner, fashion batik, laundry,
-            bengkel, hingga digital printing.
+              Sejak berdiri awal 2026, <b>0{STATS[0].value}+ website</b> telah kami rilis untuk jasa service AC,
+              barbershop, kedai kopi, batik, percetakan, hingga firma arsitektur — semuanya live dan bisa kamu
+              coba sendiri sekarang. Kami studio muda: setiap proyek dikerjakan langsung oleh founder,
+              bukan dilempar ke tim lain.
           </p>
           <p className="about-code">// dua kepala, satu commit: kepuasan klien.</p>
         </Reveal>
