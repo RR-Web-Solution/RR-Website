@@ -5,7 +5,7 @@ import LandingPage from './pages/LandingPage'
 import PartnerPage from './pages/PartnerPage'
 import JabodetabekPage from './pages/JabodetabekPage'
 import StorySlidesPage from './pages/StorySlidesPage'
-
+import KitPage from './pages/KitPage'
 
 export default function App() {
   return (
@@ -17,6 +17,7 @@ export default function App() {
         <Route path="/partner" element={<PartnerPage />} />
         <Route path="/jabodetabek" element={<JabodetabekPage />} />
         <Route path="/story-slides" element={<StorySlidesPage />} />
+        <Route path="/kit" element={<KitPage />} />
         {/* URL apa pun yang tidak dikenal
             → render Landing, biar ScrollManager yang gulir ke section-nya.
             Sekaligus menghapus halaman putih untuk URL apa pun. */}

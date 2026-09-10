@@ -376,7 +376,7 @@ export const CASE_STUDIES = [
     ],
     stack: ['Next.js', 'PostgreSQL', 'Fonnte WA API', 'Termux · Android'],
     // fun fact tetap pakai nama founder — spesifik, powerful, dan jujur
-    footnote: 'Dibangun 100% oleh Rafael (founder RR Devs) dari tablet Android pakai Termux — tanpa laptop.',
+    footnote: 'Dibangun 100% oleh Rafael dari tablet Android pakai Termux — tanpa laptop.',
     quote: null,
     accent: '#c9a24b',
     shot: '/images/barberpro-portfolio.jpg',

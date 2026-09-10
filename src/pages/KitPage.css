@@ -1,0 +1,112 @@
+.kit-page { background: #11100e; min-height: 100vh; padding: 80px 16px 120px; }
+.kit-bar {
+  max-width: 1100px; margin: 0 auto 40px; color: #F5F1E8;
+  display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;
+}
+.kit-bar h1 { font-family: var(--disp); font-size: 1.4rem; }
+.kit-bar button, .kit-actions button {
+  background: var(--lime); color: #191613; font-weight: 700; font-size: .9rem;
+  padding: .8rem 1.4rem; border-radius: 999px; transition: transform .3s;
+}
+.kit-bar button:hover, .kit-actions button:hover { transform: translateY(-2px); }
+
+.kit-block { margin-bottom: 30px; }
+.kit-preview { zoom: .34; width: 1080px; margin: 0 auto; }
+@media (min-width: 900px) { .kit-preview { zoom: .52; } }
+.kit-actions { text-align: center; margin-top: 14px; }
+
+/* ===== SLIDE (jangan diubah — ini design system) =====
+   .kit-slide is a fixed 1080×1350 flex column: .kit-top, then
+   .kit-mid (flex:1, absorbs the slack), then .kit-foot.
+   .kit-foot used to be position:absolute + bottom:60px, pinned to a
+   fixed spot no matter how tall .kit-mid's content grew. That's what
+   let the fun-fact terminal (3-line title + 4-line body + 6-line
+   terminal) physically run into the footer text instead of pushing
+   it down. .kit-foot is now a normal flow child, so it always sits
+   right after whatever .kit-mid actually rendered — it can't be
+   overlapped, only ever pushed further down. */
+.kit-slide {
+  width: 1080px; height: 1350px; background: #F5F1E8; color: #191613;
+  position: relative; overflow: hidden; padding: 80px 80px 60px;
+  display: flex; flex-direction: column;
+  font-family: var(--body);
+}
+.kit-slide::after {
+  content: '+'; position: absolute; right: 90px; top: 290px;
+  font-family: var(--disp); font-weight: 800; font-size: 130px; color: rgba(25,22,19,.08);
+}
+.kit-top { flex-shrink: 0; display: flex; justify-content: space-between; align-items: center; }
+.kit-logo {
+  background: #191613; color: #F5F1E8; font-family: var(--disp); font-weight: 800;
+  font-size: 34px; padding: 14px 22px; border-radius: 14px;
+}
+.kit-logo b { color: #FF4D00; }
+.kit-handle { font-family: var(--mono); font-size: 26px; color: #6E675C; }
+.kit-mid { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; margin-top: 60px; }
+.kit-chip {
+  width: fit-content; background: #D8F34F; font-family: var(--mono); font-weight: 700;
+  font-size: 26px; letter-spacing: .14em; padding: 14px 28px; border-radius: 999px;
+}
+.kit-title {
+  font-family: var(--disp); font-weight: 800; font-size: 96px;
+  line-height: 1.05; letter-spacing: -.01em; margin-top: 40px;
+}
+.kit-title em { font-style: italic; color: #FF4D00; }
+/* rule of thumb: add class "tight" (titleTight: true in SLIDES) once a
+   title is long enough to risk wrapping to 3 lines at the default 96px */
+.kit-title.tight { font-size: 70px; line-height: 1.1; }
+.kit-body { font-size: 40px; line-height: 1.5; color: #3d3830; max-width: 880px; margin-top: 36px; }
+.kit-bullets { list-style: none; margin-top: 40px; display: grid; gap: 26px; }
+.kit-bullets li { display: flex; gap: 20px; font-size: 40px; font-weight: 600; }
+.kit-bullets li span { color: #FF4D00; font-weight: 800; }
+
+.kit-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 48px; }
+.kit-card {
+  background: #fff; border: 3px solid #191613; border-radius: 24px; padding: 36px;
+  box-shadow: 10px 10px 0 rgba(25,22,19,.9);
+}
+.kit-card b { font-family: var(--disp); font-size: 46px; display: block; }
+.kit-card small { font-family: var(--mono); font-size: 26px; color: #6E675C; }
+.kit-card-avatar {
+  position: relative; width: 96px; height: 96px; border-radius: 999px;
+  overflow: hidden; margin-bottom: 22px;
+  background: #191613; color: #D8F34F;
+}
+.kit-cards .kit-card:nth-child(2) .kit-card-avatar { background: #D8F34F; color: #191613; }
+.kit-card-initial {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  font-family: var(--disp); font-weight: 800; font-size: 40px;
+}
+.kit-card-avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+.kit-stats { display: flex; gap: 60px; margin-top: 52px; border-top: 3px solid rgba(25,22,19,.15); padding-top: 40px; }
+.kit-stats b { font-family: var(--disp); font-weight: 800; font-size: 68px; display: block; }
+.kit-stats small { font-size: 28px; color: #6E675C; }
+
+/* terminal was 30px / line-height 1.9 / 36px padding — sized down a
+   notch so a full 6-line session fits comfortably above the footer */
+.kit-terminal {
+  margin-top: 40px; background: #191613; color: #F5F1E8; border-radius: 24px;
+  padding: 30px 36px; font-family: var(--mono); font-size: 26px; line-height: 1.6;
+  box-shadow: 12px 12px 0 rgba(25,22,19,.25);
+}
+.kit-terminal .g { color: #D8F34F; }
+.kit-terminal .m { color: #8a8378; }
+
+.kit-cta {
+  margin-top: auto; background: #FF4D00; color: #2a0e00; border-radius: 28px;
+  padding: 42px 46px; font-family: var(--disp); font-weight: 800; font-size: 48px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+/* a standalone note (no CTA above it, e.g. slide 1's "geser untuk
+   kenalan →") anchors to the bottom of .kit-mid instead of leaving a
+   dead gap beneath it. A note that follows a CTA (slide 6) stays
+   glued right under that CTA — the more specific selector below wins. */
+.kit-note { margin-top: auto; font-family: var(--mono); font-size: 26px; color: #6E675C; }
+.kit-cta + .kit-note { margin-top: 22px; }
+
+.kit-foot {
+  flex-shrink: 0; margin-top: 28px;
+  display: flex; justify-content: space-between;
+  font-family: var(--mono); font-size: 26px; color: #6E675C;
+}

@@ -49,7 +49,6 @@ export default function StorySlidesPage() {
     return `MULAI Rp${fmt(plan.price)}`
   }
   const dur = (p) => (p.feats.find((f) => /pengerjaan/i.test(f)) || '').replace('Pengerjaan ', '')
-  const funFact = CASE_STUDIES.find((c) => c.id === 'barberpro')?.footnote || ''
 
    const SLIDE_W = 1080
    const SLIDE_H = 1920
@@ -313,8 +312,8 @@ export default function StorySlidesPage() {
         <div className="slide ink ff" data-name={nm('tim', 'funfact')}>
           <img className="logo" src={LOGO} alt="" />
           <span className="chip">// FUN FACT</span>
-          <h2>Kami nggak nunggu kondisi ideal buat mulai.</h2>
-          <p className="sub">{funFact} Bisnis kamu juga nggak perlu nunggu "nanti" buat punya sistem yang bener.</p>
+          <h2>Bagi kami, keterbatasan bukan alasan untuk menunda hasil.</h2>
+          <p className="sub">Sistem di web ini terbukti sukses dibangun oleh Rafael hanya bermodalkan tablet Android. Kami membawa semangat eksekusi cepat ini ke dalam bisnis Anda: tidak perlu modal miliaran atau agensi besar, bisnis Anda bisa punya sistem website yang bener minggu ini juga.</p>
           <footer><span>@rrdevs.my.id</span><span>4/4</span></footer>
         </div>
       </div>

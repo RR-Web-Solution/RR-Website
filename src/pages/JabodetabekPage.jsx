@@ -120,10 +120,8 @@ export default function JabodetabekPage() {
                 <p className="jt-kick">// BUKAN SOAL ALAT</p>
                 <p className="jt-text">
                   Sistem booking paling kompleks di halaman ini dibangun{' '}
-                  <b>100% oleh Rafael (salah satu founder) dari tablet Android pakai Termux — tanpa laptop</b>.
-                  Bukan cerita penderitaan — bukti bahwa kami di RR Devs nggak nunggu kondisi ideal buat mulai.
-                  Kebanyakan bisnis bukan stuck karena kurang alat, tapi karena nunggu "waktu yang tepat".
-                  Sistem kamu bisa jalan minggu ini, dengan apa yang kamu punya sekarang.
+                  <b>100% oleh Rafael menggunakan tablet Android via Termux — tanpa laptop</b>.
+                  Ini bukan cerita penderitaan. Ini bukti bahwa kami di RR Devs tidak pernah menunggu kondisi ideal untuk mulai mengeksekusi. Kebanyakan bisnis stuck bukan karena kurang modal atau alat, tapi karena menunda eksekusi. Bisnis Anda pun bisa mulai melangkah minggu ini, dengan apa yang Anda punya sekarang.
                 </p>
               </div>
             </Reveal>
