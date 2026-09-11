@@ -59,9 +59,9 @@ export default function Nav() {
   return (
     <header className={`nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="wrap nav-in">
-        <a href="/" onClick={handleLogoClick} className="logo" aria-label="RR Web Solution">
+        <a href="/" onClick={handleLogoClick} className="logo" aria-label="RR Devs">
           <span className="logo-mark">R<b>&amp;</b>R</span>
-          <span className="logo-txt">RR·WEB·<b>SOLUTION</b></span>
+          <span className="logo-txt">RR·<b>DEVS</b></span>
         </a>
         <nav className="nav-links">
           {sectionLinks.map((l) => (
@@ -77,7 +77,7 @@ export default function Nav() {
           </Link>
         </nav>
         <div className="nav-right">
-          <a className="btn btn-acc btn-sm" href={waLink('Halo RR Web Solution, saya mau konsultasi gratis soal website untuk bisnis saya 🙂')} target="_blank" rel="noreferrer">
+          <a className="btn btn-acc btn-sm" href={waLink('Halo RR Devs, saya mau konsultasi gratis soal website untuk bisnis saya 🙂')} target="_blank" rel="noreferrer">
             Konsultasi Gratis
           </a>
           <button className={`burger ${open ? 'on' : ''}`} onClick={() => setOpen(!open)} aria-label="Menu">

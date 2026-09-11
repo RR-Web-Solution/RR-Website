@@ -331,7 +331,7 @@ function Nav() {
       <div className="wrap nav-in">
         <Link to="/" className="logo" aria-label="RR Devs">
           <span className="logo-mark">R<b>&amp;</b>R</span>
-          <span className="logo-txt">RR·WEB·<b>SOLUTION</b></span>
+          <span className="logo-txt">RR·<b>DEVS</b></span>
         </Link>
         <nav className="nav-links">
           {links.map((l) => (
@@ -819,7 +819,7 @@ function Footer() {
         <div className="foot-brand">
           <a href="#top" className="logo">
             <span className="logo-mark">R<b>&amp;</b>R</span>
-            <span className="logo-txt">RR·WEB·<b>SOLUTION</b></span>
+            <span className="logo-txt">RR·<b>DEVS</b></span>
           </a>
           <p>Studio website milik Rafael &amp; Rendy. Kami bantu UMKM Indonesia tumbuh lewat website yang cepat, rapi, dan terjangkau.</p>
           <div className="foot-social">
