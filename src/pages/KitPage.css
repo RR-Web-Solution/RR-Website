@@ -164,3 +164,22 @@
 .kit-slide.theme-orange .kit-title em { color: #2a0e00; }
 /* jaga kontras highlight body di atas latar orange */
 .kit-slide.theme-orange .kit-body em { color: #2a0e00; }
+
+/* ===== MODE AUDIT: satu halaman padat, tetap terbaca di HP ===== */
+.kit-slide.audit { padding: 70px 70px 56px; }
+.kit-slide.audit .kit-mid { margin-top: 40px; }
+.kit-slide.audit .kit-chip { font-size: 22px; padding: 12px 24px; }
+.kit-slide.audit .kit-title { font-size: 62px; line-height: 1.1; margin-top: 28px; }
+.kit-slide.audit .kit-bullets { margin-top: 26px; gap: 16px; }
+.kit-slide.audit .kit-bullets li { font-size: 32px; line-height: 1.35; gap: 16px; }
+.kit-slide.audit .kit-note { margin-top: 24px; font-size: 24px; }
+.kit-slide.audit .kit-foot { margin-top: 22px; font-size: 24px; }
+
+/* ===== ALARM OVERFLOW: isi melebihi kartu = JANGAN DIUNDUH ===== */
+.kit-slide.overflow { outline: 8px solid #FF0000; outline-offset: -8px; }
+.kit-slide.overflow::before {
+  content: '⚠ ISI MELUBER — JANGAN DIUNDUH';
+  position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
+  background: #FF0000; color: #fff; font-family: var(--mono); font-weight: 700;
+  font-size: 24px; padding: 10px 22px; border-radius: 999px; z-index: 9;
+}

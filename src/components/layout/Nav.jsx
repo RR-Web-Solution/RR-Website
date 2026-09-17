@@ -75,6 +75,9 @@ export default function Nav() {
           <Link to="/jabodetabek" className={pathname === '/jabodetabek' ? 'active' : ''}>
             <i />Jabodetabek ✦
           </Link>
+          <Link to="/barbershop" className={pathname === '/barbershop' ? 'active' : ''}>
+            <i />Barbershop ✦
+          </Link>
         </nav>
         <div className="nav-right">
           <a className="btn btn-acc btn-sm" href={waLink('Halo RR Devs, saya mau konsultasi gratis soal website untuk bisnis saya 🙂')} target="_blank" rel="noreferrer">
@@ -91,7 +94,8 @@ export default function Nav() {
             <a key={l.id} href={`/#${l.id}`} onClick={(e) => handleSectionClick(e, l.id)}>{l.label}</a>
           ))}
           <Link to="/partner" onClick={() => setOpen(false)}>Partner ✦</Link>
-          <Link to="/jabodetabek" onClick={() => setOpen(false)}>Jabodetabek</Link>
+          <Link to="/jabodetabek" onClick={() => setOpen(false)}>Jabodetabek ✦</Link>
+          <Link to="/barbershop" onClick={() => setOpen(false)}>Barbershop ✦</Link>
         </div>
       )}
     </header>

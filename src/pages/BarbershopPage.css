@@ -1,0 +1,44 @@
+.bs-page { background: #FDFCF9; color: #191613; font-family: var(--body); }
+.bs-wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+.bs-hero { background: #191613; color: #F5F1E8; padding: 96px 0 72px; }
+.bs-kicker { font-family: var(--mono); font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: #D8F34F; }
+.bs-hero h1 { font-family: var(--disp); font-weight: 800; font-size: clamp(40px, 7vw, 76px); line-height: 1.05; margin: 18px 0 20px; max-width: 820px; }
+.bs-hero h1 em { color: #FF4D00; font-style: italic; }
+.bs-sub { max-width: 620px; color: rgba(245,241,232,.78); font-size: 17px; line-height: 1.7; }
+.bs-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.bs-btn { display: inline-block; font-weight: 700; padding: 14px 22px; border-radius: 999px; }
+.bs-btn.primary { background: #FF4D00; color: #191613; }
+.bs-btn.lime { background: #D8F34F; color: #191613; }
+.bs-btn.ghost { border: 2px solid rgba(245,241,232,.4); color: #F5F1E8; }
+.bs-btn.ghost.dark { border-color: rgba(25,22,19,.35); color: #191613; }
+.bs-proof { margin-top: 26px; font-family: var(--mono); font-size: 12px; color: rgba(245,241,232,.55); }
+.bs-section { padding: 72px 0; }
+.bs-section.dark { background: #191613; color: #F5F1E8; }
+.bs-section.cream { background: #F5F1E8; }
+.bs-section h2 { font-family: var(--disp); font-weight: 800; font-size: clamp(28px, 4.4vw, 44px); line-height: 1.15; max-width: 760px; margin-bottom: 14px; }
+.bs-lead { max-width: 640px; line-height: 1.7; opacity: .8; }
+.bs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 30px; }
+.bs-card { border: 2px solid #191613; border-radius: 14px; padding: 20px; background: #FDFCF9; box-shadow: 6px 6px 0 #FF4D00; }
+.bs-tag { font-family: var(--mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; background: #191613; color: #D8F34F; padding: 4px 10px; border-radius: 999px; }
+.bs-card h3 { font-family: var(--disp); font-size: 19px; margin: 12px 0 8px; }
+.bs-card p { font-size: 14.5px; line-height: 1.65; color: #4a4438; }
+.bs-build { list-style: none; display: grid; gap: 14px; margin-top: 26px; max-width: 760px; }
+.bs-build li { padding-left: 30px; position: relative; line-height: 1.65; }
+.bs-build li::before { content: '✓'; position: absolute; left: 0; top: 0; color: #FF4D00; font-weight: 800; }
+.bs-section.dark .bs-build li::before { color: #D8F34F; }
+.bs-note { margin-top: 24px; padding: 14px 18px; border-left: 4px solid #D8F34F; background: rgba(216,243,79,.08); max-width: 760px; line-height: 1.65; }
+.bs-demo { border: 2px solid #191613; border-radius: 16px; padding: 28px; background: #FDFCF9; box-shadow: 8px 8px 0 #D8F34F; max-width: 760px; margin-top: 26px; }
+.bs-demo h3 { font-family: var(--disp); font-size: 22px; margin: 12px 0 10px; }
+.bs-demo p { line-height: 1.7; color: #4a4438; margin-bottom: 18px; }
+.bs-quote { border-left: 4px solid #FF4D00; padding: 6px 0 6px 22px; margin: 26px 0 18px; font-family: var(--disp); font-size: clamp(20px, 3vw, 28px); line-height: 1.4; font-weight: 700; max-width: 820px; }
+.bs-quote cite { display: block; margin-top: 12px; font-family: var(--mono); font-size: 12px; font-style: normal; color: #6E675C; }
+.bs-foot { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 56px; padding-top: 18px; border-top: 1px solid rgba(25,22,19,.15); font-family: var(--mono); font-size: 12px; color: #6E675C; }
+
+/* ===== CTA PENUTUP ===== */
+.bs-final { background: #191613; color: #F5F1E8; padding: 96px 0 88px; text-align: center; }
+.bs-final h2 { font-family: var(--disp); font-weight: 800; font-size: clamp(2rem, 6vw, 4rem); line-height: 1.08; margin: 0 auto 22px; max-width: 900px; }
+.bs-final p { max-width: 620px; margin: 0 auto; color: rgba(245,241,232,.75); line-height: 1.7; }
+.bs-btn.wa { display: inline-block; margin-top: 30px; background: #25D366; color: #0b2015; font-weight: 800; padding: 18px 30px; border-radius: 999px; font-size: 17px; }
+.bs-final-note { font-family: var(--mono); font-size: 12px; color: rgba(245,241,232,.5); padding-top: 16px; }
+.bs-final-alt { padding-top: 26px; font-size: 14px; }
+.bs-final-alt a { color: #D8F34F; font-weight: 700; text-decoration: underline; }

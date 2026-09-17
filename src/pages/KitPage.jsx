@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { toPng } from 'html-to-image'
 import './KitPage.css'
 
@@ -84,8 +84,8 @@ const CAROUSELS = {
      {
        theme: 'orange',
        chip: 'HARGA',
-       title: (<>Transparan. Tanpa <em>biaya siluman.</em></>),
-       body: 'Semua paket sudah termasuk domain .com, hosting, SSL tahun pertama. Tidak ada “oh ini belum termasuk” di tengah jalan.',
+       title: (<>Investasi Jelas, <em>Hasil Berkelas.</em></>),
+       body: 'Mulai dari landing page ringkas hingga sistem kustomasi kompleks, semua biaya tertulis jujur di awal. Sudah lengkap dengan domain, hosting, dan SSL tanpa biaya tersembunyi.',
        note: 'geser → lihat 3 paket',
      },
      {
@@ -93,10 +93,11 @@ const CAROUSELS = {
        title: (<>Landing Page <em>Rp2,5jt.</em></>),
        body: 'Satu halaman fokus jualan. Cocok untuk jasa panggilan, produk tunggal, atau bisnis yang baru mau go online.',
        bullets: [
-         'Desain responsif HP & laptop',
-         'Tombol WhatsApp + form order',
+         '1 halaman desain profesional',
+         'Gratis domain .com + hosting (1 thn)',
+         'Tombol integrasi WhatsApp API',
          'Revisi 2 ronde',
-         'Jadi dalam 5–7 hari',
+         'Jadi dalam 3–7 hari',
        ],
      },
      {
@@ -104,23 +105,38 @@ const CAROUSELS = {
        title: (<>Company Profile <em>Rp4,9jt.</em></>),
        body: 'Website sampai 5 halaman. Bikin bisnismu terlihat mapan & dipercaya — cocok untuk jasa profesional, konsultan, klinik, atau F&B.',
        bullets: [
-         'Galeri, peta & Google Maps',
-         'SEO dasar (meta + sitemap)',
-         'Revisi 3 ronde',
+         'Sampai 5 halaman + galeri & peta lokasi',
+         'Gratis domain .com + hosting (1 thn)',
+         'SEO dasar (supaya bisnismu mudah ditemukan di Google)',
+         'Email bisnis nama@bisnismu.com',
+         'Revisi 5 ronde',
          'Jadi dalam 7–10 hari',
        ],
      },
      {
        chip: 'CUSTOM',
-       title: (<>Toko Online & Custom <em>Rp6,9jt+.</em></>),
+       title: (<>Toko Online & Custom <em>mulai Rp6,9jt.</em></>),
        body: 'Katalog, keranjang, checkout, sampai fitur sesuai cara bisnismu bekerja: booking, kalkulator harga, member area, dll.',
        bullets: [
-         'Panel admin tanpa sentuh kode',
-         'Pembayaran QRIS / transfer',
-         'Revisi 5 ronde',
+         'Dibangun dari nol, 100% milikmu selamanya',
+         'Gratis domain + hosting + SSL (1 tahun)',
+         'Integrasi WhatsApp API & pembayaran',
+         'Dashboard admin custom',
+         'Revisi 10 ronde',
          'Jadi dalam 14–21 hari',
        ],
      },
+     {
+        chip: 'MAINTENANCE',
+        title: (<>Perawatan Web <em>Rp500rb/bln.</em></>),
+        body: 'Website itu aset digital, bukan barang sekali pakai. Kami jaga agar sistem Anda tetap kencang, aman, dan selalu diperbarui.',
+        bullets: [
+          'Backup & pengawasan keamanan mingguan',
+          'Update/revisi konten 2× tiap bulan',
+          'Laporan performa & SEO bulanan',
+          'Konsultasi strategi digital 1×/bulan',
+        ],
+      },
      {
        chip: 'SKEMA BAYAR',
        title: (<>DP 50% → pelunasan <em>setelah jadi.</em></>),
@@ -238,11 +254,36 @@ const CAROUSELS = {
        note: 'balas Sen–Sab 09.00–18.00 WIB',
      },
    ],
+
+  'audit-parveen': [
+     { 
+        audit: true, chip: "AUDIT GRATIS · PARVEEN BARBER'S", title: (<>Biar penawaran kemitraan makin <em>dipercaya.</em></>), bullets: ['Konsep & harga kemitraan transparan sejak halaman pertama.'], pains: ['Proses gabung mitra masih lewat chat manual — tanpa jalur pengajuan terstruktur.', 'Tidak ada halaman ringkas per outlet — jaringan yang berjalan sulit diverifikasi calon mitra.'], close: 'Ini yang kami notice sejauh ini — kalau mau kami bantu benerin, reply aja 🙏' 
+     }
+  ],
+'audit-cukr': [{ audit: true, chip: 'AUDIT GRATIS · CUKR BARBERSHOP', title: (<>3 titik kecil yang bikin calon pelanggan <em>nyasar.</em></>), bullets: ['Halaman legalitas & anti-penipuan (PT Cukr Ralin Dinata) — fondasi trust yang jarang dimiliki brand lain.'], pains: ['Peta cabang di cukr.id ber-watermark "API KEY REQUIRED" — kunci API belum aktif.', 'Tiga "rumah" sekaligus: cukr.id, cukr.co.id, linktr.ee di bio — traffic & SEO terpecah.'], close: 'Ini yang kami notice sejauh ini — kalau mau kami bantu benerin, reply aja 🙏' }],
+'audit-dalamruang': [{ audit: true, chip: 'AUDIT GRATIS · DALAM RUANG HAIR STUDIO', title: (<>Booking 2 cabang masih <em>"numpang" di platform orang.</em></>), bullets: ['IG terverifikasi, ribuan followers, highlight rapi — mesin konten sudah jalan.'], pains: ['Booking terpecah: Minutes Apps + WA manual — satu pelanggan, dua sistem.', 'Data pelanggan berada di platform pihak ketiga, bukan di rumah sendiri.'], close: 'Ini yang kami notice sejauh ini — kalau mau kami bantu benerin, reply aja 🙏' }],
+'audit-barbertopia': [{ audit: true, chip: 'AUDIT GRATIS · BARBERTOPIA', title: (<>Tombol website di Google Maps <em>nyasar.</em></>), bullets: ['IG aktif dengan konten rutin — mesin konten jalan, jalur konversinya yang bocor.'], pains: ['Link "website" di Maps (4,9★ · 348 ulasan) menuju akun IG yang sudah tidak ditemukan.', 'Dua nomor kontak berbeda antara Maps dan bio WA — pelanggan bingung mana yang resmi.'], close: 'Ini yang kami notice sejauh ini — kalau mau kami bantu benerin, reply aja 🙏' }],
+'audit-tamaro': [{ audit: true, chip: 'AUDIT GRATIS · TAMARO BARBER STUDIO', title: (<>Momentum opening yang sayang <em>kelewat.</em></>), bullets: ['IG sangat aktif sejak opening — momentum 90 hari pertama masih terbuka.'], pains: ['Harga & layanan belum tersimpan di highlight — pelanggan baru harus scroll puluhan post.', 'Belum ada website atau jalur booking sendiri — masih WA manual di bio.'], close: 'Ini yang kami notice sejauh ini — kalau mau kami bantu benerin, reply aja 🙏' }],
+'audit-sapiens': [{ audit: true, chip: 'AUDIT GRATIS · SAPIENS BARBERSHOP', title: (<>5 cabang aktif, <em>nol jalur booking online.</em></>), bullets: ['Kelima cabang tercantum aktif di bio & highlight — struktur jaringan sudah rapi.'], pains: ['Listing Maps cabang (kami cek Duren Sawit) tanpa telepon maupun website — pelanggan buntu.', 'Bio IG tanpa link apa pun — lima cabang tanpa satu pintu digital bersama.'], close: 'Ini yang kami notice sejauh ini — kalau mau kami bantu benerin, reply aja 🙏' }],
+'audit-cartel': [{ audit: true, chip: 'AUDIT GRATIS · CARTEL BARBERSHOP', title: (<>Booking yang hilang <em>tiap 24 jam.</em></>), bullets: ['Rating 5,0 dari 86 ulasan sejak baru buka — reputasi terbayar tunai, tinggal dipajang.'], pains: ['Booking dipromosikan lewat Story — besok hilang; yang datang terlambat kehilangan jalurnya.', 'Booking berjalan di aplikasi pihak ketiga — rumah & data pelanggan bukan milik sendiri.'], close: 'Ini yang kami notice sejauh ini — kalau mau kami bantu benerin, reply aja 🙏' }],
+'audit-stud': [{ audit: true, chip: 'AUDIT GRATIS · STUD BARBER STUDIO', title: (<>3 cabang, belum ada halaman yang <em>mengenalkan semuanya.</em></>), bullets: ['Rating 4,9 dari 203 ulasan + cabang Jatibening segera buka — fondasi ekspansi sudah jalan.'], pains: ['Calon pelanggan harus menebak cabang terdekat — tidak ada halaman yang memetakan ketiganya.', `Link menu di Maps mati ("That page doesn't exist") — cek harga berakhir di halaman kosong.`], close: 'Ini yang kami notice sejauh ini — kalau mau kami bantu benerin, reply aja 🙏' }],
+'audit-katto': [{ audit: true, chip: 'AUDIT GRATIS · KATTO BARBERSHOP', title: (<>Diferensiator terbaikmu <em>tak kelihatan di online.</em></>), bullets: ['Rating 4,7 dari 216 ulasan dengan pujian "ramah anak" & "nyaman" — bahan cerita sudah jadi.'], pains: ['Kursi potong anak bentuk mobil — paling dipuji orang tua — tidak muncul di mana pun online.', 'Tidak ada jalur booking: link bio mati (error 410), Maps tanpa telepon maupun website.'], close: 'Ini yang kami notice sejauh ini — kalau mau kami bantu benerin, reply aja 🙏' }],
 }
 
 export default function KitPage() {
   const [key, setKey] = useState('01-perkenalan')
   const SLIDES = CAROUSELS[key]
+
+  useEffect(() => {
+     const t = setTimeout(() => {
+       document.querySelectorAll('.kit-slide').forEach((el) => {
+         const over = el.scrollHeight > el.clientHeight + 4
+         el.classList.toggle('overflow', over)
+         if (over) console.warn('⚠ Slide luber:', el.id)
+       })
+     }, 300)
+     return () => clearTimeout(t)
+   }, [key])
 
   const download = async (i) => {
     const node = document.getElementById(`kit-slide-${i}`)
@@ -274,7 +315,7 @@ export default function KitPage() {
       {SLIDES.map((s, i) => (
         <section className="kit-block" key={`${key}-${i}`}>
           <div className="kit-preview">
-            <div className={`kit-slide ${s.dark ? 'dark' : ''} ${s.theme ? `theme-${s.theme}` : ''}`} id={`kit-slide-${i}`}>
+            <div className={`kit-slide ${s.dark ? 'dark' : ''} ${s.theme ? `theme-${s.theme}` : ''} ${s.audit ? 'audit' : ''}`} id={`kit-slide-${i}`}>
               <div className="kit-top">
                 <span className="kit-logo">R<b>&amp;</b>R</span>
                 <span className="kit-handle">RR DEVS · JAKARTA</span>
@@ -301,6 +342,7 @@ export default function KitPage() {
                 {s.img && <div className="kit-img"><img src={s.img} alt={s.imgAlt || 'Tangkapan layar situs klien RR Devs'} /></div>}
                 {s.quote && <div className="kit-quote"><p>“{s.quote.t}”</p><small>— {s.quote.n}</small></div>}
                 {s.cta && <div className="kit-cta"><span>{s.cta.left}</span><span>{s.cta.right}</span></div>}
+                {s.close && <p className="kit-note">{s.close}</p>}
               </div>
               <div className="kit-foot">
                 <span>rrdevs.my.id</span>

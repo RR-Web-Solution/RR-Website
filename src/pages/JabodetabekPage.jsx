@@ -200,7 +200,7 @@ export default function JabodetabekPage() {
                 katalog. Gratis, tanpa komitmen. Meeting online atau kami datang ke lokasi (Jabodetabek).
               </p>
               <a className="btn btn-wa btn-big" href={waLink(WA_MSG)} target="_blank" rel="noreferrer">
-                Chat WhatsApp — Mulai Obrolan <span className="btn-arrow">→</span>
+                Ceritakan bisnis Anda — GRATIS <span className="btn-arrow">→</span>
               </a>
               <p className="jkt-final-note">// balas cepat · Senin–Sabtu 09.00–18.00 WIB</p>
             </Reveal>

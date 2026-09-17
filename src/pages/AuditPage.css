@@ -1,0 +1,124 @@
+/* ============ LAYAR ============ */
+.audit-wrap { background: #e9e5dd; padding: 48px 16px 140px; }
+.audit-doc {
+  max-width: 820px; margin: 0 auto; background: #FDFCF9; color: #191613;
+  font-family: var(--body); font-size: 15px; line-height: 1.75;
+  box-shadow: 0 24px 70px rgba(25,22,19,.22);
+}
+.a-section { padding: 52px 64px; }
+.a-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 64px; }
+.a-logo { background: #F5F1E8; color: #191613; font-family: var(--disp); font-weight: 800; font-size: 20px; padding: 8px 14px; border-radius: 10px; }
+.a-logo b { color: #FF4D00; }
+.a-docno { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; color: rgba(245,241,232,.55); }
+.a-cover { background: #191613; color: #F5F1E8; padding: 52px 64px 44px; }
+.a-kicker { font-family: var(--mono); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: #D8F34F; }
+.a-cover h1 { font-family: var(--disp); font-weight: 800; font-size: 46px; line-height: 1.1; margin: 18px 0 14px; }
+.a-sub { color: rgba(245,241,232,.72); max-width: 560px; }
+.a-points { list-style: none; margin: 34px 0 40px; display: grid; gap: 12px; }
+.a-points li { padding-left: 26px; position: relative; }
+.a-points li::before { content: '—'; position: absolute; left: 0; color: #FF4D00; font-weight: 800; }
+.a-conf { font-family: var(--mono); font-size: 11px; color: rgba(245,241,232,.45); border-top: 1px solid rgba(245,241,232,.18); padding-top: 16px; }
+.a-section h2 { font-family: var(--disp); font-size: 24px; border-bottom: 3px solid #D8F34F; padding-bottom: 10px; margin-bottom: 18px; }
+.a-lead { color: #4a4438; max-width: 640px; }
+.a-finding { margin-top: 34px; }
+.a-finding h3 { font-family: var(--disp); font-size: 18px; margin-bottom: 12px; }
+.a-ev { margin: 14px 0 16px; }
+.a-ev-img { position: relative; border: 1px solid rgba(25,22,19,.15); border-radius: 10px; overflow: hidden; }
+.a-ev-img + .a-ev-img { margin-top: 14px; }
+.a-ev-img img { width: 100%; display: block; }
+.a-ring { position: absolute; border: 3px solid #D93025; border-radius: 14px; pointer-events: none; }
+.a-ring i {
+  position: absolute; top: -12px; left: -12px; width: 24px; height: 24px; border-radius: 999px;
+  background: #D93025; color: #fff; font-style: normal; font-weight: 700; font-size: 13px;
+  display: grid; place-items: center; font-family: var(--mono);
+}
+/* .a-ev-label {
+  position: absolute; top: 30px; right: 10px; z-index: 2;
+  background: #191613; color: #F5F1E8; font-family: var(--mono);
+  font-size: 11px; letter-spacing: .1em; padding: 4px 8px; border-radius: 6px;
+} */
+
+/* .a-ring { position: absolute; border: 3px solid #D93025; border-radius: 50%; pointer-events: none; }
+.a-ring i {
+  position: absolute; top: 14%; left: 15%; width: 24px; height: 24px; border-radius: 999px;
+  background: rgba(0,0,0,0.9); color: #fff; font-style: normal; font-weight: 700; font-size: 14px;
+  display: grid; place-items: center; font-family: var(--mono);
+} */
+.a-ev-label {
+  position: absolute; bottom: 10px; right: 10px; z-index: 2;
+  background: #191613; color: #F5F1E8; font-family: var(--mono);
+  font-size: 11px; letter-spacing: .1em; padding: 4px 8px; border-radius: 6px;
+  white-space: pre-line;
+}
+
+.a-ev figcaption { font-family: var(--mono); font-size: 12px; color: #6E675C; margin-top: 8px; white-space: pre-line; }
+.a-obs { margin-top: 6px; }
+.a-impact { background: #F5F1E8; border-left: 4px solid #FF4D00; padding: 12px 16px; border-radius: 0 8px 8px 0; margin-top: 10px; }
+.a-flow { margin: 22px 0 26px; display: grid; gap: 14px; }
+.a-flow-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.a-flow-label { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #6E675C; width: 128px; flex-shrink: 0; }
+.a-box { border: 2px solid #191613; border-radius: 10px; padding: 8px 12px; font-size: 13px; font-weight: 600; background: #fff; }
+.a-box.next { background: #D8F34F; }
+.a-arrow { color: #FF4D00; font-weight: 800; }
+.a-section h3 { font-family: var(--disp); font-size: 16px; margin: 20px 0 8px; }
+.a-build { list-style: none; display: grid; gap: 8px; }
+.a-build li { padding-left: 24px; position: relative; }
+.a-build li::before { content: '✓'; position: absolute; left: 0; color: #FF4D00; font-weight: 800; }
+.a-keep { color: #4a4438; }
+.a-close { background: #F5F1E8; }
+.a-contact { list-style: none; margin: 18px 0; display: grid; gap: 6px; font-family: var(--mono); font-size: 13px; }
+.a-disc { font-size: 12px; color: #6E675C; border-top: 1px solid rgba(25,22,19,.15); padding-top: 14px; }
+.a-actions { text-align: center; margin-top: 26px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.a-actions button { background: #191613; color: #D8F34F; font-weight: 700; padding: .9rem 1.6rem; border-radius: 999px; }
+.a-index { max-width: 600px; margin: 0 auto; font-family: var(--mono); }
+.a-index a { color: #191613; font-weight: 700; }
+
+/* ============================================================
+   CETAK — satu-satunya blok print di file ini.
+   Default = SATU HALAMAN PANJANG (ukuran disetel otomatis via JS).
+   body.print-a4 = mode A4 berhalaman (untuk cetak kertas).
+   ============================================================ */
+@page { size: A4; margin: 0; }
+@media print {
+  /* warna & background wajib tercetak (tanpa centang dialog) */
+  .audit-doc, .audit-doc * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* buang navbar/footer situs */
+  nav, footer, header:not(.a-head),
+  .navbar, .nav, .Nav, .site-header, .topbar, .footer, .site-footer,
+  .no-print { display: none !important; }
+  #root > *:not(:has(.audit-doc)) { display: none !important; }
+  #root > * > *:not(:has(.audit-doc)):not(.audit-doc):not(.audit-doc *) { display: none !important; }
+
+  body { padding: 0 !important; background: #fff !important; }
+  .audit-wrap { padding: 0; background: #fff; }
+  .audit-doc { max-width: none; box-shadow: none; }
+
+  /* bukti: kotak mengerut mengikuti gambar → koordinat cincin tetap valid */
+  .a-ev-img { width: fit-content; max-width: 100%; margin: 0 auto; }
+  .a-ev-img img { width: auto; max-width: 100%; height: auto; max-height: 120mm; }
+
+  /* ----- MODE PANJANG (default): tanpa patahan sama sekali ----- */
+  body:not(.print-a4) .a-cover { padding: 16mm 14mm 12mm; }
+  body:not(.print-a4) .a-section { padding: 10mm 14mm; }
+
+  /* ----- MODE A4 (opsional, hanya untuk cetak kertas) ----- */
+  body.print-a4 .a-cover { padding: 14mm 16mm; min-height: 296mm; box-sizing: border-box; break-inside: avoid; break-after: page; }
+  body.print-a4 .a-section { padding: 12mm 14mm; break-inside: auto; }
+  body.print-a4 .a-ev { break-inside: auto; margin: 10px 0 12px; }
+  body.print-a4 .a-ev-img { break-inside: avoid; }
+  body.print-a4 .a-ev figcaption { break-inside: avoid; break-before: avoid; }
+  body.print-a4 .a-section h2, body.print-a4 .a-section h3, body.print-a4 .a-finding h3 { break-after: avoid; }
+  body.print-a4 .a-obs, body.print-a4 .a-impact, body.print-a4 .a-flow, body.print-a4 .a-flow-row,
+  body.print-a4 .a-build, body.print-a4 .a-keep, body.print-a4 .a-contact, body.print-a4 .a-disc { break-inside: avoid; }
+  body.print-a4 .a-obs { break-after: avoid; }
+  body.print-a4 .a-impact { break-before: avoid; }
+  body.print-a4 .a-close { break-inside: avoid; }
+  body.print-a4 p, body.print-a4 li { orphans: 3; widows: 3; }
+}
+.a-finding .a-ev { margin-top: 16px; }
+
+/* SECTION 2 UTUH: bila tidak muat di sisa halaman, pindah seluruhnya */
+.a-rec { break-inside: avoid; }
+/* SECTION 2 UTUH — spesifisitas dinaikkan agar mengalahkan .a-section mode A4 */
+body.print-a4 .a-section.a-rec { break-inside: avoid; }

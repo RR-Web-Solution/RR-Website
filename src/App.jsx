@@ -7,6 +7,8 @@ import JabodetabekPage from './pages/JabodetabekPage'
 import StorySlidesPage from './pages/StorySlidesPage'
 import KitPage from './pages/KitPage'
 import SolusiPage from './pages/SolusiPage'
+import AuditPage from './pages/AuditPage'
+import BarbershopPage from './pages/BarbershopPage'
 
 export default function App() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
         <Route path="/story-slides" element={<StorySlidesPage />} />
         <Route path="/kit" element={<KitPage />} />
         <Route path="/solusi" element={<SolusiPage />} />
+        <Route path="/audit/:slug" element={<AuditPage />} />
+        <Route path="/barbershop" element={<BarbershopPage />} />
         {/* URL apa pun yang tidak dikenal
             → render Landing, biar ScrollManager yang gulir ke section-nya.
             Sekaligus menghapus halaman putih untuk URL apa pun. */}

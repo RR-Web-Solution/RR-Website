@@ -470,7 +470,7 @@ mark { background: var(--lime); padding: 0 .35em; box-decoration-break: clone; -
 .final-mail:hover { color: #fff; border-color: #fff; }
 
 /* ============ FOOTER ============ */
-.footer { background: var(--ink); color: var(--cream); padding: 90px 0 0; }
+.footer { background: var(--ink); color: var(--cream); padding: 90px 0 20px 0; }
 .foot-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.4fr; gap: 48px; padding-bottom: 64px; }
 .foot-brand p { color: rgba(245,241,232,.6); margin: 22px 0; max-width: 320px; font-size: .95rem; }
 .foot-social { display: flex; gap: 16px; flex-wrap: wrap; }
