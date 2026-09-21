@@ -1,5 +1,4 @@
 import Reveal from '../components/ui/Reveal'
-import { STATS } from '../data/content'
 
 export default function About() {
   return (
@@ -7,28 +6,27 @@ export default function About() {
       <div className="wrap about-grid">
         <Reveal className="about-copy">
           <p className="kick"><span>(01)</span> — Tentang Kami</p>
-          <h2 className="h2">Dua sahabat, satu misi: <br />UMKM Indonesia naik kelas.</h2>
+          <h2 className="h2">Dua sahabat, satu fokus: <br />sistem booking yang benar-benar dipakai.</h2>
           <p className="about-text">
-            RR Devs lahir dari dua sahabat — <b>Rafael</b> &amp; <b>Rendy</b> — yang percaya usaha kecil Indonesia{' '}
-            <mark>layak tampil sekelas brand besar</mark> di internet. Kami merancang dan membangun website untuk UMKM:
-            mulai dari landing page jualan, company profile, sampai website full custom 100%.
+            RR Devs lahir dari dua sahabat — <b>Rafael</b> & <b>Rendy</b> — yang percaya barbershop dan UMKM Indonesia
+            layak punya sistem milik sendiri, <mark>bukan numpang aplikasi orang</mark>. Fokus kami: sistem booking
+            yang membuat pelanggan pilih jam sendiri, slot terkunci otomatis, dan owner pegang kendali penuh atas datanya.
           </p>
           <p className="about-text">
-              Sejak berdiri awal 2026, <b>0{STATS[0].value}+ website</b> telah kami rilis untuk jasa service AC,
-              barbershop, kedai kopi, batik, percetakan, hingga firma arsitektur — semuanya live dan bisa kamu
-              coba sendiri sekarang. Kami studio muda: setiap proyek dikerjakan langsung oleh founder,
-              bukan dilempar ke tim lain.
+            Selain itu kami tetap mengerjakan landing page, company profile, dan website custom — tapi kalimat pertama
+            kami selalu sama: <b>bukti, bukan janji</b>. Sejak awal 2026 kami merilis satu sistem booking production
+            (BarberPro), satu klien nyata yang masih live, dan menyusun 20+ audit digital barbershop Jabodetabek.
           </p>
           <p className="about-code">// dua kepala, satu commit: kepuasan klien.</p>
         </Reveal>
         <div className="about-duo">
           <Reveal delay={120} className="founder f-a">
             <img src="images/rafael.jpg" alt="Rafael, co-founder RR Devs" loading="lazy" />
-            <div className="founder-cap"><b>Rafael</b><small>Desain &amp; Front-End</small></div>
+            <div className="founder-cap"><b>Rafael</b><small>Desain & Front-End</small></div>
           </Reveal>
           <Reveal delay={260} className="founder f-b">
             <img src="images/rendy.jpg" alt="Rendy, co-founder RR Devs" loading="lazy" width="640" height="800" />
-            <div className="founder-cap"><b>Rendy</b><small>Back-End &amp; Strategi</small></div>
+            <div className="founder-cap"><b>Rendy</b><small>Back-End & Strategi</small></div>
           </Reveal>
         </div>
       </div>

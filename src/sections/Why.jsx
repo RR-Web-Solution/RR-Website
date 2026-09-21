@@ -9,7 +9,7 @@ export default function Why() {
           <div className="why-sticky">
             <Reveal>
               <p className="kick"><span>(03)</span> — Keunggulan</p>
-              <h2 className="h2">Kenapa UMKM memilih RR?</h2>
+              <h2 className="h2">Kenapa Barbershop memilih RR?</h2>
               <p className="why-desc">
                 Kami bukan agensi besar dengan harga korporat. Kami dua orang yang turun tangan langsung —
                 dari briefing sampai website-mu ramai pengunjung.
@@ -17,7 +17,7 @@ export default function Why() {
               <div className="why-badges">
                 <span>✦ Respons &lt; 1 jam</span>
                 <span>✦ Kontrak &amp; invoice jelas</span>
-                <span>✦ Garansi support 3 bulan</span>
+                <span>✦ Garansi support 30 hari</span>
               </div>
             </Reveal>
           </div>

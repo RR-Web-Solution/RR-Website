@@ -10,6 +10,7 @@ import Testimonials from '../sections/Testimonials'
 import AgencyPartner from '../sections/AgencyPartner'
 import FinalCTA from '../sections/FinalCTA'
 import Footer from '../components/layout/Footer'
+import BarberPro from '../sections/BarberPro'
 
 export default function LandingPage() {
   return (
@@ -17,6 +18,7 @@ export default function LandingPage() {
       <main>
         <Hero />
         <Ticker />
+        <BarberPro />
         <About />
         <Services />
         <Why />

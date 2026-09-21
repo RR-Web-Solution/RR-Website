@@ -1,30 +1,45 @@
 import { useEffect, useState } from 'react'
-import { prefersReduced } from '../../utils/motion'
 
-const GLYPHS = '█▓▒░#%&@*+=?/'
+const CHARS = '!<>-_\\/[]{}—=+*^?#'
 
-export default function Scramble({ text, delay = 0 }) {
-  const [val, setVal] = useState(() => (prefersReduced() ? text : '\u00A0'))
+export default function Scramble({ text = '', delay = 0, className = '' }) {
+  const [out, setOut] = useState(text)
 
   useEffect(() => {
-    if (prefersReduced()) { setVal(text); return }
-    let raf, start = null
-    const dur = 950
-    const tick = (t) => {
-      if (start === null) start = t
-      const p = Math.min(1, (t - start - delay) / dur)
-      if (p < 0) { raf = requestAnimationFrame(tick); return }
-      const reveal = Math.floor(p * text.length)
-      let s = text.slice(0, reveal)
-      for (let i = reveal; i < text.length; i++) {
-        s += text[i] === ' ' ? ' ' : GLYPHS[Math.floor(Math.random() * GLYPHS.length)]
-      }
-      setVal(s)
-      if (p < 1) raf = requestAnimationFrame(tick)
+    let interval = null
+    let frame = 0
+    const timeout = setTimeout(() => {
+      interval = setInterval(() => {
+        frame += 1
+        const progress = Math.floor(frame / 2)
+        setOut(
+          text
+            .split('')
+            .map((c, i) => {
+              if (i < progress) return c
+              if (c === ' ') return ' '
+              return CHARS[Math.floor(Math.random() * CHARS.length)]
+            })
+            .join('')
+        )
+        if (progress >= text.length) {
+          clearInterval(interval)
+          setOut(text)
+        }
+      }, 40)
+    }, delay)
+    return () => {
+      clearTimeout(timeout)
+      if (interval) clearInterval(interval)
     }
-    raf = requestAnimationFrame(tick)
-    return () => cancelAnimationFrame(raf)
   }, [text, delay])
 
-  return <span className="scramble">{val}</span>
+  return (
+    <span className={`scramble ${className}`.trim()}>
+      {/* GHOST: teks final tak terlihat yang menahan lebar & tinggi tetap */}
+      <span className="scramble-ghost" aria-hidden="true">{text}</span>
+      {/* LIVE: teks glitch yang menimpa ghost tanpa mempengaruhi layout */}
+      <span className="scramble-live">{out}</span>
+    </span>
+  )
 }

@@ -4,7 +4,8 @@ import SectionHead from '../components/ui/SectionHead'
 import { SERVICES, waLink } from '../data/content'
 
 export default function Services() {
-  const [open, setOpen] = useState(0)
+  const [open, setOpen] = useState(2)
+
   return (
     <section className="sec services" id="layanan">
       <div className="wrap">
@@ -13,7 +14,13 @@ export default function Services() {
           {SERVICES.map((s, i) => (
             <Reveal key={s.n} delay={i * 70}>
               <div className={`svc ${open === i ? 'open' : ''}`}>
-                <button type="button" className="svc-head" onClick={() => setOpen(open === i ? -1 : i)} aria-expanded={open === i} aria-controls={`service-panel-${i}`}>
+                <button
+                  type="button"
+                  className="svc-head"
+                  onClick={() => setOpen(open === i ? -1 : i)}
+                  aria-expanded={open === i}
+                  aria-controls={`service-panel-${i}`}
+                >
                   <span className="svc-n">{s.n}</span>
                   <span className="svc-t">
                     {s.title}
@@ -25,7 +32,7 @@ export default function Services() {
                 <div className="svc-body" id={`service-panel-${i}`}>
                   <div className="svc-body-in">
                     <p>{s.desc}</p>
-                    <div className="svc-tags">{s.tags.map((t) => (<span key={t}>{t}</span>))}</div>
+                    <div className="svc-tags">{s.tags.map((t) => <span key={t}>{t}</span>)}</div>
                     <a href={waLink(`Halo, saya tertarik layanan ${s.title} (${s.price}). Bisa dibantu?`)} target="_blank" rel="noreferrer">
                       Konsultasi layanan ini →
                     </a>

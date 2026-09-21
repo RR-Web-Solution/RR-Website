@@ -1,5 +1,6 @@
 import './BarbershopPage.css'
 import Footer from '../components/layout/Footer'
+import BarberPro from '../sections/BarberPro'
 
 const WA = 'https://wa.me/6283171125657?text=Halo+RR+Devs,%0ASaya+mau+konsultasi+gratis'
 const WA_AUDIT = 'https://wa.me/6283171125657?text=Halo+RR+Devs,%0ABoleh+saya+minta+audit+Gratis?'
@@ -54,24 +55,14 @@ export default function BarbershopPage() {
         </div>
       </section>
 
-      <section className="bs-section">
-        <div className="bs-wrap">
-          <h2>Jangan percaya kami. Coba sendiri.</h2>
-          <div className="bs-demo">
-            <span className="bs-tag">Demo live — sistem contoh, bukan klien</span>
-            <h3>BarberPro · barbershop fiktif dengan sistem sungguhan</h3>
-            <p>Masuk sebagai pelanggan: pilih layanan, pilih barber, pilih tanggal. Lalu masuk sebagai owner: lihat dashboard pendapatan dan konfirmasi booking. Semua bisa kamu klik sekarang.</p>
-            <a className="bs-btn primary" href="https://barberpro.rrdevs.my.id">Buka barberpro.rrdevs.my.id →</a>
-          </div>
-        </div>
-      </section>
+      <BarberPro />
 
       <section className="bs-section cream">
         <div className="bs-wrap">
           <h2>Tetangga yang sudah lebih dulu</h2>
           <blockquote className="bs-quote">
-            "Sejak ada web, orderan WA nambah dan pelanggan baru lebih gampang percaya. Ternyata website ngebantu bisnis saya banget."
-            <cite>— Charles Pardede · Theo Teknik, service AC Cakung (klien pertama kami)</cite>
+            "Sejak ada web, orderan WA nambah dan pelanggan baru lebih gampang percaya."
+            <cite>— Pemilik · Theo Teknik, service AC Cakung (klien pertama kami)</cite>
           </blockquote>
           <p className="bs-lead">
             Theo bukan barbershop — dia bukti sistemnya bekerja. Untuk rasa barbershop, ada demo BarberPro di atas.
@@ -112,7 +103,7 @@ export default function BarbershopPage() {
       {/* ===== CTA PENUTUP — gaya /jabodetabek ===== */}
       <section className="bs-final">
         <div className="bs-wrap">
-          <h2>Siap bikin pelanggan booking sendiri — bahkan saat kamu lagi megang clipper?</h2>
+          <h2>Siap bikin pelanggan booking sendiri — bahkan saat kamu tidak sedang di toko?</h2>
           <p>
             Ceritakan barbershopmu 15 menit — kami sketsakan sistem yang paling cocok:
             booking per cabang, daftar harga permanen, atau mulai dari audit gratis.

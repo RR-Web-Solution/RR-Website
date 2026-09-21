@@ -1,37 +1,30 @@
 /* ============================================================
-   RR DEVS — Pusat konten.
+   RR DEVS — Pusat konten (versi mesin penjualan barbershop).
    Ubah teks, harga & kontak cukup di file ini.
    ============================================================ */
-
 export const WA_NUMBER = '6283171125657'
 export const waLink = (msg) => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`
 export const fmt = (n) => n.toLocaleString('id-ID')
+export const track = (name, extra = {}) => { try { window.gtag?.('event', name, extra) } catch (e) {} }
+export const WA_MSG_BARBER = 'Halo RR Devs, saya punya barbershop dan mau lihat sistem bookingnya 🙂'
 
-const _makeDemoImage = ({ label, accent, bg, text }) => {
-  const svg = `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
-      <defs>
-        <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-          <stop offset="0%" stop-color="${bg}"/>
-          <stop offset="100%" stop-color="${accent}"/>
-        </linearGradient>
-      </defs>
-      <rect width="800" height="560" fill="url(#g)"/>
-      <circle cx="670" cy="120" r="120" fill="rgba(255,255,255,0.18)"/>
-      <rect x="70" y="120" width="300" height="180" rx="24" fill="rgba(255,255,255,0.16)"/>
-      <rect x="100" y="162" width="160" height="12" rx="6" fill="rgba(255,255,255,0.8)"/>
-      <rect x="100" y="184" width="230" height="12" rx="6" fill="rgba(255,255,255,0.58)"/>
-      <rect x="100" y="206" width="200" height="12" rx="6" fill="rgba(255,255,255,0.4)"/>
-      <rect x="70" y="352" width="200" height="56" rx="16" fill="rgba(255,255,255,0.82)"/>
-      <text x="95" y="390" font-size="32" font-family="Arial, sans-serif" font-weight="700" fill="${text}">${label}</text>
-    </svg>
-  `
-
-  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`
-}
-
-/* ---------- Hero: demo website di browser mockup ---------- */
+/* ---------- Hero: demo website di browser mockup (BarberPro pertama) ---------- */
 export const DEMOS = [
+  {
+    id: 'barber',
+    short: 'Barbershop',
+    brand: 'BARBERPRO',
+    tag: 'Sistem Booking · Demo Live',
+    accent: '#FF4D00',
+    soft: '#FFF3EC',
+    nav: ['Booking', 'Layanan', 'Harga'],
+    headline: 'Pelanggan pilih jam sendiri.',
+    sub: 'Slot terisi otomatis terkunci. Tanpa double-book.',
+    cta: 'Book Sekarang',
+    feats: ['Notifikasi WA otomatis', 'Dashboard owner', 'Slot terkunci real-time'],
+    seed: 'barberpro-demo',
+    urlImages: '/images/barberpro-portfolio.jpg',
+  },
   {
     id: 'kopi',
     short: 'Kedai Kopi',
@@ -79,242 +72,193 @@ export const DEMOS = [
   },
 ]
 
-export const TICKER = ['Landing Page', 'Company Profile', 'Website Custom (Unggulan)', 'Redesain Website', 'Undangan Digital', 'Maintenance & SEO']
-// 'Toko Online' (menyusul)
+export const TICKER = [
+  'Sistem Booking Barbershop', 'BarberPro — Demo Live', 'Tanpa Double-Booking',
+  'Notifikasi WhatsApp Otomatis', 'Dashboard Owner', 'Setup ±14 Hari', 'Jabodetabek',
+]
 
-/* ---------- Layanan ---------- */
+/* ---------- Layanan (BarberPro unggulan pertama) ---------- */
 export const SERVICES = [
   {
-    n: '01', title: 'Landing Page', price: 'mulai Rp2,5 jt',
+    n: '01', title: 'BarberPro — Sistem Booking', price: 'Rp 3,9 jt', hot: true,
+    desc: 'Produk utama kami. Pelanggan pilih layanan, kapster, dan jam dari HP. Slot yang sudah diambil terkunci otomatis (tanpa double-booking). Notifikasi langsung ke WhatsApp toko + dashboard admin.',
+    tags: ['Booking Real-Time', 'Notifikasi WA', 'Dashboard', '14 hari'],
+    slide: {
+      sub: 'Bukan sekadar website cantik. Ini sistem operasional yang membuat kursi tidak bentrok dan pemilik tahu omzet hari itu.',
+      bullets: ['Overlap-proof di level database', 'Branding toko diganti milik kamu', 'Training singkat saat serah-terima', 'Support 30 hari setelah live'],
+    },
+  },
+  {
+    n: '02', title: 'Landing Page', price: 'mulai Rp2,5 jt',
     desc: 'Satu halaman yang fokusnya satu: membuat pengunjung menghubungi / memesan. Cocok untuk produk tunggal, promo, atau jasa lokal yang butuh presence cepat.',
     tags: ['1 Halaman', 'Tombol WhatsApp', 'Form Order', 'Mobile-first'],
     slide: {
-    sub: '3 detik pertama menentukan semuanya. Kami bikin halaman yang membuat pengunjung langsung chat — bukan scroll lalu pergi.',
-    bullets: ['CTA WhatsApp di setiap lipatan layar', 'Copywriting menjual, bukan sekadar indah', 'Gratis domain + hosting 1 tahun', 'Live 3–7 hari — cepat balik modal'],
-   },
+      sub: '3 detik pertama menentukan semuanya. Kami bikin halaman yang membuat pengunjung langsung chat — bukan scroll lalu pergi.',
+      bullets: ['CTA WhatsApp di setiap lipatan layar', 'Copywriting menjual, bukan sekadar indah', 'Gratis domain + hosting 1 tahun', 'Live 3–7 hari'],
+    },
   },
   {
-    n: '02', title: 'Company Profile', price: 'mulai Rp4,5 jt',
+    n: '03', title: 'Company Profile', price: 'mulai Rp4,5 jt',
     desc: 'Website 5 halaman yang membuat bisnismu terlihat mapan dan terpercaya di mata pelanggan, mitra, maupun calon investor.',
     tags: ['Sampai 5 Halaman', 'Galeri & Peta', 'SEO Dasar', 'Email Bisnis'],
     slide: {
-    sub: 'Calon klien besar googling bisnismu sebelum deal. Pastikan yang mereka temukan terlihat mapan — bukan akun medsos saja.',
-    bullets: ['Sampai 5 halaman + galeri & peta lokasi', 'SEO dasar biar mudah ditemukan Google', 'Email bisnis nama@bisnismu.com', 'Jadi 7–10 hari'],
-   },
+      sub: 'Calon klien besar googling bisnismu sebelum deal. Pastikan yang mereka temukan terlihat mapan — bukan akun medsos saja.',
+      bullets: ['Struktur jelas: Beranda, Tentang, Layanan, Galeri, Kontak', 'Optimasi dasar agar mudah ditemukan Google', 'Gratis domain + hosting 1 tahun'],
+    },
   },
   {
-    n: '03', title: 'Website Custom', price: 'mulai Rp6,5 jt', hot: true,
-    desc: 'Bisnismu unik — websitenya juga harus. Kami rancang dan bangun website dengan fitur yang benar-benar pas dengan cara kerjamu: sistem booking & reservasi, member area, kalkulator harga otomatis, integrasi WhatsApp API, sampai dashboard laporan penjualan. Bukan template, dibangun dari nol, dan 100% jadi milikmu selamanya.',
-    tags: ['Fitur 100% Sesuai Kebutuhan', 'Sistem Booking / Reservasi', 'Integrasi WhatsApp API', 'Bisa Dikembangkan Bertahap'],
+    n: '04', title: 'Website Custom', price: 'mulai Rp6,5 jt',
+    desc: 'Fitur sesuai kebutuhan: booking multi-cabang, member, kalkulator harga, dashboard laporan, dll. Dibangun dari nol dan 100% jadi milikmu selamanya.',
+    tags: ['Fitur Custom', 'Integrasi WA API', 'Dashboard', 'Skalabel'],
     slide: {
-    sub: 'Booking, member area, kalkulator harga, dashboard — fitur yang mengikuti cara bisnismu bekerja, bukan sebaliknya.',
-    bullets: ['Dibangun dari nol, 100% milikmu selamanya', 'Integrasi WhatsApp API & pembayaran', 'Slot jadwal terkunci di level database', 'Bisa dikembangkan bertahap sesuai budget'],
-   },
+      sub: 'Kalau kebutuhanmu di luar BarberPro standar, kita bahas dulu scopenya. Timeline jujur 2–4 minggu.',
+      bullets: ['Konsultasi 1-on-1 sebelum mulai', 'Dokumentasi + pelatihan', 'Bisa dikembangkan bertahap'],
+    },
   },
   {
-    n: '04', title: 'Maintenance & SEO', price: 'mulai Rp500rb/bln',
+    n: '05', title: 'Maintenance & SEO', price: 'Rp350rb/bln',
     desc: 'Website dijaga supaya tetap cepat, aman, dan update: backup rutin, perubahan konten, plus laporan performa tiap bulan.',
     tags: ['Backup Mingguan', 'Update Konten', 'Keamanan', 'Laporan Bulanan'],
     slide: {
-    sub: 'Website itu aset, bukan barang sekali pakai. Kami yang jaga supaya tetap kencang, aman, dan selalu update.',
-    bullets: ['Backup & pengawasan keamanan mingguan', 'Update konten 2×/bulan tanpa ribet', 'Laporan performa tiap bulan', 'Konsultasi strategi digital 1×/bulan'],
-   },
+      sub: 'Website itu aset, bukan barang sekali pakai. Kami yang jaga supaya tetap kencang, aman, dan selalu update.',
+      bullets: ['Backup & pengawasan keamanan mingguan', 'Update konten 2×/bulan tanpa ribet', 'Laporan performa tiap bulan'],
+    },
   },
-  // {
-  //   n: '04', title: 'Toko Online', price: 'mulai Rp6,9 jt',
-  //   desc: 'Katalog produk lengkap dengan keranjang, checkout, dan pembayaran. Kamu kelola produk sendiri lewat panel admin — tanpa biaya komisi marketplace.',
-  //   tags: ['Katalog & Keranjang', 'Pembayaran QRIS', 'Panel Admin', 'Laporan Penjualan'],
-  // },
 ]
 
 /* ---------- Keunggulan ---------- */
 export const WHY = [
   { n: '01', title: 'Harga Jujur & Terjangkau', desc: 'Harga disepakati di depan, tertulis di invoice — tidak ada biaya siluman. DP cukup 50%, sisanya setelah website jadi dan kamu puas.' },
-  { n: '02', title: 'Pengerjaan Cepat', desc: 'Landing page jadi 3–7 hari, website custom 14–21 hari (berdasarkan kerumitan fitur). Progress bisa kamu pantau setiap hari lewat link preview.' },
-  { n: '03', title: 'Gratis Revisi + Domain & Hosting', desc: 'Revisi desain 2–5× (tergantung paket) sampai sesuai karakter bisnismu. Semua paket sudah termasuk domain .com dan hosting tahun pertama.' },
-  { n: '04', title: 'Dukungan Setelah Jadi', desc: 'Kami tidak hilang setelah launching. Ada support & konsultasi gratis 3 bulan, plus panduan cara mengelola website sendiri.' },
+  { n: '02', title: 'Pengerjaan Cepat & Terpantau', desc: 'Landing page 3–7 hari, sistem booking ±14 hari. Progress bisa kamu pantau setiap hari lewat link preview.' },
+  { n: '03', title: 'Gratis Revisi + Domain & Hosting', desc: 'Revisi 2× untuk landing dan BarberPro, sampai sesuai karakter bisnismu. Semua paket sudah termasuk domain .com dan hosting tahun pertama.' },
+  { n: '04', title: 'Dukungan Setelah Jadi', desc: 'Kami tidak hilang setelah launching. Support 30 hari untuk BarberPro, plus panduan cara mengelola website sendiri.' },
 ]
 
 /* ---------- Proses ---------- */
 export const PROCESS = [
-  {
-    n: '01', t: 'Konsultasi',
-    d: 'Chat / call WhatsApp. Kami dengarkan kebutuhan & budget-mu — gratis, tanpa komitmen.',
-    points: ['Gratis & tanpa komitmen', 'Boleh cuma tanya-tanya dulu', 'Kami balas cepat di jam kerja'],
-  },
-  {
-    n: '02', t: 'Desain & Konten',
-    d: 'Kami susun struktur, copywriting, dan desain awal. Kamu boleh revisi sebelum masuk koding.',
-    points: ['Revisi desain SEBELUM masuk koding', 'Voice bisnis kamu tetap terdengar', 'Mockup bisa kamu lihat & komentari'],
-  },
-  {
-    n: '03', t: 'Development',
-    d: 'Website dibangun, responsif di HP & laptop, lalu dites menyeluruh. Progress bisa dilihat real-time.',
-    points: ['Progress dipantau tiap hari via link preview', 'Standar performa Lighthouse 95+', 'Dites di HP & laptop sungguhan'],
-  },
-  {
-    n: '04', t: 'Launch & Pelatihan',
-    d: 'Go-live! Kami ajari cara kelola websitenya, lalu support 3 bulan penuh.',
-    points: ['Kami ajari sampai bisa kelola sendiri', 'Support gratis 3 bulan', 'DP 50% → pelunasan setelah kamu setujui'],
-  },
+  { n: '01', t: 'Konsultasi', d: 'Chat / call WhatsApp. Kami dengarkan kebutuhan & budget-mu — gratis, tanpa komitmen.', points: ['Gratis & tanpa komitmen', 'Boleh cuma tanya-tanya dulu', 'Kami balas cepat di jam kerja'] },
+  { n: '02', t: 'Desain & Konten', d: 'Kami susun struktur, copywriting, dan desain awal. Kamu boleh revisi sebelum masuk koding.', points: ['Revisi desain SEBELUM masuk koding', 'Voice bisnis kamu tetap terdengar', 'Mockup bisa kamu lihat & komentari'] },
+  { n: '03', t: 'Development', d: 'Website dibangun, responsif di HP & laptop, lalu dites menyeluruh. Progress bisa dilihat real-time.', points: ['Progress dipantau tiap hari via link preview', 'Standar performa Lighthouse 95+', 'Dites di HP & laptop sungguhan'] },
+  { n: '04', t: 'Launch & Pelatihan', d: 'Go-live! Kami ajari cara kelola websitenya, lalu support penuh sesuai paket.', points: ['Kami ajari sampai bisa kelola sendiri', 'Support sesuai paket', 'DP 50% → pelunasan setelah kamu setujui'] },
 ]
 
-/* ---------- Paket Harga ---------- */
+/* ---------- Paket Harga (Compro disembunyikan dari pricing) ---------- */
 export const PLANS = [
   {
-    name: 'Basic',
-    sub: 'Landing Page',
-    price: 2500000,
-    hot: false,
+    name: 'Basic', sub: 'Landing Page', price: 2500000, hot: false,
+    feats: ['1 halaman desain profesional', 'Responsif di HP & laptop', 'Gratis domain .com + hosting (1 thn)', 'Tombol integrasi WhatsApp API', 'Revisi 2×', 'Pengerjaan 3–7 hari'],
+  },
+  {
+    name: 'BarberPro', sub: 'Sistem Booking Barbershop', price: 3900000, hot: true, flag: '★ Paling Laris · Barbershop',
     feats: [
-      '1 halaman desain profesional',
-      'Responsif di HP & laptop',
-      'Gratis domain .com + hosting (1 thn)',
-      'Tombol integrasi WhatsApp API',
+      'Sistem booking real-time (slot terkunci)',
+      'Pelanggan pilih layanan, kapster & jam dari HP',
+      'Notifikasi WhatsApp otomatis ke toko',
+      'Dashboard admin (jadwal + estimasi omzet)',
+      'Branding toko (warna, logo, nama, harga)',
+      'Gratis domain + hosting + SSL (1 tahun)',
+      'Training singkat + dokumentasi',
       'Revisi 2×',
-      'Pengerjaan 3–7 hari',
+      'Pengerjaan target 14 hari',
+      'Support 30 hari setelah live',
     ],
   },
   {
-    name: 'Standar',
-    sub: 'Company Profile / Website Bisnis',
-    price: 4900000,
-    hot: false,
-    feats: [
-      'Sampai 5 halaman',
-      'Desain custom sesuai brand',
-      'Gratis domain + hosting (1 thn)',
-      'Galeri, peta & Google Maps',
-      'SEO dasar (meta + sitemap)',
-      'Revisi 4×',
-      'Pengerjaan 7–10 hari',
-    ],
-  },
-  {
-    name: 'Custom',
-    sub: 'Website Impian Bisnismu',
-    price: 6900000,
-    hot: true,
+    name: 'Custom', sub: 'Website Impian Bisnismu', price: 6900000, hot: false,
     feats: [
       'Sesi konsultasi & bedah kebutuhan bisnis 1-on-1',
       'Desain eksklusif dari nol — bukan template',
-      '1 fitur custom (pilih: booking ATAU member ATAU kalkulator)',
+      '1 fitur custom (booking / member / kalkulator)',
       'Integrasi WhatsApp API',
       'Dashboard admin custom',
       'Gratis domain + hosting + SSL (1 tahun)',
-      'Revisi sampai sesuai (maks. 10×)',
       'Garansi bug-fix & support 6 bulan',
-      'Pelatihan tim + dokumentasi cara pakai',
-      'Pengerjaan 2–4 minggu (berdasarkan kerumitan fitur)',
+      'Pengerjaan 2–4 minggu',
     ],
   },
 ]
-export const CARE_PRICE = 500000
+export const CARE_PRICE = 350000
 export const CARE_FEATS = [
-   'Backup & keamanan mingguan',
-   'Update konten 2×/bulan',
-   'Laporan performa bulanan',
-   'Dukungan teknis prioritas (WhatsApp)',
-   'Konsultasi strategi digital 1×/bulan',
-   'Optimasi kecepatan & SEO berkala',
+  'Backup & keamanan mingguan', 'Update konten 2×/bulan', 'Laporan performa bulanan',
+  'Dukungan teknis prioritas (WhatsApp)', 'Konsultasi strategi digital 1×/bulan', 'Optimasi kecepatan & SEO berkala',
 ]
 
-/* ---------- Portofolio ---------- */
+/* ---------- Portofolio (jujur: produk / live / demo) ---------- */
 export const PORTFOLIO = [
-   {
-       title: 'Architect Studio',
-       type: 'Company Profile Premium + Galeri Project + Cinematic Visual Experience',
-       year: '2026',
-       desc: 'Firma arsitektur menjual satu hal yang tidak terlihat: rasa percaya. Klien kelas atas tidak membeli gambar — mereka membeli keyakinan bahwa studio ini punya selera, ketelitian, dan kelas. Masalahnya, kebanyakan website firma arsitektur justru terlihat lebih biasa daripada karya mereka: galeri foto kecil yang lambat, halaman polos tanpa cerita, dan portofolio yang masih dikirim lewat PDF. Architect Studio kami rancang untuk menutup jurang itu. Begitu halaman dibuka, pengunjung masuk ke pengalaman visual sinematik — foto bangunan berukuran penuh, animasi halus yang mengikuti scroll, dan tipografi elegan yang membuat setiap project terasa seperti pameran di galeri seni. Setiap karya punya halaman ceritanya sendiri, tim diperkenalkan dengan kelas, dan calon klien hanya butuh satu scroll untuk menghubungi studio. Dan karena brand premium tidak boleh membuat orang menunggu: website ini mencetak skor kecepatan sempurna 100/100, ringan bahkan di koneksi lambat, dan mudah ditemukan di Google.',
-       tags: ['Company Profile Premium', 'Visual Sinematik', 'Galeri + Halaman Detail Project', 'Lighthouse 100', 'SEO Ready'],
-       metric: '100',
-       metricLabel: 'skor Lighthouse Performance — sempurna, bahkan di pengujian paling ketat',
-       imageUrl: 'images/architect-studio-portfolio.jpg',
-       liveUrl: 'https://architect-studio.rrdevs.my.id',
-     },
-   {
-     title: 'BarberPro',
-     type: 'Website Custom + Sistem Booking Real-Time + Notifikasi Otomatis + Dashboard Admin',
-     year: '2026',
-     desc: 'Barbershop yang masih mencatat booking lewat chat dan buku tulis selalu menghadapi masalah yang sama: pelanggan datang tanpa janji, dua orang menempati jam yang sama, dan pemilik tidak tahu omzet hari ini sampai tutup toko. BarberPro menyelesaikan semuanya: pelanggan memilih layanan, barber favorit, dan jam kosong langsung dari HP — slot yang terisi otomatis terkunci sehingga double-booking mustahil terjadi. Setiap booking baru langsung berbunyi di WhatsApp pemilik dan email pelanggan, sementara dashboard admin merangkum jadwal hari ini, estimasi pendapatan, hingga barber tersibuk. Antrean jadi teratur, kursi tidak pernah bentrok, dan pemilik akhirnya pegang kendali penuh atas bisnisnya.',
-     tags: ['Website Custom', 'Sistem Booking Real-Time', 'Notifikasi WhatsApp + Email', 'Dashboard Admin'],
-     metric: '1 mnt',
-     metricLabel: 'dari buka website sampai jadwal terkunci — tanpa chat, tanpa telepon',
-     imageUrl: 'images/barberpro-portfolio.jpg',
-     liveUrl: 'https://barberpro.rrdevs.my.id',
-   },
   {
-     title: 'Digital Printing',
-     type: 'Website Custom + Company Profile + Sistem Order + Admin CMS',
-     year: '2026',
-     desc: 'Website digital printing yang disebut mesin order 24 jam: pengunjung memilih produk, total harga terhitung otomatis, lalu pesanan terkirim rapi ke WhatsApp admin lengkap dengan detail ukuran, jumlah, dan opsi desain. Seluruh konten — produk, harga, galeri, testimoni, hingga jam buka — dikelola mandiri lewat admin panel tanpa menyentuh satu baris kode pun.',
-     tags: ['Website Custom', 'Sesuai Kebutuhan', 'WhatsApp Ordering', 'Admin CMS'],
-     metric: '24/7',
-     metricLabel: 'order masuk otomatis tanpa jam tutup',
-     imageUrl: 'images/digital-printing-portfolio.jpg',
-     liveUrl: 'https://digital-printing-website-production.up.railway.app',
-   },
-   {
-    title: 'Kopi Senja',
-    type: 'Next.js 16 + Cinematic UI + Interactive Booking System',
-    year: '2026',
-    desc: 'Transformasi digital untuk UMKM coffee shop dengan pengalaman web kelas premium. Menggabungkan estetika "cinematic editorial" menggunakan Framer Motion dengan performa tinggi. Dilengkapi menu interaktif dengan filter kategori real-time, sistem reservasi meja langsung ke WhatsApp, dan optimasi SEO & Core Web Vitals (Lighthouse 95+) untuk memastikan pengunjung betah dan konversi pemesanan meningkat.',
-    tags: ['Next.js 16 App Router', 'Cinematic UI/UX', 'WhatsApp API Booking', 'Lighthouse 95+', 'SEO Optimized'],
-    metric: '95+',
-    metricLabel: 'Lighthouse Performance Score',
-    imageUrl: 'images/kopi-senja-portfolio.png',
-    liveUrl: 'https://kopisenja-eight.vercel.app',
+    title: 'BarberPro', kind: 'product', kindLabel: 'Sistem siap pakai',
+    demoCred: 'Demo admin: demo@rrdevs.my.id / demo1234',
+    type: 'Website Custom + Sistem Booking Real-Time + Notifikasi Otomatis + Dashboard Admin', year: '2026',
+    desc: 'Barbershop yang masih mencatat booking lewat chat selalu menghadapi masalah yang sama: dua orang menempati jam yang sama, dan pemilik tidak tahu omzet hari ini sampai tutup toko. BarberPro menyelesaikan semuanya: pelanggan memilih layanan, barber favorit, dan jam kosong langsung dari HP — slot terisi otomatis terkunci sehingga double-booking mustahil terjadi. Setiap booking baru berbunyi di WhatsApp pemilik, sementara dashboard merangkum jadwal dan estimasi pendapatan.',
+    tags: ['Sistem Booking Real-Time', 'Notifikasi WhatsApp', 'Dashboard Admin', 'Overlap-proof'],
+    metric: '1 mnt', metricLabel: 'dari buka website sampai jadwal terkunci — tanpa chat',
+    imageUrl: 'images/barberpro-portfolio.jpg', liveUrl: 'https://barberpro.rrdevs.my.id',
   },
   {
-    title: 'Batik Nusantara',
-    type: 'Company Profile + Product Catalog + Admin CMS + WhatsApp Ordering',
-    year: '2026',
-    desc: 'Website company profile untuk brand batik artisanal dengan katalog produk lengkap per kategori (Tulis, Cap, Printing, Kain & Pakaian). Pengunjung bisa lihat harga, pesan langsung via WhatsApp, dan admin bisa kelola seluruh produk lewat panel admin. Mendukung dual language (ID/EN) dan dirancang mobile-first untuk kemudahan akses dari mana saja.',
-    tags: ['Company Profile', 'Katalog Produk', 'Admin CMS', 'WhatsApp Ordering', 'Multi-Language'],
-    metric: '15',
-    metricLabel: 'total produk terkelola via admin',
-    imageUrl: 'images/batik-nusantara-portfolio.jpg',
-    liveUrl: 'https://batik-comp.wasmer.app/id',
+    title: 'Theo Teknik', kind: 'live', kindLabel: 'Proyek live',
+    type: 'Landing Page + WhatsApp-first + Local SEO', year: '2026',
+    desc: 'Website jasa panggilan AC di Cakung, Jakarta Timur — klien nyata pertama kami. WhatsApp dijadikan satu-satunya jalur booking di setiap section, daftar harga transparan dipasang di depan untuk mematahkan ketakutan "kena tipu", plus bukti before-after. Sampai hari ini masih live dan dipakai.',
+    tags: ['Landing Page', 'WhatsApp-first', 'Local SEO'],
+    metric: '1', metricLabel: 'jalur booking tunggal via WhatsApp',
+    imageUrl: 'images/theo-teknik-portfolio.jpg', liveUrl: 'https://theo-teknik.rrdevs.my.id',
+  },
+  {
+    title: 'Architect Studio', kind: 'demo', kindLabel: 'Demo desain',
+    type: 'Company Profile Premium + Galeri Project + Cinematic Visual', year: '2026',
+    desc: 'Konsep company profile firma arsitektur: pengalaman visual sinematik, foto bangunan berukuran penuh, animasi halus, dan tipografi elegan. Dibuat untuk membuktikan kami paham desain kelas atas — bukan klien nyata, dan kami labeli jujur sebagai demo.',
+    tags: ['Company Profile Premium', 'Visual Sinematik', 'Lighthouse 100'],
+    metric: '100', metricLabel: 'skor Lighthouse Performance',
+    imageUrl: 'images/architect-studio-portfolio.jpg', liveUrl: 'https://architect-studio.rrdevs.my.id',
+  },
+  {
+    title: 'Kopi Senja', kind: 'demo', kindLabel: 'Demo desain',
+    type: 'Next.js 16 + Cinematic UI + Interactive Booking', year: '2026',
+    desc: 'Konsep F&B pribadi: menu interaktif dengan filter kategori real-time dan reservasi meja yang auto-generate pesan WhatsApp. Kami labeli jujur sebagai konsep pribadi, bukan klien.',
+    tags: ['Next.js 16', 'Cinematic UI', 'WhatsApp Booking'],
+    metric: '95+', metricLabel: 'Lighthouse Performance Score',
+    imageUrl: 'images/kopi-senja-portfolio.png', liveUrl: 'https://kopisenja.rrdevs.my.id',
+  },
+  {
+    title: 'Batik Nusantara', kind: 'demo', kindLabel: 'Demo desain',
+    type: 'Company Profile + Product Catalog + Admin CMS', year: '2026',
+    desc: 'Konsep company profile brand batik dengan katalog produk per kategori dan pemesanan via WhatsApp plus panel admin. Demo kemampuan, bukan klien nyata.',
+    tags: ['Company Profile', 'Katalog Produk', 'Admin CMS'],
+    metric: '15', metricLabel: 'total produk terkelola via admin',
+    imageUrl: 'images/batik-nusantara-portfolio.jpg', liveUrl: 'https://batik-comp.wasmer.app/id',
+  },
+  {
+    title: 'Digital Printing', kind: 'demo', kindLabel: 'Demo · sedang dipindah', moving: true,
+    type: 'Website Custom + Sistem Order + Admin CMS', year: '2026',
+    desc: 'Mesin order 24 jam untuk percetakan: kalkulator harga otomatis berdasarkan ukuran & jumlah, order terformat rapi ke WhatsApp, dan admin panel penuh. Saat ini sedang kami pindahkan ke hosting baru.',
+    tags: ['Kalkulator Harga', 'WhatsApp Ordering', 'Admin CMS'],
+    metric: '24/7', metricLabel: 'order masuk otomatis tanpa jam tutup',
+    imageUrl: 'images/digital-printing-portfolio.jpg', liveUrl: '#',
   },
 ]
 
-/* ---------- Testimoni ---------- */
+/* ---------- Testimoni: hanya yang jujur ---------- */
 export const TESTIMONIALS = [
-   {
-     name: 'Hendra Wijaya',
-     biz: 'Pemilik · Barbershop, Depok',
-     text: 'Dulu booking lewat chat WhatsApp, saya catat manual di buku — sering keliru, dan pernah dua pelanggan datang di jam yang sama sampai salah satu marah. Sekarang pelanggan booking sendiri dari website, jam yang terisi langsung terkunci, dan tiap booking baru bunyi di HP saya lengkap dengan nama dan jamnya. Pagi hari tinggal buka dashboard: sudah tahu hari ini ada berapa pelanggan dan perkiraan omzet. Antrean di kursi tunggu jauh berkurang karena semua sudah punya jam masing-masing. Ini bukan sekadar website — rasanya seperti menambah satu staf admin yang bekerja 24 jam.',
-     imageUrl: 'images/hendra-wijaya.jpg',
-     slideQuote: 'Rasanya seperti menambah satu staf admin yang bekerja 24 jam.',
-   },
   {
-     name: 'Joko Prasetyo',
-     biz: 'Pemilik · Digital Printing, Bekasi',
-     text: 'Awalnya ragu, percetakan kecil kok punya website sendiri. Ternyata kurang dari sebulan sudah live dan langsung jalan — pelanggan hitung harga banner sendiri, pesanan masuk ke WhatsApp lengkap dengan ukuran dan jumlah, bahkan sering masuk malam hari saat toko sudah tutup. Sekarang ganti harga atau tambah produk saya kerjakan sendiri dari HP lewat admin panel, nggak perlu nyentuh kode. Investasi yang terasa balik modal dalam hitungan bulan.',
-     imageUrl: 'images/joko-prasetyo.jpg',
-     slideQuote: 'Investasi yang terasa balik modal dalam hitungan bulan.',
-   },
-   {
-    name: 'Raka Aditya',
-    biz: 'Founder · Kopi Senja, Jakarta',
-    text: 'Awalnya kami hanya butuh website sederhana, tapi hasilnya jauh di atas ekspektasi. Desainnya terasa sangat premium dan animasinya halus, membuat brand kami terlihat jauh lebih mapan. Yang paling berdampak: fitur menu interaktif dan booking via WhatsApp sangat memudahkan operasional kami. Pelanggan sering memuji betapa mudahnya melihat menu dan reservasi dari HP. Website ini benar-benar meningkatkan citra dan konversi bisnis kami.',
-    imageUrl: 'images/raka-aditya.jpg',
-    slideQuote: 'Website ini benar-benar meningkatkan citra dan konversi bisnis kami.',
+    name: 'Proyek live — bisnis asli', biz: 'Klien nyata · Jakarta Timur', badge: '✓ TERVERIFIKASI LIVE',
+    text: 'Website jasa teknisi AC di Cakung, Jakarta Timur. Tombol booking ke WhatsApp, daftar harga transparan di depan, dan halaman yang siap dipakai calon pelanggan saat googling "service AC terdekat". Dikerjakan langsung oleh founder RR Devs — dan sampai hari ini masih live serta dipakai.',
+    imageUrl: 'images/theo-teknik-portfolio.jpg',
+    slideQuote: 'Masih live dan dipakai sampai hari ini.',
+    link: 'https://theo-teknik.rrdevs.my.id',
   },
 ]
 
 /* ---------- Agency Partner ---------- */
 export const PARTNER_PREVIEW = [
-  { p: 'Landing Page', buy: '3,5 jt', sell: '7–9 jt' },
-  { p: 'Company Profile', buy: '6 jt', sell: '12–15 jt' },
-  { p: 'Website Custom', buy: '9 jt', sell: '18–25 jt' },
+  { p: 'BarberPro Setup', buy: '3,9 jt', sell: '8–10 jt' },
+  { p: 'Landing Page', buy: '2,5 jt', sell: '5–7 jt' },
+  { p: 'Website Custom', buy: '6,9 jt', sell: '15–20 jt' },
 ]
-
 export const RATE_ROWS = [
+  { p: 'BarberPro Setup', d: 'Sistem booking barbershop + branding toko', partner: 'Rp 3.900.000', sell: 'Rp 8–10 jt', margin: '~2x' },
   { p: 'Landing Page', d: '1 halaman fokus konversi', partner: 'Rp 2.500.000', sell: 'Rp 5–7 jt', margin: '~2x' },
-  { p: 'Company Profile', d: 'Profil bisnis profesional multi-halaman', partner: 'Rp 4.900.000', sell: 'Rp 10–12 jt', margin: '~2x' },
+  { p: 'Company Profile', d: 'Profil bisnis profesional multi-halaman', partner: 'Rp 4.500.000', sell: 'Rp 10–12 jt', margin: '~2x' },
   { p: 'Website Custom', d: 'Fitur sesuai kebutuhan klien', partner: 'Rp 6.900.000', sell: 'Rp 15–20 jt', margin: '~2x' },
-  { p: 'Maintenance Bulanan', d: 'Perawatan & update berkala', partner: 'Rp 500.000/bln', sell: 'Rp 1–1,5 jt/bln', margin: '~2x' },
+  { p: 'Maintenance Bulanan', d: 'Perawatan & update berkala', partner: 'Rp 350.000/bln', sell: 'Rp 1–1,5 jt/bln', margin: '~2x' },
 ]
 
 export const RULES = [
@@ -323,132 +267,70 @@ export const RULES = [
   { n: '03', t: 'Pembayaran Bertahap', d: '50% DP di awal → 40% saat staging disetujui → 10% saat handover. Arus kas agency tetap sehat.' },
   { n: '04', t: 'Garansi Purna Jual', d: 'Bug-fix gratis selama 30 hari + 2 ronde revisi di setiap project. Reputasi Anda di depan klien tetap aman.' },
 ]
-
 export const FLOW = [
   { pct: '50%', t: 'DP', d: 'Project dimulai, slot dikunci' },
   { pct: '40%', t: 'Staging Approval', d: 'Klien Anda review & setujui hasil' },
   { pct: '10%', t: 'Handover', d: 'Website live, aset diserahkan' },
 ]
 
-/* ============================================================
-   STUDI KASUS — halaman /jabodetabek
-   Voice rule: pakai "kami" (brand duo) kecuali cerita spesifik
-   salah satu founder (fun fact Termux).
-   ============================================================ */
+/* ---------- Studi kasus /jabodetabek (quote Theo dianonimkan) ---------- */
 export const CASE_STUDIES = [
   {
-    id: 'theo-teknik',
-    emoji: '❄️',
-    title: 'Theo Teknik',
+    id: 'theo-teknik', emoji: '❄️', title: 'Theo Teknik',
     tagline: 'Landing page service AC · Cakung, Jakarta Timur',
-    kind: 'client',
-    kindLabel: 'Client Story · Klien Nyata',
-    story: 'Theo Teknik, jasa panggilan AC di Cakung, sebelumnya cuma mengandalkan promosi mulut ke mulut. Kami bangun landing page yang menaruh WhatsApp sebagai satu-satunya jalur booking di setiap section, menampilkan daftar harga transparan di depan — karena ketakutan terbesar pelanggan jasa panggilan adalah kena tipu harga — plus bukti before-after dan testimoni asli. Hasilnya: usaha yang tadinya cuma modal nomor HP sekarang punya kehadiran digital yang meyakinkan siapa pun yang googling "service AC terdekat".',
-    highlights: [
-      'WhatsApp jadi satu-satunya jalur booking di setiap section',
-      'Daftar harga transparan di depan — mematahkan takut kena tipu',
-      'Bukti before-after + testimoni asli',
-    ],
+    kind: 'client', kindLabel: 'Client Story · Klien Nyata',
+    story: 'Theo Teknik, jasa panggilan AC di Cakung, sebelumnya cuma mengandalkan promosi mulut ke mulut. Kami bangun landing page yang menaruh WhatsApp sebagai satu-satunya jalur booking di setiap section, menampilkan daftar harga transparan di depan — karena ketakutan terbesar pelanggan jasa panggilan adalah kena tipu harga — plus bukti before-after. Hasilnya: usaha yang tadinya cuma modal nomor HP sekarang punya kehadiran digital yang meyakinkan siapa pun yang googling "service AC terdekat".',
+    highlights: ['WhatsApp jadi satu-satunya jalur booking di setiap section', 'Daftar harga transparan di depan — mematahkan takut kena tipu', 'Bukti before-after + testimoni asli'],
     stack: ['Landing Page', 'WhatsApp-first', 'Local SEO'],
-    quote: { 
-      text: 'Sejak ada web, orderan WA nambah dan pelanggan baru lebih gampang percaya. Ternyata website ngebantu bisnis saya banget. Terimakasih, Rafael', 
-      name: 'Charles Pardede', 
-      biz: 'Theo Teknik' 
-    },
-    accent: '#0369A1', 
-    shot: '/images/theo-teknik-portfolio.jpg',
+    quote: { text: 'Sejak ada web, orderan WA nambah dan pelanggan baru lebih gampang percaya.', name: 'Pemilik', biz: 'Jasa teknisi AC · Jakarta Timur' },
+    accent: '#0369A1', shot: '/images/theo-teknik-portfolio.jpg',
     shotNote: 'Landing page + daftar harga transparan + integrasi WhatsApp',
     live: 'https://theo-teknik.rrdevs.my.id',
   },
   {
-    id: 'barberpro',
-    emoji: '🪒',
-    title: 'BarberPro',
-    tagline: 'Sistem booking barbershop anti-bentrok',
-    kind: 'demo',
-    kindLabel: 'Capability Demo',
-    story: 'BarberPro kami bangun untuk membuktikan satu hal: RR Devs sanggup bikin sistem booking production-grade, bukan ikut-ikutan tutorial. Penyakit klasik booking amatir — dua pelanggan pesan jam yang sama karena validasi cuma di tampilan — kami kunci di level database: constraint PostgreSQL yang bikin bentrok jadwal mustahil terjadi secara teknis. Lengkap dengan notifikasi WhatsApp otomatis ke pelanggan & admin, plus dashboard pendapatan dan barber tersibuk.',
-    highlights: [
-      'Constraint PostgreSQL — bentrok jadwal mustahil, bukan cuma dicegah di UI',
-      'Email konfirmasi otomatis ke client',
-      'Notifikasi WhatsApp booking terbaru ke admin',
-      'Dashboard pendapatan & barber tersibuk',
-    ],
+    id: 'barberpro', emoji: '🪒', title: 'BarberPro', tagline: 'Sistem booking barbershop anti-bentrok',
+    kind: 'demo', kindLabel: 'Capability Demo',
+    story: 'BarberPro kami bangun untuk membuktikan satu hal: RR Devs sanggup bikin sistem booking production-grade. Penyakit klasik booking amatir — dua pelanggan pesan jam yang sama karena validasi cuma di tampilan — kami kunci di level database: constraint PostgreSQL yang bikin bentrok jadwal mustahil terjadi secara teknis. Lengkap dengan notifikasi WhatsApp otomatis ke pelanggan & admin, plus dashboard pendapatan.',
+    highlights: ['Constraint PostgreSQL — bentrok jadwal mustahil', 'Notifikasi WhatsApp booking terbaru ke admin', 'Dashboard pendapatan & barber tersibuk'],
     stack: ['Next.js', 'PostgreSQL', 'Fonnte WA API', 'Termux · Android'],
-    // fun fact tetap pakai nama founder — spesifik, powerful, dan jujur
     footnote: 'Dibangun 100% oleh Rafael dari tablet Android pakai Termux — tanpa laptop.',
-    quote: null,
-    accent: '#c9a24b',
-    shot: '/images/barberpro-portfolio.jpg',
-    shotNote: `Homepage — Tampilan premium bisnis yang dipercaya pelanggan. 
-    AdminPage — Dashboard booking & pendapatan`,
+    quote: null, accent: '#c9a24b', shot: '/images/barberpro-portfolio.jpg',
+    shotNote: 'Homepage premium + dashboard booking & pendapatan',
     live: 'https://barberpro.rrdevs.my.id',
   },
   {
-    id: 'architect-studio',
-    emoji: '🏛️',
-    title: 'Architect Studio',
-    tagline: 'Company profile rasa premium',
-    kind: 'demo',
-    kindLabel: 'Capability Demo',
-    story: 'Konsep company profile untuk firma arsitektur, kami rancang khusus untuk membuktikan RR Devs nggak cuma bisa menulis logic tapi juga paham desain kelas atas: tipografi editorial, animasi scroll yang halus, palet warna yang niat, dan performa yang tetap kencang meski visualnya berat. Ini yang kami tunjukkan ke calon klien yang butuh presence digital terasa "mahal" — arsitek, interior, konsultan, properti.',
-    highlights: [
-      'Tipografi editorial & animasi scroll halus',
-      'Palet warna premium — presence terasa "mahal"',
-      'Performa kencang meski visual berat',
-    ],
+    id: 'architect-studio', emoji: '🏛️', title: 'Architect Studio', tagline: 'Company profile rasa premium',
+    kind: 'demo', kindLabel: 'Capability Demo',
+    story: 'Konsep company profile firma arsitektur: tipografi editorial, animasi scroll halus, palet warna premium, dan performa kencang meski visual berat. Ini yang kami tunjukkan ke calon klien yang butuh presence digital terasa "mahal".',
+    highlights: ['Tipografi editorial & animasi scroll halus', 'Palet warna premium', 'Performa kencang meski visual berat'],
     stack: ['Next.js', 'Framer Motion', 'Editorial Design'],
-    quote: null,
-    accent: '#a08757', 
-    shot: '/images/architect-studio-portfolio.jpg',
-    shotNote: 'Beranda — tipografi editorial',
+    quote: null, accent: '#a08757', shot: '/images/architect-studio-portfolio.jpg', shotNote: 'Beranda — tipografi editorial',
     live: 'https://architect-studio.rrdevs.my.id',
   },
   {
-    id: 'toko-percetakan',
-    emoji: '🖨️',
-    title: 'Toko Percetakan Online',
-    tagline: 'E-commerce percetakan + kalkulator harga',
-    kind: 'demo',
-    kindLabel: 'Capability Demo',
-    story: 'Simulasi lengkap sistem e-commerce untuk bisnis percetakan: kalkulator harga otomatis berdasarkan ukuran & jumlah, panel admin penuh untuk kelola produk dan testimoni tanpa sentuh kode, sampai order yang otomatis terformat rapi ke WhatsApp. Kami bangun ini untuk membuktikan sanggup pegang backend yang lebih berat (Laravel) untuk bisnis dengan operasi serumit ini.',
-    highlights: [
-      'Kalkulator harga otomatis (ukuran × jumlah)',
-      'Panel admin penuh tanpa sentuh kode',
-      'Order auto-format rapi masuk WhatsApp',
-    ],
+    id: 'toko-percetakan', emoji: '🖨️', title: 'Toko Percetakan Online', tagline: 'E-commerce percetakan + kalkulator harga',
+    kind: 'demo', kindLabel: 'Capability Demo · sedang dipindah',
+    story: 'Simulasi lengkap sistem e-commerce percetakan: kalkulator harga otomatis berdasarkan ukuran & jumlah, panel admin penuh, sampai order yang otomatis terformat rapi ke WhatsApp. Saat ini sedang kami pindahkan ke hosting baru.',
+    highlights: ['Kalkulator harga otomatis (ukuran × jumlah)', 'Panel admin penuh tanpa sentuh kode', 'Order auto-format rapi masuk WhatsApp'],
     stack: ['Laravel', 'MySQL', 'WhatsApp Order'],
-    quote: null,
-    accent: '#4338CA',
-    shot: '/images/digital-printing-portfolio.jpg',
-    shotNote: 'Kalkulator harga + admin panel',
-    live: 'https://digital-printing-website-production.up.railway.app',
+    quote: null, accent: '#4338CA', shot: '/images/digital-printing-portfolio.jpg', shotNote: 'Kalkulator harga + admin panel',
+    live: '#',
   },
   {
-    id: 'kopi-senja',
-    emoji: '☕',
-    title: 'Kopi Senja',
-    tagline: 'Reservasi kedai kopi auto-WhatsApp',
-    kind: 'demo',
-    kindLabel: 'Capability Demo · Konsep',
-    story: 'Konsep F&B pribadi: reservasi meja yang auto-generate pesan WhatsApp — pelanggan pilih tanggal, jam, dan jumlah orang, sistem yang menyusun pesannya. Ditambah menu interaktif dengan filter kategori real-time serta optimasi SEO & Core Web Vitals (Lighthouse 95+). Kami labeli jujur sebagai konsep pribadi, bukan klien — karena memang kami rancang sendiri dari nol.',
-    highlights: [
-      'Reservasi auto-generate pesan WhatsApp',
-      'Menu interaktif dengan filter kategori real-time',
-      'Lighthouse 95+ (SEO & Core Web Vitals)',
-    ],
+    id: 'kopi-senja', emoji: '☕', title: 'Kopi Senja', tagline: 'Reservasi kedai kopi auto-WhatsApp',
+    kind: 'demo', kindLabel: 'Capability Demo · Konsep',
+    story: 'Konsep F&B pribadi: reservasi meja yang auto-generate pesan WhatsApp — pelanggan pilih tanggal, jam, dan jumlah orang, sistem yang menyusun pesannya. Ditambah menu interaktif dengan filter kategori real-time serta optimasi SEO & Core Web Vitals.',
+    highlights: ['Reservasi auto-generate pesan WhatsApp', 'Menu interaktif filter kategori real-time', 'Lighthouse 95+'],
     stack: ['Next.js 16', 'Cinematic UI', 'SEO · CWV'],
-    quote: null,
-    accent: '#A05C2C', 
-    shot: '/images/kopi-senja-portfolio.png',
-    shotNote: 'Menu interaktif + reservasi WA',
+    quote: null, accent: '#A05C2C', shot: '/images/kopi-senja-portfolio.png', shotNote: 'Menu interaktif + reservasi WA',
     live: 'https://kopisenja.rrdevs.my.id',
   },
 ]
 
-/* ---------- Stats JUJUR — update tiap rilis project baru ---------- */
+/* ---------- Stats JUJUR ---------- */
 export const STATS = [
-  { value: PORTFOLIO.length + 1, suffix: '', label: 'Proyek live — semua bisa dicoba' },   // 5 portofolio + Theo Teknik
-  { value: 6, suffix: '', label: 'Industri berbeda kami layani' },                          // AC, barbershop, kopi, batik, printing, arsitektur
-  { value: 3, suffix: '', label: 'Bulan support gratis tiap proyek' },
+  { value: 14, suffix: '', label: 'hari — target pasang BarberPro di toko kamu' },
+  { value: 0, suffix: '', label: 'double-booking — slot terkunci di level database' },
+  { value: 20, suffix: '+', label: 'audit digital barbershop Jabodetabek (Sep 2026)' },
+  { value: 2, suffix: '', label: 'sistem live yang bisa kamu klik sekarang (demo + klien)' },
 ]

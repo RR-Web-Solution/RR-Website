@@ -9,6 +9,7 @@ import KitPage from './pages/KitPage'
 import SolusiPage from './pages/SolusiPage'
 import AuditPage from './pages/AuditPage'
 import BarbershopPage from './pages/BarbershopPage'
+import SiteMovePage from './pages/SiteMovePage'
 
 export default function App() {
   return (
@@ -24,9 +25,7 @@ export default function App() {
         <Route path="/solusi" element={<SolusiPage />} />
         <Route path="/audit/:slug" element={<AuditPage />} />
         <Route path="/barbershop" element={<BarbershopPage />} />
-        {/* URL apa pun yang tidak dikenal
-            → render Landing, biar ScrollManager yang gulir ke section-nya.
-            Sekaligus menghapus halaman putih untuk URL apa pun. */}
+        <Route path="/portofolio/digital-printing" element={<SiteMovePage />} />
         <Route path="*" element={<LandingPage />} />
       </Routes>
     </BrowserRouter>
