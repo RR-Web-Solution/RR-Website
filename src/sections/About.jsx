@@ -22,11 +22,11 @@ export default function About() {
         <div className="about-duo">
           <Reveal delay={120} className="founder f-a">
             <img src="images/rafael.jpg" alt="Rafael, co-founder RR Devs" loading="lazy" />
-            <div className="founder-cap"><b>Rafael</b><small>Desain & Front-End</small></div>
+            <div className="founder-cap"><b>Rafael</b><small>Full-Stack Developer · Pembangun BarberPro System</small></div>
           </Reveal>
           <Reveal delay={260} className="founder f-b">
             <img src="images/rendy.jpg" alt="Rendy, co-founder RR Devs" loading="lazy" width="640" height="800" />
-            <div className="founder-cap"><b>Rendy</b><small>Back-End & Strategi</small></div>
+            <div className="founder-cap"><b>Rendy</b><small>Full-Stack Developer · Sistem & Infrastruktur</small></div>
           </Reveal>
         </div>
       </div>

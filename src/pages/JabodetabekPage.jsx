@@ -121,7 +121,7 @@ export default function JabodetabekPage() {
                 <p className="jt-text">
                   Sistem booking paling kompleks di halaman ini dibangun{' '}
                   <b>100% oleh Rafael menggunakan tablet Android via Termux — tanpa laptop</b>.
-                  Ini bukan cerita penderitaan. Ini bukti bahwa kami di RR Devs tidak pernah menunggu kondisi ideal untuk mulai mengeksekusi. Kebanyakan bisnis stuck bukan karena kurang modal atau alat, tapi karena menunda eksekusi. Bisnis Anda pun bisa mulai melangkah minggu ini, dengan apa yang Anda punya sekarang.
+                  Ini bukan cerita penderitaan. Ini bukti bahwa kami di RR Devs tidak pernah menunggu kondisi ideal untuk mulai mengeksekusi. Kebanyakan bisnis stuck bukan karena kurang modal atau alat, tapi karena menunda eksekusi. Bisnis Kamu pun bisa mulai melangkah minggu ini, dengan apa yang Kamu punya sekarang.
                 </p>
               </div>
             </Reveal>
@@ -200,7 +200,7 @@ export default function JabodetabekPage() {
                 katalog. Gratis, tanpa komitmen. Meeting online atau kami datang ke lokasi (Jabodetabek).
               </p>
               <a className="btn btn-wa btn-big" href={waLink(WA_MSG)} target="_blank" rel="noreferrer">
-                Ceritakan bisnis Anda — GRATIS <span className="btn-arrow">→</span>
+                Ceritakan bisnis Kamu — GRATIS <span className="btn-arrow">→</span>
               </a>
               <p className="jkt-final-note">// balas cepat · Senin–Sabtu 09.00–18.00 WIB</p>
             </Reveal>

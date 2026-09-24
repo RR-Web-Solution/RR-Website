@@ -1,117 +1,98 @@
 /* ============================================================
-   PABRIK KONTEN RR DEVS — KitPage.css (v2.2 — konsolidasi utang teknis)
-   Slide = flex column: .kit-top -> .kit-mid (flex:1) -> .kit-foot.
-   .kit-foot adalah flow child biasa (BUKAN absolute) supaya tidak
-   pernah tertimpa konten sepanjang apa pun isi .kit-mid.
-   JANGAN kembalikan elemen konten ke position:absolute.
-   ============================================================ */
-
+PABRIK KONTEN RR DEVS — KitPage.css v3.1
+Slide = flex column: .kit-top -> .kit-mid (flex:1) -> [.kit-cta-space] -> .kit-foot.
+v3.1 (sesuai kritik_desain_carousel.md):
+- Slide story: konten diseimbangkan vertikal (auto-margin), leading judul
+  dilonggarkan, em tidak patah di hyphen, zona kosong CTA untuk stiker IG.
+- Placeholder stiker dihapus dari slide; info stiker tampil di luar slide.
+============================================================ */
 .kit-page { background: #11100e; min-height: 100vh; padding: 80px 16px 120px; }
 .kit-bar {
-  max-width: 1100px; margin: 0 auto 40px; color: #F5F1E8;
-  display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;
+max-width: 1100px; margin: 0 auto 40px; color: #F5F1E8;
+display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;
 }
 .kit-bar h1 { font-family: var(--disp); font-size: 1.4rem; }
 .kit-bar button, .kit-actions button {
-  background: var(--lime); color: #191613; font-weight: 700; font-size: .9rem;
-  padding: .8rem 1.4rem; border-radius: 999px; transition: transform .3s;
+background: var(--lime); color: #191613; font-weight: 700; font-size: .9rem;
+padding: .8rem 1.4rem; border-radius: 999px; transition: transform .3s;
 }
 .kit-bar button:hover, .kit-actions button:hover { transform: translateY(-2px); }
 .kit-block { margin-bottom: 30px; }
 .kit-preview { zoom: .34; width: 1080px; margin: 0 auto; }
 @media (min-width: 900px) { .kit-preview { zoom: .52; } }
-.kit-actions { text-align: center; margin-top: 14px; }
-
+.kit-actions { text-align: center; margin-top: 14px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.kit-sticker-info {
+max-width: 900px; color: rgba(245,241,232,.75);
+font-family: var(--mono); font-size: .78rem; line-height: 1.6; text-align: center;
+}
+.kit-sticker-info b { color: var(--lime); }
+.kit-sticker-info code { color: rgba(245,241,232,.6); word-break: break-all; }
 /* ===== SLIDE ===== */
 .kit-slide {
-  width: 1080px; height: 1350px; background: #F5F1E8; color: #191613;
-  position: relative; overflow: hidden; padding: 80px 80px 60px;
-  display: flex; flex-direction: column;
-  font-family: var(--body);
+width: 1080px; height: 1350px; background: #F5F1E8; color: #191613;
+position: relative; overflow: hidden; padding: 80px 80px 60px;
+display: flex; flex-direction: column;
+font-family: var(--body);
 }
-/* dekorasi "+" di zona aman, tidak menimpa teks */
 .kit-slide::after {
-  content: '+'; position: absolute; right: 84px; top: 200px;
-  font-family: var(--disp); font-weight: 800; font-size: 96px;
-  color: rgba(25, 22, 19, .07);
+content: '+'; position: absolute; right: 84px; top: 200px;
+font-family: var(--disp); font-weight: 800; font-size: 96px;
+color: rgba(25, 22, 19, .07);
 }
 .kit-top { flex-shrink: 0; display: flex; justify-content: space-between; align-items: center; }
 .kit-logo {
-  background: #191613; color: #F5F1E8; font-family: var(--disp); font-weight: 800;
-  font-size: 34px; padding: 14px 22px; border-radius: 14px;
+background: #191613; color: #F5F1E8; font-family: var(--disp); font-weight: 800;
+font-size: 34px; padding: 14px 22px; border-radius: 14px;
 }
 .kit-logo b { color: #FF4D00; }
 .kit-handle { font-family: var(--mono); font-size: 26px; color: #6E675C; }
 .kit-mid {
-  flex: 1 1 auto; min-height: 0;
-  display: flex; flex-direction: column; justify-content: flex-start;
-  margin-top: 60px;
+flex: 1 1 auto; min-height: 0;
+display: flex; flex-direction: column; justify-content: flex-start;
+margin-top: 60px;
 }
 .kit-chip {
-  width: fit-content; background: #D8F34F; font-family: var(--mono); font-weight: 700;
-  font-size: 26px; letter-spacing: .14em; padding: 14px 28px; border-radius: 999px;
+width: fit-content; background: #D8F34F; font-family: var(--mono); font-weight: 700;
+font-size: 26px; letter-spacing: .14em; padding: 14px 28px; border-radius: 999px;
 }
-/* judul: wrap seimbang, tidak putus di tengah kata.
-   pakai class "tight" kalau judul rawan wrap 3 baris di 76px */
 .kit-title {
-  font-family: var(--disp); font-weight: 800; font-size: 76px;
-  line-height: 1.08; letter-spacing: -.01em;
-  margin-top: 36px; max-width: 940px;
-  text-wrap: balance; hyphens: none;
+font-family: var(--disp); font-weight: 800; font-size: 76px;
+line-height: 1.08; letter-spacing: -.01em;
+margin-top: 36px; max-width: 940px;
+text-wrap: balance; hyphens: none;
 }
 .kit-title em { font-style: italic; color: #FF4D00; }
 .kit-title.tight { font-size: 70px; line-height: 1.1; }
 .kit-body { font-size: 40px; line-height: 1.5; color: #3d3830; max-width: 880px; margin-top: 36px; }
-/* highlight oranye di dalam body — satu sistem dengan .kit-title em (TUGAS 2) */
 .kit-body em { color: #FF4D00; font-style: italic; }
 .kit-bullets { list-style: none; margin-top: 36px; display: grid; gap: 22px; }
 .kit-bullets li { display: flex; gap: 20px; font-size: 38px; font-weight: 600; line-height: 1.4; }
 .kit-bullets li span { color: #FF4D00; font-weight: 800; flex-shrink: 0; }
 .kit-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 48px; }
 .kit-card {
-  background: #fff; border: 3px solid #191613; border-radius: 24px; padding: 36px;
-  box-shadow: 10px 10px 0 rgba(25,22,19,.9);
+background: #fff; border: 3px solid #191613; border-radius: 24px; padding: 36px;
+box-shadow: 10px 10px 0 rgba(25,22,19,.9);
 }
 .kit-card b { font-family: var(--disp); font-size: 46px; display: block; color: #191613; }
 .kit-card small { font-family: var(--mono); font-size: 26px; color: #6E675C; }
-/* (dead code: .kit-card-avatar & .kit-card-initial tidak dirender JSX v2.1 —
-   dibiarkan karena di luar scope tugas ini, siap dihapus kalau kamu setuju) */
-.kit-card-avatar {
-  position: relative; width: 96px; height: 96px; border-radius: 999px;
-  overflow: hidden; margin-bottom: 22px;
-  background: #191613; color: #D8F34F;
-}
-.kit-cards .kit-card:nth-child(2) .kit-card-avatar { background: #D8F34F; color: #191613; }
-.kit-card-initial {
-  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-  font-family: var(--disp); font-weight: 800; font-size: 40px;
-}
-.kit-card-avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .kit-stats { display: flex; gap: 60px; margin-top: 52px; border-top: 3px solid rgba(25,22,19,.15); padding-top: 40px; }
 .kit-stats b { font-family: var(--disp); font-weight: 800; font-size: 68px; display: block; }
 .kit-stats small { font-size: 28px; color: #6E675C; }
 .kit-terminal {
-  margin-top: 40px; background: #191613; color: #F5F1E8; border-radius: 24px;
-  padding: 30px 36px; font-family: var(--mono); font-size: 26px; line-height: 1.6;
-  box-shadow: 12px 12px 0 rgba(25,22,19,.25);
+margin-top: 40px; background: #191613; color: #F5F1E8; border-radius: 24px;
+padding: 30px 36px; font-family: var(--mono); font-size: 26px; line-height: 1.6;
+box-shadow: 12px 12px 0 rgba(25,22,19,.25);
 }
 .kit-terminal .g { color: #D8F34F; }
 .kit-terminal .m { color: #8a8378; }
-.kit-cta {
-  margin-top: auto; background: #FF4D00; color: #2a0e00; border-radius: 28px;
-  padding: 38px 42px; font-family: var(--disp); font-weight: 800; font-size: 44px;
-  display: flex; justify-content: space-between; align-items: center;
-}
-/* note menempel ke elemen di atasnya (body/CTA) dengan jarak seragam */
 .kit-note { margin-top: 26px; font-family: var(--mono); font-size: 26px; color: #6E675C; }
 .kit-foot {
-  flex-shrink: 0; margin-top: 28px;
-  display: flex; justify-content: space-between;
-  font-family: var(--mono); font-size: 26px; color: #6E675C;
+flex-shrink: 0; margin-top: 28px;
+display: flex; justify-content: space-between;
+font-family: var(--mono); font-size: 26px; color: #6E675C;
 }
 .kit-tabs { display: flex; gap: 10px; flex-wrap: wrap; max-width: 1100px; margin: 0 auto 30px; }
 .kit-tabs button { background: #221E18; color: #F5F1E8; border: 1px solid rgba(245,241,232,.2); padding: .6rem 1.1rem; border-radius: 999px; font-family: var(--mono); font-size: .8rem; }
-/* --acc BUKAN typo: didefinisikan di src/styles/globals.css (:root) = #FF4D00 */
 .kit-tabs button.on { background: var(--acc); color: #2a0e00; border-color: var(--acc); font-weight: 700; }
 .kit-numlist { list-style: none; margin-top: 40px; display: grid; gap: 30px; }
 .kit-numlist li { display: flex; gap: 24px; font-size: 38px; font-weight: 600; line-height: 1.4; }
@@ -119,10 +100,6 @@
 .kit-quote { margin-top: 44px; border-left: 8px solid #FF4D00; background: #fff; border-radius: 0 20px 20px 0; padding: 36px 40px; box-shadow: 8px 8px 0 rgba(25,22,19,.15); }
 .kit-quote p { font-size: 36px; line-height: 1.45; color: #191613; }
 .kit-quote small { display: block; margin-top: 18px; font-family: var(--mono); font-size: 26px; color: #6E675C; }
-/* screenshot: tinggi dikunci agar tidak menabrak footer */
-.kit-img { margin-top: 36px; background: #191613; padding: 14px; border-radius: 24px; box-shadow: 12px 12px 0 rgba(25,22,19,.25); }
-.kit-img img { width: 100%; height: 560px; object-fit: cover; object-position: top; border-radius: 14px; }
-
 /* ===== COVER INK (hook) ===== */
 .kit-slide.dark { background: #191613; color: #F5F1E8; }
 .kit-slide.dark .kit-chip { color: #191613; }
@@ -132,25 +109,22 @@
 .kit-slide.dark .kit-logo { background: #F5F1E8; color: #191613; }
 .kit-slide.dark .kit-logo b { color: #FF4D00; }
 .kit-slide.dark .kit-quote small { color: #6E675C; }
-
-/* 5 kotak centang: yang tercentang = "kalau 2 kena..." */
+/* 5 kotak centang */
 .kit-checks { display: flex; gap: 22px; margin-top: 52px; }
 .kit-checks span {
-  width: 76px; height: 76px; border-radius: 16px;
-  border: 3px solid rgba(245,241,232,.35);
-  display: grid; place-items: center;
-  font-size: 42px; font-weight: 800; color: transparent;
+width: 76px; height: 76px; border-radius: 16px;
+border: 3px solid rgba(245,241,232,.35);
+display: grid; place-items: center;
+font-size: 42px; font-weight: 800; color: transparent;
 }
 .kit-checks span.on { background: #FF4D00; border-color: #FF4D00; color: #2a0e00; }
-
-/* chip pintu (slide TANDA 05) */
+/* chip pintu */
 .kit-chips { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 40px; }
 .kit-chips span {
-  background: #D8F34F; color: #191613;
-  font-family: var(--mono); font-weight: 700; font-size: 28px;
-  padding: 16px 26px; border-radius: 999px;
+background: #D8F34F; color: #191613;
+font-family: var(--mono); font-weight: 700; font-size: 28px;
+padding: 16px 26px; border-radius: 999px;
 }
-
 /* ===== COVER ORANGE ===== */
 .kit-slide.theme-orange { background: #FF4D00; color: #2a0e00; }
 .kit-slide.theme-orange .kit-body { color: rgba(42,14,0,.82); }
@@ -162,10 +136,8 @@
 .kit-slide.theme-orange .kit-logo b { color: #FF4D00; }
 .kit-slide.theme-orange .kit-chip { background: #191613; color: #D8F34F; }
 .kit-slide.theme-orange .kit-title em { color: #2a0e00; }
-/* jaga kontras highlight body di atas latar orange */
 .kit-slide.theme-orange .kit-body em { color: #2a0e00; }
-
-/* ===== MODE AUDIT: satu halaman padat, tetap terbaca di HP ===== */
+/* ===== MODE AUDIT ===== */
 .kit-slide.audit { padding: 70px 70px 56px; }
 .kit-slide.audit .kit-mid { margin-top: 40px; }
 .kit-slide.audit .kit-chip { font-size: 22px; padding: 12px 24px; }
@@ -174,12 +146,108 @@
 .kit-slide.audit .kit-bullets li { font-size: 32px; line-height: 1.35; gap: 16px; }
 .kit-slide.audit .kit-note { margin-top: 24px; font-size: 24px; }
 .kit-slide.audit .kit-foot { margin-top: 22px; font-size: 24px; }
-
-/* ===== ALARM OVERFLOW: isi melebihi kartu = JANGAN DIUNDUH ===== */
+/* ===== ALARM OVERFLOW ===== */
 .kit-slide.overflow { outline: 8px solid #FF0000; outline-offset: -8px; }
 .kit-slide.overflow::before {
-  content: '⚠ ISI MELUBER — JANGAN DIUNDUH';
-  position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
-  background: #FF0000; color: #fff; font-family: var(--mono); font-weight: 700;
-  font-size: 24px; padding: 10px 22px; border-radius: 999px; z-index: 9;
+content: '⚠ ISI MELUBER — JANGAN DIUNDUH';
+position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
+background: #FF0000; color: #fff; font-family: var(--mono); font-weight: 700;
+font-size: 24px; padding: 10px 22px; border-radius: 999px; z-index: 9;
 }
+/* ===== MODE STORY 1080×1920 ===== */
+.kit-slide.story { height: 1920px; padding: 80px 80px 70px; }
+/* judul story: lebih kecil + leading longgar (kritik #5) */
+.kit-slide.story .kit-title { font-size: 78px; line-height: 1.18; letter-spacing: -.005em; }
+/* em tidak patah di hyphen / spasi ("embel-embel." utuh satu baris) */
+/* keseimbangan vertikal: konten duduk di zona tengah, bukan menempel atas (kritik #1).
+auto-margin aman: bila konten penuh, margin mengecil ke 0 tanpa memotong. */
+.kit-slide.story .kit-mid > :first-child { margin-top: auto; }
+.kit-slide.story .kit-mid > :last-child { margin-bottom: auto; }
+/* jarak antar elemen lebih lega (instruksi: jangan menumpuk) */
+.kit-slide.story .kit-body { margin-top: 44px; }
+.kit-slide.story .kit-bullets { margin-top: 48px; gap: 28px; }
+.kit-slide.story .kit-numlist { margin-top: 52px; gap: 36px; }
+.kit-slide.story .kit-img { margin-top: 48px; }
+.kit-slide.story .kit-note { margin-top: 32px; }
+/* ===== ZONA KOSONG CTA untuk stiker tautan IG (kritik #2) =====
+Tidak ada placeholder visual di dalam slide. Zona ini murni ruang kosong
+±190px di atas footer, tempat kamu menaruh stiker tautan di editor IG. */
+.kit-cta-space { flex: 0 0 190px; }
+/* ===== FOTO TIM ===== */
+.kit-photo { margin-top: 44px; background: #fff; border: 3px solid #191613; border-radius: 24px; padding: 24px; box-shadow: 12px 12px 0 rgba(25,22,19,.9); }
+.kit-photo img { width: 100%; height: 760px; object-fit: cover; object-position: top; border-radius: 16px; }
+.kit-photo-cap { padding: 20px 8px 4px; }
+.kit-photo-cap b { font-family: var(--disp); font-size: 44px; display: block; color: #191613; }
+.kit-photo-cap small { font-family: var(--mono); font-size: 26px; color: #6E675C; }
+
+/* ===== BINGKAI MOCKUP GAMBAR — browser frame, tanpa crop ===== */
+.kit-img {
+  margin-top: 36px; background: #191613; border-radius: 24px;
+  box-shadow: 12px 12px 0 rgba(25,22,19,.25); overflow: hidden;
+}
+.kit-img-bar { display: flex; align-items: center; gap: 14px; padding: 16px 20px 12px; }
+.kit-img-dots { display: flex; gap: 6px; flex-shrink: 0; }
+.kit-img-dots i { width: 10px; height: 10px; border-radius: 50%; background: #E86A58; }
+.kit-img-dots i:nth-child(2) { background: #F2C14E; }
+.kit-img-dots i:nth-child(3) { background: #7BC47F; }
+.kit-img-url {
+  font-family: var(--mono); font-size: 20px; color: rgba(245,241,232,.55);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.kit-img img {
+  display: block; width: 100%; height: auto; max-height: 680px;
+  object-fit: contain; object-position: center top; background: #0b0b0b;
+}
+
+/* ===== ZONA KOSONG CTA (tempat stiker tautan IG) ===== */
+.kit-cta-space { flex: 0 0 190px; }
+.kit-actions { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.kit-sticker-info {
+  max-width: 900px; color: rgba(245,241,232,.75);
+  font-family: var(--mono); font-size: .78rem; line-height: 1.6; text-align: center;
+}
+.kit-sticker-info b { color: var(--lime); }
+.kit-sticker-info code { color: rgba(245,241,232,.6); word-break: break-all; }
+/* ===== KOTAK KREDENSIAL DEMO (pengganti bullet malas) ===== */
+.kit-creds {
+  margin-top: 44px; background: #191613; border-radius: 24px;
+  padding: 20px 22px; box-shadow: 12px 12px 0 rgba(25,22,19,.25);
+}
+.kit-creds-title {
+  display: block; font-family: var(--mono); font-size: 20px;
+  letter-spacing: .12em; text-transform: uppercase; color: #D8F34F; margin-bottom: 20px;
+}
+.kit-creds-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.kit-creds-box {
+  background: rgba(245,241,232,.06); border: 2px solid rgba(245,241,232,.25);
+  border-radius: 16px; padding: 10px 12px;
+}
+.kit-creds-box small {
+  display: block; font-family: var(--mono); font-size: 14px; letter-spacing: .1em;
+  text-transform: uppercase; color: rgba(245,241,232,.55); margin-bottom: 8px;
+}
+.kit-creds-box b { font-family: var(--mono); font-size: 24px; color: #F5F1E8; word-break: break-all; }
+.kit-creds-note { display: block; margin-top: 18px; font-family: var(--mono); font-size: 20px; color: rgba(245,241,232,.5); }
+/* varian bila kotak kredensial dipakai di slide gelap */
+.kit-slide.dark .kit-creds { background: #F5F1E8; box-shadow: 12px 12px 0 rgba(245,241,232,.2); }
+.kit-slide.dark .kit-creds-title { color: #191613; }
+.kit-slide.dark .kit-creds-box { background: rgba(25,22,19,.05); border-color: rgba(25,22,19,.25); }
+.kit-slide.dark .kit-creds-box small { color: rgba(25,22,19,.55); }
+.kit-slide.dark .kit-creds-box b { color: #191613; }
+.kit-slide.dark .kit-creds-note { color: rgba(25,22,19,.5); }
+
+/* harga tidak boleh patah di tengah token ("Rp350 rb/bulan" utuh satu baris) */
+.kit-title .nb { white-space: nowrap; }
+
+/* ===== KREDENSIAL KOMPAK (muat berdampingan dengan gambar) ===== */
+.kit-creds.sm { margin-top: 26px; padding: 14px 16px; }
+.kit-creds.sm .kit-creds-title { font-size: 16px; margin-bottom: 10px; letter-spacing: .1em; }
+.kit-creds.sm .kit-creds-row { gap: 12px; }
+.kit-creds.sm .kit-creds-box { padding: 8px 10px; border-width: 1.5px; }
+.kit-creds.sm .kit-creds-box small { font-size: 12px; margin-bottom: 4px; }
+.kit-creds.sm .kit-creds-box b { font-size: 20px; }
+.kit-creds.sm .kit-creds-note { display: none; }
+/* ===== GAMBAR UKURAN KECIL (menyisakan ruang) ===== */
+.kit-img.sm img { max-height: 520px; }
+/* ===== JUDUL PADAT DI SLIDE STORY (mengalahkan override story) ===== */
+.kit-slide.story .kit-title.tight { font-size: 68px; line-height: 1.12; }

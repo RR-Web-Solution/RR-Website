@@ -6,7 +6,7 @@ export const WA_NUMBER = '6283171125657'
 export const waLink = (msg) => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`
 export const fmt = (n) => n.toLocaleString('id-ID')
 export const track = (name, extra = {}) => { try { window.gtag?.('event', name, extra) } catch (e) {} }
-export const WA_MSG_BARBER = 'Halo RR Devs, saya punya barbershop dan mau lihat sistem bookingnya 🙂'
+export const WA_MSG_BARBER = 'Halo RR Devs, saya punya barbershop dan mau lihat sistem bookingnya 💈'
 
 /* ---------- Hero: demo website di browser mockup (BarberPro pertama) ---------- */
 export const DEMOS = [
@@ -227,12 +227,12 @@ export const PORTFOLIO = [
     imageUrl: 'images/batik-nusantara-portfolio.jpg', liveUrl: 'https://batik-comp.wasmer.app/id',
   },
   {
-    title: 'Digital Printing', kind: 'demo', kindLabel: 'Demo · sedang dipindah', moving: true,
+    title: 'Digital Printing', kind: 'demo', kindLabel: 'Demo Sistem Custom',
     type: 'Website Custom + Sistem Order + Admin CMS', year: '2026',
-    desc: 'Mesin order 24 jam untuk percetakan: kalkulator harga otomatis berdasarkan ukuran & jumlah, order terformat rapi ke WhatsApp, dan admin panel penuh. Saat ini sedang kami pindahkan ke hosting baru.',
+    desc: 'Mesin order 24 jam untuk percetakan: kalkulator harga otomatis berdasarkan ukuran & jumlah, order terformat rapi ke WhatsApp, dan admin panel penuh.',
     tags: ['Kalkulator Harga', 'WhatsApp Ordering', 'Admin CMS'],
     metric: '24/7', metricLabel: 'order masuk otomatis tanpa jam tutup',
-    imageUrl: 'images/digital-printing-portfolio.jpg', liveUrl: '#',
+    imageUrl: 'images/digital-printing-portfolio.jpg', liveUrl: 'https://rrprint.rrdevs.my.id',
   },
 ]
 
@@ -262,14 +262,14 @@ export const RATE_ROWS = [
 ]
 
 export const RULES = [
-  { n: '01', t: 'White-Label Penuh', d: 'Nama agency Anda yang tampil di semua deliverable dan komunikasi dengan klien. Kami bekerja senyap di belakang layar.' },
-  { n: '02', t: 'Terlindungi NDA', d: 'Kami tidak akan menghubungi klien Anda secara langsung tanpa izin. Kerahasiaan bisnis Anda dijamin perjanjian tertulis.' },
+  { n: '01', t: 'White-Label Penuh', d: 'Nama agency Kamu yang tampil di semua deliverable dan komunikasi dengan klien. Kami bekerja senyap di belakang layar.' },
+  { n: '02', t: 'Terlindungi NDA', d: 'Kami tidak akan menghubungi klien Kamu secara langsung tanpa izin. Kerahasiaan bisnis Kamu dijamin perjanjian tertulis.' },
   { n: '03', t: 'Pembayaran Bertahap', d: '50% DP di awal → 40% saat staging disetujui → 10% saat handover. Arus kas agency tetap sehat.' },
-  { n: '04', t: 'Garansi Purna Jual', d: 'Bug-fix gratis selama 30 hari + 2 ronde revisi di setiap project. Reputasi Anda di depan klien tetap aman.' },
+  { n: '04', t: 'Garansi Purna Jual', d: 'Bug-fix gratis selama 30 hari + 2 ronde revisi di setiap project. Reputasi Kamu di depan klien tetap aman.' },
 ]
 export const FLOW = [
   { pct: '50%', t: 'DP', d: 'Project dimulai, slot dikunci' },
-  { pct: '40%', t: 'Staging Approval', d: 'Klien Anda review & setujui hasil' },
+  { pct: '40%', t: 'Staging Approval', d: 'Klien Kamu review & setujui hasil' },
   { pct: '10%', t: 'Handover', d: 'Website live, aset diserahkan' },
 ]
 
@@ -282,7 +282,7 @@ export const CASE_STUDIES = [
     story: 'Theo Teknik, jasa panggilan AC di Cakung, sebelumnya cuma mengandalkan promosi mulut ke mulut. Kami bangun landing page yang menaruh WhatsApp sebagai satu-satunya jalur booking di setiap section, menampilkan daftar harga transparan di depan — karena ketakutan terbesar pelanggan jasa panggilan adalah kena tipu harga — plus bukti before-after. Hasilnya: usaha yang tadinya cuma modal nomor HP sekarang punya kehadiran digital yang meyakinkan siapa pun yang googling "service AC terdekat".',
     highlights: ['WhatsApp jadi satu-satunya jalur booking di setiap section', 'Daftar harga transparan di depan — mematahkan takut kena tipu', 'Bukti before-after + testimoni asli'],
     stack: ['Landing Page', 'WhatsApp-first', 'Local SEO'],
-    quote: { text: 'Sejak ada web, orderan WA nambah dan pelanggan baru lebih gampang percaya.', name: 'Pemilik', biz: 'Jasa teknisi AC · Jakarta Timur' },
+    /* quote: { text: 'Sejak ada web, orderan WA nambah dan pelanggan baru lebih gampang percaya.', name: 'Pemilik', biz: 'Jasa teknisi AC · Jakarta Timur' }, */
     accent: '#0369A1', shot: '/images/theo-teknik-portfolio.jpg',
     shotNote: 'Landing page + daftar harga transparan + integrasi WhatsApp',
     live: 'https://theo-teknik.rrdevs.my.id',
@@ -304,7 +304,7 @@ export const CASE_STUDIES = [
     story: 'Konsep company profile firma arsitektur: tipografi editorial, animasi scroll halus, palet warna premium, dan performa kencang meski visual berat. Ini yang kami tunjukkan ke calon klien yang butuh presence digital terasa "mahal".',
     highlights: ['Tipografi editorial & animasi scroll halus', 'Palet warna premium', 'Performa kencang meski visual berat'],
     stack: ['Next.js', 'Framer Motion', 'Editorial Design'],
-    quote: null, accent: '#a08757', shot: '/images/architect-studio-portfolio.jpg', shotNote: 'Beranda — tipografi editorial',
+    quote: null, accent: '#a08757', shot: '/images/architect-studio-portfolio.jpg', shotNote: 'BerKamu — tipografi editorial',
     live: 'https://architect-studio.rrdevs.my.id',
   },
   {
@@ -314,7 +314,7 @@ export const CASE_STUDIES = [
     highlights: ['Kalkulator harga otomatis (ukuran × jumlah)', 'Panel admin penuh tanpa sentuh kode', 'Order auto-format rapi masuk WhatsApp'],
     stack: ['Laravel', 'MySQL', 'WhatsApp Order'],
     quote: null, accent: '#4338CA', shot: '/images/digital-printing-portfolio.jpg', shotNote: 'Kalkulator harga + admin panel',
-    live: '#',
+    live: 'https://rrprint.rrdevs.my.id',
   },
   {
     id: 'kopi-senja', emoji: '☕', title: 'Kopi Senja', tagline: 'Reservasi kedai kopi auto-WhatsApp',

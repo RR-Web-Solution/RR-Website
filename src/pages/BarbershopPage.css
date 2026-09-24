@@ -25,6 +25,7 @@
 .bs-btn { display: inline-block; font-weight: 700; padding: 14px 22px; border-radius: 999px; font-size: 15px; text-decoration: none; transition: all 0.2s ease; } 
 .bs-btn.primary { background: #FF4D00; color: #191613; }
 .bs-btn.ghost { border: 2px solid rgba(245,241,232,.4); color: #F5F1E8; }
+.bs-btn.dark { border: 2px solid #191613; color: #191613; }
 .bs-proof { margin-top: 26px; font-family: var(--mono); font-size: 11px; color: rgba(245,241,232,.55); }
 
 /* ===== PERBAIKAN: TRANSISI DAN PADDING ANTAR SECTION AGAR TIDAK ADA AREA PUTIH BOCOR ===== */

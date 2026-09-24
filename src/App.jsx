@@ -10,6 +10,7 @@ import SolusiPage from './pages/SolusiPage'
 import AuditPage from './pages/AuditPage'
 import BarbershopPage from './pages/BarbershopPage'
 import SiteMovePage from './pages/SiteMovePage'
+import BannerPage from './pages/BannerPage'
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="/barbershop" element={<BarbershopPage />} />
         <Route path="/portofolio/digital-printing" element={<SiteMovePage />} />
         <Route path="*" element={<LandingPage />} />
+        <Route path="/banner" element={<BannerPage />} />
       </Routes>
     </BrowserRouter>
   )

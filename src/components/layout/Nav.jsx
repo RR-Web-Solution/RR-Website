@@ -54,11 +54,11 @@ export default function Nav() {
               <i />{l.label}
             </a>
           ))}
-          <Link to="/jabodetabek" className={pathname === '/jabodetabek' ? 'active' : ''}>
-            <i />Jabodetabek ✦
-          </Link>
           <Link to="/barbershop" className={pathname === '/barbershop' ? 'active' : ''}>
             <i />Barbershop ✦
+          </Link>
+          <Link to="/jabodetabek" className={pathname === '/jabodetabek' ? 'active' : ''}>
+            <i />Jabodetabek ✦
           </Link>
         </nav>
         <div className="nav-right">

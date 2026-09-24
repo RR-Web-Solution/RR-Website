@@ -1,14 +1,14 @@
 import { waLink } from '../data/content'
 
-const WA_MSG = 'Halo RR Devs, saya punya barbershop dan mau lihat sistem bookingnya 🙂'
+const WA_MSG = 'Halo RR Devs, saya punya barbershop dan mau lihat sistem bookingnya 💈'
 const track = (name, extra = {}) => { try { window.gtag?.('event', name, extra) } catch (e) {} }
 
 const SLOTS = [
-  { jam: '10.00', capster: 'Dedi', status: 'isi' },
-  { jam: '11.00', capster: 'Dedi', status: 'kosong' },
-  { jam: '13.00', capster: 'Rian', status: 'isi' },
-  { jam: '14.00', capster: 'Rian', status: 'kosong' },
-  { jam: '16.00', capster: 'Dedi', status: 'kunci' },
+  { jam: '10.00', capster: 'Dimas', status: 'isi' },
+  { jam: '11.00', capster: 'Dimas', status: 'kosong' },
+  { jam: '13.00', capster: 'Rizky', status: 'isi' },
+  { jam: '14.00', capster: 'Rizky', status: 'kosong' },
+  { jam: '16.00', capster: 'Andi', status: 'kunci' },
 ]
 
 export default function BarberPro() {
@@ -19,7 +19,7 @@ export default function BarberPro() {
           <p className="kick"><span>★</span> — Lihat sebelum percaya</p>
           <h2 className="h2">Pelanggan Pilih Jadwal, Sistem yang Mencatat.</h2>
           <p className="bp-lead">
-            Biarkan pelanggan Anda mengunci jadwal kapster favorit mereka secara mandiri dalam
+            Biarkan pelanggan Kamu mengunci jadwal kapster favorit mereka secara mandiri dalam
              <br />
              <em>1 menit</em>. 
              <br />

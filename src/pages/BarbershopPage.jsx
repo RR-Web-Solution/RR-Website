@@ -2,8 +2,8 @@ import './BarbershopPage.css'
 import Footer from '../components/layout/Footer'
 import BarberPro from '../sections/BarberPro'
 
-const WA = 'https://wa.me'
-const WA_AUDIT = 'https://wa.me?'
+const WA = 'https://wa.me/6283171125657?text=Halo+RR+Devs,+saya+punya+barbershop+dan+mau+lihat+sistem+bookingnya+💈'
+const WA_AUDIT = 'https://wa.me/6283171125657?text=Halo+RR+Devs,+saya+mau+klaim+audit+gratis+💈'
 
 export default function BarbershopPage() {
   return (
@@ -20,7 +20,7 @@ export default function BarbershopPage() {
           </p>
           <div className="bs-cta">
             <a className="bs-btn primary" href={WA}>Obrolkan Kebutuhan Bisnismu (Gratis) →</a>
-            <a className="bs-btn ghost" href="https://rrdevs.my.id" target="_blank" rel="noopener noreferrer">Coba Demo Booking Langsung</a>
+            <a className="bs-btn ghost" href="https://barberpro.rrdevs.my.id" target="_blank" rel="noopener noreferrer">Coba Demo Booking Langsung</a>
           </div>
           <p className="bs-proof">Dipercaya oleh Theo Teknik (Cakung) · 20+ Audit Bisnis Disusun September 2026</p>
         </div>
@@ -73,7 +73,7 @@ export default function BarbershopPage() {
 
       <BarberPro />
 
-      <section className="bs-section cream">
+      {/* <section className="bs-section cream">
         <div className="bs-wrap">
           <h2>Bukti Sistem Kami Bekerja Nyata</h2>
           <blockquote className="bs-quote">
@@ -84,7 +84,7 @@ export default function BarbershopPage() {
             Theo memang bukan usaha barbershop—dia adalah bukti nyata bahwa alur konversi sistem kami bekerja efektif. Khusus untuk bisnis pangkas rambut, Kamu bisa langsung menguji coba Demo Aplikasi BarberPro di atas.
           </p>
         </div>
-      </section>
+      </section> */}
 
       <section className="bs-section dark">
         <div className="bs-wrap">
@@ -107,7 +107,7 @@ export default function BarbershopPage() {
             Kami menyediakan tiga paket kerja sama yang fleksibel: Landing Page Informasi, Website + Integrasi Booking WhatsApp, hingga Dashboard Multi-Cabang. Angka dan detail lengkapnya bisa Kamu cek langsung di halaman utama. Kami tidak menyembunyikan harga di balik kata "Hubungi Kami".
           </p>
           <div className="bs-cta">
-            <a className="bs-btn ghost dark" href="/#paket">Cek Detail Paket Harga</a>
+            <a className="bs-btn dark" href="/#harga">Cek Detail Paket Harga</a>
             <a className="bs-btn primary" href={WA}>Tanya-Tanya Dulu via WA →</a>
           </div>
         </div>

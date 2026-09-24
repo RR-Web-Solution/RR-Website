@@ -4,7 +4,7 @@
 .jkt-hero { padding: 90px 0 70px; background: var(--paper2); border-bottom: 1.5px solid var(--ink); }
 .jkt-title {
   font-family: var(--disp); font-weight: 800;
-  font-size: clamp(2.1rem, 5vw, 3.9rem); line-height: 1.05; letter-spacing: -.015em;
+  font-size: clamp(2.1rem, 4vw, 3.9rem) !important; line-height: 1.05; letter-spacing: -.015em;
   max-width: 860px;
 }
 .jkt-title em { font-style: italic; color: var(--acc); }
@@ -103,7 +103,7 @@
   background: #EFE7DD;
   border: 1.5px solid var(--ink); border-radius: 18px;
   box-shadow: 12px 12px 0 rgba(25, 22, 19, .9);
-  overflow: hidden; transform: rotate(1deg);
+  overflow: hidden;
   transition: transform .5s cubic-bezier(.2,.7,.2,1);
 }
 .wa-card:hover { transform: rotate(0); }
@@ -130,8 +130,8 @@
   box-shadow: 4px 4px 0 rgba(25,22,19,.85); white-space: nowrap;
   animation: float 5.5s ease-in-out infinite;
 }
-.wa-chip-a { top: -16px; right: -10px; }
-.wa-chip-b { bottom: 22px; left: -18px; animation-delay: 2s; background: var(--lime); }
+.wa-chip-a { top: 16px; right: 0px; }
+.wa-chip-b { bottom: 22px; left: 0px; animation-delay: 2s; background: var(--lime); }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {

@@ -15,9 +15,9 @@ export default function Footer() {
             pilih jam sendiri — plus landing page, company profile, dan website custom untuk UMKM.
           </p>
           <div className="foot-social">
-            <a href="https://instagram.com/universe.dev.id" target="_blank" rel="noreferrer" aria-label="Instagram RR Devs">Instagram ↗</a>
-            <a href="https://tiktok.com/@universe.dev.id" target="_blank" rel="noreferrer" aria-label="TikTok RR Devs">TikTok ↗</a>
-            <a href="https://linkedin.com/in/developer-id" target="_blank" rel="noreferrer" aria-label="LinkedIn RR Devs">LinkedIn ↗</a>
+            <a href="https://instagram.com/rrdevs.my.id" target="_blank" rel="noreferrer" aria-label="Instagram RR Devs">Instagram ↗</a>
+            {/* <a href="https://tiktok.com/@universe.dev.id" target="_blank" rel="noreferrer" aria-label="TikTok RR Devs">TikTok ↗</a> */}
+            <a href="https://facebook.com/rrdevs.my.id" target="_blank" rel="noreferrer" aria-label="Facebook Page RR Devs">Facebook ↗</a>
           </div>
         </div>
         <div className="foot-col">
@@ -27,7 +27,7 @@ export default function Footer() {
           <a href="#harga">Paket Harga</a>
           <a href="#portofolio">Portofolio</a>
           <Link to="/barbershop">Barbershop ✦</Link>
-          <Link to="/partner">Agency Partner</Link>
+          {/* <Link to="/partner">Agency Partner</Link> */}
           <Link to="/jabodetabek">Solusi Jabodetabek</Link>
         </div>
         <div className="foot-col">

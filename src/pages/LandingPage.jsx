@@ -25,8 +25,8 @@ export default function LandingPage() {
         <Process />
         <Pricing />
         <Portfolio />
-        <Testimonials />
-        <AgencyPartner />
+        {/* <Testimonials /> */}
+        {/* <AgencyPartner /> */}
         <FinalCTA />
       </main>
       <Footer />
