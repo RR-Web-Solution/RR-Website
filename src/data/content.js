@@ -4,6 +4,7 @@
    ============================================================ */
 export const WA_NUMBER = '6283171125657'
 export const waLink = (msg) => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`
+// export const waLink = (msg) => `https://wa.me/6283171125657?text=Halo+RR+Devs,+saya+mau+konsultasi+gratis.`
 export const fmt = (n) => n.toLocaleString('id-ID')
 export const track = (name, extra = {}) => { try { window.gtag?.('event', name, extra) } catch (e) {} }
 export const WA_MSG_BARBER = 'Halo RR Devs, saya punya barbershop dan mau lihat sistem bookingnya 💈'
@@ -109,7 +110,7 @@ export const SERVICES = [
   {
     n: '04', title: 'Website Custom', price: 'mulai Rp6,5 jt',
     desc: 'Fitur sesuai kebutuhan: booking multi-cabang, member, kalkulator harga, dashboard laporan, dll. Dibangun dari nol dan 100% jadi milikmu selamanya.',
-    tags: ['Fitur Custom', 'Integrasi WA API', 'Dashboard', 'Skalabel'],
+    tags: ['Fitur Custom', 'Integrasi WA API', 'Dashboard', 'Scalable'],
     slide: {
       sub: 'Kalau kebutuhanmu di luar BarberPro standar, kita bahas dulu scopenya. Timeline jujur 2–4 minggu.',
       bullets: ['Konsultasi 1-on-1 sebelum mulai', 'Dokumentasi + pelatihan', 'Bisa dikembangkan bertahap'],

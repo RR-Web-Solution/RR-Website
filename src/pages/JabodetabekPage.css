@@ -95,7 +95,7 @@
 
 /* ===== HERO 2 KOLOM ===== */
 .jkt-hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
-.jkt-title { font-size: clamp(2rem, 4.2vw, 3.4rem); text-wrap: balance; }
+.jkt-title { font-size: clamp(1.45rem, 7.5vw, 3.4rem); line-height: 1.1; text-wrap: balance; overflow-wrap: break-word; word-break: normal; max-width: 100%; }
 .jkt-vis { position: relative; }
 
 /* ===== MOCKUP CHAT WHATSAPP ===== */
@@ -140,7 +140,7 @@
 }
 @media (max-width: 640px) {
   .wa-chip { font-size: .66rem; padding: .4rem .7rem; }
-  .wa-chip-a { top: -12px; right: 6px; }
+  .wa-chip-a { top: 12px; right: 6px; }
   .wa-chip-b { bottom: 10px; left: 6px; }
 }
 

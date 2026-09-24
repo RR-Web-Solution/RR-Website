@@ -10,14 +10,8 @@
 .bs-kicker { font-family: var(--mono); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: #D8F34F; }
 
 /* ===== TYPOGRAPHY & SPACING TETAP PROPORSIONAL ===== */
-.bs-hero h1 { 
-  font-family: var(--disp); 
-  font-weight: 800; 
-  font-size: clamp(32px, 5vw, 54px); 
-  line-height: 1.1; 
-  margin: 16px 0 20px; 
-  max-width: 780px; 
-}
+.bs-hero h1 { font-family: var(--disp); font-weight: 800; font-size: clamp(30px, 7vw, 76px); line-height: 1.08; margin: 18px 0 20px; max-width: 820px; overflow-wrap: break-word; }
+
 .bs-hero h1 em { color: #FF4D00; font-style: italic; }
 
 .bs-sub { max-width: 640px; color: rgba(245,241,232,.78); font-size: 16px; line-height: 1.6; }
@@ -63,3 +57,7 @@
 .bs-final-note { font-family: var(--mono); font-size: 11px; color: rgba(245,241,232,.5); padding-top: 12px; }
 .bs-final-alt { padding-top: 20px; font-size: 13px; }
 .bs-final-alt a { color: #D8F34F; font-weight: 700; text-decoration: underline; }
+
+@media (max-width: 480px) {
+  .bs-hero h1 { font-size: clamp(26px, 8.6vw, 40px); }
+}

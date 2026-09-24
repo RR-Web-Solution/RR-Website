@@ -75,9 +75,9 @@ export default function Nav() {
           {sectionLinks.map((l) => (
             <a key={l.id} href={`/#${l.id}`} onClick={(e) => handleSectionClick(e, l.id)}>{l.label}</a>
           ))}
-          <Link to="/jabodetabek" onClick={() => setOpen(false)}>Jabodetabek ✦</Link>
           <Link to="/barbershop" onClick={() => setOpen(false)}>Barbershop ✦</Link>
-          <Link to="/partner" onClick={() => setOpen(false)}>Agency Partner</Link>
+          <Link to="/jabodetabek" onClick={() => setOpen(false)}>Jabodetabek ✦</Link>
+          {/* <Link to="/partner" onClick={() => setOpen(false)}>Agency Partner</Link> */}
         </div>
       )}
     </header>
