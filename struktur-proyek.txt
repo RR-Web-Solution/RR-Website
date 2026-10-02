@@ -1,0 +1,145 @@
+.
+├── README.md
+├── contoh.html
+├── index.html
+├── index_v1.html
+├── kertas-tinggal.html
+├── package-lock.json
+├── package.json
+├── public
+│   ├── RR-Devs—Rate-Card-Partner-2026.pdf
+│   ├── apple-touch-icon.png
+│   ├── audit
+│   │   ├── barbertopia
+│   │   │   ├── error-ig.png
+│   │   │   └── maps.png
+│   │   ├── cartel
+│   │   │   ├── story-2.png
+│   │   │   └── story.png
+│   │   ├── cukr
+│   │   │   ├── bio-cukr_id.png
+│   │   │   ├── bio-rara.png
+│   │   │   └── peta.png
+│   │   ├── dalamruang
+│   │   │   └── beacons.png
+│   │   ├── katto
+│   │   │   └── bio.png
+│   │   ├── parveen
+│   │   │   ├── hero-39jt.png
+│   │   │   └── paket.png
+│   │   ├── rio
+│   │   │   └── bio-rio.png
+│   │   ├── sapiens
+│   │   │   ├── maps-2.png
+│   │   │   └── maps.png
+│   │   ├── stud
+│   │   │   ├── maps.png
+│   │   │   └── page-not-found.png
+│   │   └── tamaro
+│   │       └── profil.png
+│   ├── demo-images
+│   │   ├── batik-demo.webp
+│   │   ├── dapur-demo.webp
+│   │   └── kopi-demo.webp
+│   ├── favicon-96x96.png
+│   ├── favicon.ico
+│   ├── favicon.svg
+│   ├── icons.svg
+│   ├── images
+│   │   ├── architect-studio-portfolio.jpg
+│   │   ├── barberpro-booking.png
+│   │   ├── barberpro-dashboard.png
+│   │   ├── barberpro-portfolio.png
+│   │   ├── batik-nusantara-portfolio.jpg
+│   │   ├── digital-printing-portfolio.jpg
+│   │   ├── kopi-senja-portfolio.png
+│   │   ├── maintenance.png
+│   │   ├── paket-harga.png
+│   │   ├── rafael.jpg
+│   │   ├── rendy.jpg
+│   │   ├── rrprint-dashboard.png
+│   │   ├── theo-teknik-portfolio.jpg
+│   │   ├── under-development.png
+│   │   └── wa-booking-real.png
+│   ├── og-image.jpg
+│   ├── robots.txt
+│   ├── site.webmanifest
+│   ├── sitemap.xml
+│   ├── web-app-manifest-192x192.png
+│   └── web-app-manifest-512x512.png
+├── src
+│   ├── App.jsx
+│   ├── assets
+│   │   ├── hero.png
+│   │   ├── react.svg
+│   │   └── vite.svg
+│   ├── components
+│   │   ├── home
+│   │   │   ├── BrowserMock.jsx
+│   │   │   └── BrowserMock_v1.jsx
+│   │   ├── layout
+│   │   │   ├── Footer.jsx
+│   │   │   ├── Footer_v1.jsx
+│   │   │   ├── Nav.jsx
+│   │   │   ├── Nav_v1.jsx
+│   │   │   └── ScrollManager.jsx
+│   │   └── ui
+│   │       ├── Counter.jsx
+│   │       ├── Reveal.jsx
+│   │       ├── Scramble.jsx
+│   │       ├── Scramble_v1.jsx
+│   │       └── SectionHead.jsx
+│   ├── data
+│   │   ├── content.js
+│   │   └── content_v1.js
+│   ├── hooks
+│   │   └── useInView.js
+│   ├── index.css
+│   ├── main.jsx
+│   ├── pages
+│   │   ├── AuditPage.css
+│   │   ├── AuditPage.jsx
+│   │   ├── BannerPage.jsx
+│   │   ├── BarbershopPage.css
+│   │   ├── BarbershopPage.jsx
+│   │   ├── JabodetabekPage.css
+│   │   ├── JabodetabekPage.jsx
+│   │   ├── KitPage.css
+│   │   ├── KitPage.jsx
+│   │   ├── KitPage_v1.jsx
+│   │   ├── LandingPage.jsx
+│   │   ├── PartnerPage.jsx
+│   │   ├── SiteMovePage.css
+│   │   ├── SiteMovePage.jsx
+│   │   ├── SolusiPage.css
+│   │   ├── SolusiPage.jsx
+│   │   ├── StorySlides.css
+│   │   └── StorySlidesPage.jsx
+│   ├── sections
+│   │   ├── About.jsx
+│   │   ├── About_v1.jsx
+│   │   ├── AgencyPartner.jsx
+│   │   ├── BarberPro.jsx
+│   │   ├── FinalCTA.jsx
+│   │   ├── FinalCTA_v1.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Hero_v1.jsx
+│   │   ├── Portfolio.jsx
+│   │   ├── Portfolio_v1.jsx
+│   │   ├── Pricing.jsx
+│   │   ├── Pricing_v1.jsx
+│   │   ├── Process.jsx
+│   │   ├── Services.jsx
+│   │   ├── Services_v1.jsx
+│   │   ├── Testimonials.jsx
+│   │   ├── Testimonials_v1.jsx
+│   │   ├── Ticker.jsx
+│   │   └── Why.jsx
+│   ├── styles.css
+│   └── utils
+│       └── motion.js
+├── struktur-proyek.txt
+├── vercel.json
+└── vite.config.js
+
+26 directories, 117 files

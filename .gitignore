@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# draf mati & berkas pribadi — salinannya hidup di branch arsip
+*_v1.jsx
+*_v1.js
+content_v1.js
+index_v1.html
+contoh.html
+kertas-tinggal.html
+struktur-proyek.txt

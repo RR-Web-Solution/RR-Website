@@ -41,7 +41,7 @@ export default function Pricing() {
                   Pilih {p.name}
                 </a>
                 {p.name === 'Custom' && (
-                  <div className="notes">* Harga dapat bervariasi berdasarkan jumlah dan kerumitan fitur yang diinginkan</div>
+                  <div className="notes">* Fitur di atas ukuran itu: penyesuaian harga disampaikan transparan sebelum DP — kamu mendengar angkanya sebelum membayar apa pun.</div>
                 )}
               </div>
             </Reveal>
@@ -49,11 +49,28 @@ export default function Pricing() {
         </div>
         <Reveal delay={150}>
           <div className="pay-note">
-            <b>Skema pembayaran:</b> DP 50% di awal, pelunasan setelah website jadi & kamu setujui.{' '}
-            <br />
-            <b>Garansi:</b> tidak cocok sebelum hari ke-7 → DP kembali. Bug-fix gratis 30 hari setelah live.{' '}
-            <a href={waLink('Halo, saya mau tanya skema pembayaran / garansi.')} target="_blank" rel="noreferrer">Tanya dulu? Gratis kok →</a>
+            <p>
+               <b>Skema pembayaran:</b> 
+               <br />
+               DP 50% di awal, pelunasan setelah website jadi & kamu setujui.  Bug-fix gratis 30 hari setelah live.{' '}
+            </p>
+             
+            <p>
+               <b>Tidak cocok di 3 hari pertama?</b> 
+               <br />
+               Hubungi kami, DP kembali 100% tanpa ribet.{' '}
+            </p>
+             
+            <p>
+               <b>Mulai Hari 4:</b> 
+               <br />
+               Pengerjaan terus dilanjutkan, DP menutup pekerjaan yang berjalan.{' '}
+            </p>
+             
           </div>
+           
+          <a href={waLink('Halo, saya mau tanya skema pembayaran / garansi.')} 
+             target="_blank" rel="noreferrer" className="pricing-cta">Tanya dulu? Gratis kok →</a>
         </Reveal>
       </div>
     </section>

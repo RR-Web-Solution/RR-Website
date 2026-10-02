@@ -28,7 +28,7 @@ export default function Footer() {
           <a href="#portofolio">Portofolio</a>
           <Link to="/barbershop">Barbershop ✦</Link>
           {/* <Link to="/partner">Agency Partner</Link> */}
-          <Link to="/jabodetabek">Solusi Jabodetabek</Link>
+          <Link to="/jabodetabek">Solusi Jabodetabek ✦</Link>
         </div>
         <div className="foot-col">
           <h4>Layanan</h4>
