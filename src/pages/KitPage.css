@@ -157,7 +157,7 @@ font-size: 24px; padding: 10px 22px; border-radius: 999px; z-index: 9;
 /* ===== MODE STORY 1080×1920 ===== */
 .kit-slide.story { height: 1920px; padding: 80px 80px 70px; }
 /* judul story: lebih kecil + leading longgar (kritik #5) */
-.kit-slide.story .kit-title { font-size: 78px; line-height: 1.18; letter-spacing: -.005em; }
+.kit-slide.story .kit-title { font-size: 70px; line-height: 1.18; letter-spacing: -.005em; }
 /* em tidak patah di hyphen / spasi ("embel-embel." utuh satu baris) */
 /* keseimbangan vertikal: konten duduk di zona tengah, bukan menempel atas (kritik #1).
 auto-margin aman: bila konten penuh, margin mengecil ke 0 tanpa memotong. */
@@ -174,8 +174,16 @@ Tidak ada placeholder visual di dalam slide. Zona ini murni ruang kosong
 ±190px di atas footer, tempat kamu menaruh stiker tautan di editor IG. */
 .kit-cta-space { flex: 0 0 190px; }
 /* ===== FOTO TIM ===== */
-.kit-photo { margin-top: 44px; background: #fff; border: 3px solid #191613; border-radius: 24px; padding: 24px; box-shadow: 12px 12px 0 rgba(25,22,19,.9); }
-.kit-photo img { width: 100%; height: 760px; object-fit: cover; object-position: top; border-radius: 16px; }
+.container-photo {
+   display: flex;
+   justify-content: center; align-items: center;
+}
+.kit-photo { 
+   margin-top: 44px; background: #fff; border: 3px solid #191613; border-radius: 24px; padding: 24px; box-shadow: 12px 12px 0 rgba(25,22,19,.9); max-width: 80%; max-height: 800px;
+   display: flex; flex-direction: column; justify-content: center; align-items: center;
+   overflow: hidden;
+}
+.kit-photo img { width: 100%; height: 580px; object-fit: cover; object-position: top; border-radius: 16px; }
 .kit-photo-cap { padding: 20px 8px 4px; }
 .kit-photo-cap b { font-family: var(--disp); font-size: 44px; display: block; color: #191613; }
 .kit-photo-cap small { font-family: var(--mono); font-size: 26px; color: #6E675C; }
@@ -251,3 +259,25 @@ Tidak ada placeholder visual di dalam slide. Zona ini murni ruang kosong
 .kit-img.sm img { max-height: 520px; }
 /* ===== JUDUL PADAT DI SLIDE STORY (mengalahkan override story) ===== */
 .kit-slide.story .kit-title.tight { font-size: 68px; line-height: 1.12; }
+
+/* Slide hitam beraksen oranye (bukan oranye penuh) */
+.kit-slide.theme-night { background: #111111; color: #F5F1E8; }
+.kit-slide.theme-night .kit-body { color: rgba(245,241,232,.8); }
+.kit-slide.theme-night .kit-title em { color: #FF4D00; }
+.kit-slide.theme-night .kit-chip { background: #D8F34F; color: #111111; }
+.kit-slide.theme-night .kit-bullets span { color: #FF4D00; }
+.kit-slide.theme-night .kit-logo { background: #F5F1E8; color: #111111; }
+.kit-slide.theme-night .kit-logo b { color: #FF4D00; }
+.kit-slide.theme-night .kit-note,
+.kit-slide.theme-night .kit-foot,
+.kit-slide.theme-night .kit-handle { color: rgba(245,241,232,.5); }
+.kit-slide.theme-night .kit-stats { border-top-color: rgba(245,241,232,.2); }
+.kit-slide.theme-night .kit-stats b { color: #FF4D00; }
+
+/* Garis pemisah tipis antar kolom stats */
+.kit-stats > div + div { border-left: 2px solid rgba(25,22,19,.15); padding-left: 60px; }
+.kit-slide.dark .kit-stats > div + div,
+.kit-slide.theme-night .kit-stats > div + div { border-left-color: rgba(245,241,232,.2); }
+
+/* Nomor halaman diangkat sedikit dari tepi bawah */
+.kit-foot { margin-bottom: 28px; }

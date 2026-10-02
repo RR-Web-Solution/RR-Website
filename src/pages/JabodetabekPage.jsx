@@ -35,7 +35,7 @@ export default function JabodetabekPage() {
           <div className="wrap jkt-hero-grid">
             <Reveal className="jkt-copy">
               <p className="kick"><span>(01)</span> — Solusi Digital Jabodetabek</p>
-              <h1 className="jkt-title">
+              <h1 className="hero-title">
                 Bisnis Jabodetabek nggak butuh aplikasi ribet. Butuh sistem yang <em>nyambung ke WhatsApp</em>.
               </h1>
               <p className="jkt-lead">

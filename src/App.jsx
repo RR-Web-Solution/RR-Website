@@ -26,7 +26,6 @@ export default function App() {
         <Route path="/solusi" element={<SolusiPage />} />
         <Route path="/audit/:slug" element={<AuditPage />} />
         <Route path="/barbershop" element={<BarbershopPage />} />
-        <Route path="/portofolio/digital-printing" element={<SiteMovePage />} />
         <Route path="*" element={<LandingPage />} />
         <Route path="/banner" element={<BannerPage />} />
       </Routes>

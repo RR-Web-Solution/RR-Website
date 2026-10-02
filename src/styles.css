@@ -393,10 +393,18 @@ mark { background: var(--lime); padding: 0 .35em; box-decoration-break: clone; -
 .pay-note {
   margin-top: 40px; border: 1px dashed rgba(245,241,232,.3); border-radius: 14px;
   padding: 20px 26px; font-size: .95rem; color: rgba(245,241,232,.75);
+  display: flex; gap: 20px;
 }
 .pay-note b { color: var(--lime); }
-.pay-note a { color: var(--acc); font-weight: 600; }
-.pay-note a:hover { text-decoration: underline; }
+.pricing-cta {
+   color: var(--acc); font-weight: 600; display: block; text-align: center; margin-top: 20px;
+   font-size: 1rem; transform: 0.3s ease;
+}
+.pricing-cta:hover { text-decoration: underline; scale: 1.05; }
+.pricing-cta:active { scale: 0.95; }
+.pay-note p {
+   border-right: 1px solid rgba(245,241,232,.14); flex: 1;
+}
 
 /* ============ PORTOFOLIO (2 lapis: blur + contain) ============ */
 .pf-list { display: flex; flex-direction: column; gap: 90px; }
@@ -482,7 +490,7 @@ mark { background: var(--lime); padding: 0 .35em; box-decoration-break: clone; -
 .final-mail:hover { color: #fff; border-color: #fff; }
 
 /* ============ FOOTER ============ */
-.footer { background: var(--ink); color: var(--cream); padding: 90px 0 20px 0; }
+.footer { background: var(--ink); color: var(--cream); padding: 90px 0 10px 0; }
 .foot-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.4fr; gap: 48px; padding-bottom: 64px; }
 .foot-brand p { color: rgba(245,241,232,.6); margin: 22px 0; max-width: 320px; font-size: .95rem; }
 .foot-social { display: flex; gap: 16px; flex-wrap: wrap; }
@@ -710,7 +718,11 @@ mark { background: var(--lime); padding: 0 .35em; box-decoration-break: clone; -
 
   /* footer */
   .footer { padding-top: 70px; }
-  .foot-grid { grid-template-columns: 1fr; gap: 38px; padding-bottom: 48px; }
+  .foot-grid { 
+     grid-template-columns: 1fr; 
+     gap: 38px; 
+     padding-bottom: 48px; 
+  }
 
   /* ticker */
   .ticker { padding: 12px 0; }

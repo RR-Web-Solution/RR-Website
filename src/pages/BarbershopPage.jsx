@@ -1,6 +1,7 @@
 import './BarbershopPage.css'
 import Footer from '../components/layout/Footer'
 import BarberPro from '../sections/BarberPro'
+import { Link } from "react-router-dom";
 
 const WA = 'https://wa.me/6283171125657?text=Halo+RR+Devs,+saya+punya+barbershop+dan+mau+lihat+sistem+bookingnya+💈'
 const WA_AUDIT = 'https://wa.me/6283171125657?text=Halo+RR+Devs,+saya+mau+klaim+audit+gratis+💈'
@@ -10,7 +11,7 @@ export default function BarbershopPage() {
    <>
     <main className="bs-page">
       <header className="bs-hero">
-        <div className="bs-wrap">
+        <div className="wrap">
           <p className="bs-kicker">Spesialis Website &amp; Otomatisasi Barbershop · Jabodetabek</p>
           <h1>Pelangganmu Sudah Online. <em>Kenapa Atur Jadwal Masih Manual?</em></h1>
           <p className="bs-sub">
@@ -107,7 +108,7 @@ export default function BarbershopPage() {
             Kami menyediakan tiga paket kerja sama yang fleksibel: Landing Page Informasi, Website + Integrasi Booking WhatsApp, hingga Dashboard Multi-Cabang. Angka dan detail lengkapnya bisa Kamu cek langsung di halaman utama. Kami tidak menyembunyikan harga di balik kata "Hubungi Kami".
           </p>
           <div className="bs-cta">
-            <a className="bs-btn dark" href="/#harga">Cek Detail Paket Harga</a>
+            <Link className="bs-btn dark" to="/#harga">Cek Detail Paket Harga</Link>
             <a className="bs-btn primary" href={WA}>Tanya-Tanya Dulu via WA →</a>
           </div>
         </div>

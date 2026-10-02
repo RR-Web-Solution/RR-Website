@@ -24,7 +24,7 @@ export const DEMOS = [
     cta: 'Book Sekarang',
     feats: ['Notifikasi WA otomatis', 'Dashboard owner', 'Slot terkunci real-time'],
     seed: 'barberpro-demo',
-    urlImages: '/images/barberpro-portfolio.jpg',
+    urlImages: '/images/barberpro-portfolio.png',
   },
   {
     id: 'kopi',
@@ -90,7 +90,7 @@ export const SERVICES = [
     },
   },
   {
-    n: '02', title: 'Landing Page', price: 'mulai Rp2,5 jt',
+    n: '02', title: 'Landing Page', price: 'mulai Rp2,9 jt',
     desc: 'Satu halaman yang fokusnya satu: membuat pengunjung menghubungi / memesan. Cocok untuk produk tunggal, promo, atau jasa lokal yang butuh presence cepat.',
     tags: ['1 Halaman', 'Tombol WhatsApp', 'Form Order', 'Mobile-first'],
     slide: {
@@ -146,8 +146,17 @@ export const PROCESS = [
 /* ---------- Paket Harga (Compro disembunyikan dari pricing) ---------- */
 export const PLANS = [
   {
-    name: 'Basic', sub: 'Landing Page', price: 2500000, hot: false,
-    feats: ['1 halaman desain profesional', 'Responsif di HP & laptop', 'Gratis domain .com + hosting (1 thn)', 'Tombol integrasi WhatsApp API', 'Revisi 2×', 'Pengerjaan 3–7 hari'],
+    name: 'Basic', sub: 'Landing Page', price: 2900000, hot: false,
+    feats: [
+       '1 halaman desain profesional',
+       'Responsif di HP & laptop', 
+       'Integrasi tombol WhatsApp', 
+       'Gratis domain + hosting + SSL (1 tahun)', 
+       'Kode & data 100% milikmu — tanpa langganan bulanan ke kami',
+       'Gratis revisi sampai 2×', 
+       'Pengerjaan 3–7 hari kerja sejak bahan lengkap',
+       'Support 30 hari setelah live',
+    ],
   },
   {
     name: 'BarberPro', sub: 'Sistem Booking Barbershop', price: 3900000, hot: true, flag: '★ Paling Laris · Barbershop',
@@ -155,12 +164,13 @@ export const PLANS = [
       'Sistem booking real-time (slot terkunci)',
       'Pelanggan pilih layanan, kapster & jam dari HP',
       'Notifikasi WhatsApp otomatis ke toko',
-      'Dashboard admin (jadwal + estimasi omzet)',
+      'Dashboard admin (kelola booking & jadwal + estimasi omzet)',
       'Branding toko (warna, logo, nama, harga)',
       'Gratis domain + hosting + SSL (1 tahun)',
+      'Kode & data 100% milik tokomu — tanpa langganan bulanan ke kami',
       'Training singkat + dokumentasi',
-      'Revisi 2×',
-      'Pengerjaan target 14 hari',
+      'Gratis revisi sampai 3×',
+      'Pengerjaan target 14 hari kerja sejak bahan lengkap',
       'Support 30 hari setelah live',
     ],
   },
@@ -169,19 +179,25 @@ export const PLANS = [
     feats: [
       'Sesi konsultasi & bedah kebutuhan bisnis 1-on-1',
       'Desain eksklusif dari nol — bukan template',
-      '1 fitur custom (booking / member / kalkulator)',
-      'Integrasi WhatsApp API',
+      '1 fitur custom untuk bisnis apa saja — booking, member, kalkulator, inventori, atau idemu sendiri; ukuran dibatasi build 2–4 minggu',
+      'Integrasi tombol WhatsApp yang lebih kompleks',
       'Dashboard admin custom',
       'Gratis domain + hosting + SSL (1 tahun)',
-      'Garansi bug-fix & support 6 bulan',
-      'Pengerjaan 2–4 minggu',
+      'Kode & data 100% milik tokomu — tanpa langganan bulanan ke kami',
+      'Gratis revisi sampai 5x',
+      'Pengerjaan 2–4 minggu sejak bahan lengkap',
+      'Garansi bug-fix & support penuh 6 bulan',
     ],
   },
 ]
 export const CARE_PRICE = 350000
 export const CARE_FEATS = [
-  'Backup & keamanan mingguan', 'Update konten 2×/bulan', 'Laporan performa bulanan',
-  'Dukungan teknis prioritas (WhatsApp)', 'Konsultasi strategi digital 1×/bulan', 'Optimasi kecepatan & SEO berkala',
+  'Backup & keamanan mingguan', 
+   'Update konten 2×/bulan', 
+   'Laporan performa bulanan',
+  'Dukungan teknis prioritas (WhatsApp)', 
+   'Konsultasi strategi digital 1×/bulan', 
+   'Optimasi kecepatan & SEO berkala',
 ]
 
 /* ---------- Portofolio (jujur: produk / live / demo) ---------- */
@@ -193,7 +209,7 @@ export const PORTFOLIO = [
     desc: 'Barbershop yang masih mencatat booking lewat chat selalu menghadapi masalah yang sama: dua orang menempati jam yang sama, dan pemilik tidak tahu omzet hari ini sampai tutup toko. BarberPro menyelesaikan semuanya: pelanggan memilih layanan, barber favorit, dan jam kosong langsung dari HP — slot terisi otomatis terkunci sehingga double-booking mustahil terjadi. Setiap booking baru berbunyi di WhatsApp pemilik, sementara dashboard merangkum jadwal dan estimasi pendapatan.',
     tags: ['Sistem Booking Real-Time', 'Notifikasi WhatsApp', 'Dashboard Admin', 'Overlap-proof'],
     metric: '1 mnt', metricLabel: 'dari buka website sampai jadwal terkunci — tanpa chat',
-    imageUrl: 'images/barberpro-portfolio.jpg', liveUrl: 'https://barberpro.rrdevs.my.id',
+    imageUrl: 'images/barberpro-portfolio.png', liveUrl: 'https://barberpro.rrdevs.my.id',
   },
   {
     title: 'Theo Teknik', kind: 'live', kindLabel: 'Proyek live',
@@ -225,7 +241,7 @@ export const PORTFOLIO = [
     desc: 'Konsep company profile brand batik dengan katalog produk per kategori dan pemesanan via WhatsApp plus panel admin. Demo kemampuan, bukan klien nyata.',
     tags: ['Company Profile', 'Katalog Produk', 'Admin CMS'],
     metric: '15', metricLabel: 'total produk terkelola via admin',
-    imageUrl: 'images/batik-nusantara-portfolio.jpg', liveUrl: 'https://batik-comp.wasmer.app/id',
+    imageUrl: 'images/batik-nusantara-portfolio.jpg', liveUrl: 'https://batik.rrdevs.my.id',
   },
   {
     title: 'Digital Printing', kind: 'demo', kindLabel: 'Demo Sistem Custom',
@@ -251,12 +267,12 @@ export const TESTIMONIALS = [
 /* ---------- Agency Partner ---------- */
 export const PARTNER_PREVIEW = [
   { p: 'BarberPro Setup', buy: '3,9 jt', sell: '8–10 jt' },
-  { p: 'Landing Page', buy: '2,5 jt', sell: '5–7 jt' },
+  { p: 'Landing Page', buy: '2,9 jt', sell: '6–8 jt' },
   { p: 'Website Custom', buy: '6,9 jt', sell: '15–20 jt' },
 ]
 export const RATE_ROWS = [
   { p: 'BarberPro Setup', d: 'Sistem booking barbershop + branding toko', partner: 'Rp 3.900.000', sell: 'Rp 8–10 jt', margin: '~2x' },
-  { p: 'Landing Page', d: '1 halaman fokus konversi', partner: 'Rp 2.500.000', sell: 'Rp 5–7 jt', margin: '~2x' },
+  { p: 'Landing Page', d: '1 halaman fokus konversi', partner: 'Rp 2.900.000', sell: 'Rp 6–8 jt', margin: '~2x' },
   { p: 'Company Profile', d: 'Profil bisnis profesional multi-halaman', partner: 'Rp 4.500.000', sell: 'Rp 10–12 jt', margin: '~2x' },
   { p: 'Website Custom', d: 'Fitur sesuai kebutuhan klien', partner: 'Rp 6.900.000', sell: 'Rp 15–20 jt', margin: '~2x' },
   { p: 'Maintenance Bulanan', d: 'Perawatan & update berkala', partner: 'Rp 350.000/bln', sell: 'Rp 1–1,5 jt/bln', margin: '~2x' },
@@ -295,7 +311,7 @@ export const CASE_STUDIES = [
     highlights: ['Constraint PostgreSQL — bentrok jadwal mustahil', 'Notifikasi WhatsApp booking terbaru ke admin', 'Dashboard pendapatan & barber tersibuk'],
     stack: ['Next.js', 'PostgreSQL', 'Fonnte WA API', 'Termux · Android'],
     footnote: 'Dibangun 100% oleh Rafael dari tablet Android pakai Termux — tanpa laptop.',
-    quote: null, accent: '#c9a24b', shot: '/images/barberpro-portfolio.jpg',
+    quote: null, accent: '#c9a24b', shot: '/images/barberpro-portfolio.png',
     shotNote: 'Homepage premium + dashboard booking & pendapatan',
     live: 'https://barberpro.rrdevs.my.id',
   },
