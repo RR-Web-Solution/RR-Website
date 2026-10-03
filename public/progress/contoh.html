@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Halaman Progres Klien — MODE DEMO · RR Devs</title>
+<!--
+  CARA PAKAI (RR-Website repo):
+  1. Salin file ini ke: public/progress/contoh.html
+  2. Commit bersama commit katalog, push, deploy.
+  3. Halaman ini LIVE sungguhan di: rrdevs.my.id/progress/contoh.html
+  4. Buka di Chrome tablet → screenshot bagian atas (badge + nama + progres)
+     → potong → jadikan gambar slide 06 hl-harga.
+  5. imgBar slide diisi URL ASLI halaman ini. Tidak ada yang dimanipulasi:
+     halaman ini nyata, setengah jadi, dan mengaku demo di pita atasnya.
+  UNTUK KLIEN SUNGGUHAN NANTI (D29 lahir lebih awal):
+  salin file ini ke public/progress/<slug-toko>.html, ganti isi objek DEMO
+  di bawah (nama toko, hari ke-, tahap), deploy. Klien mendapat alamat
+  progres pribadinya; janji "progress dipantau tiap hari" punya rumah.
+-->
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0c0f13; color: #faf8f3;
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    min-height: 100vh; display: flex; flex-direction: column;
+  }
+  .demo-ribbon {
+    background: #CDF04E; color: #101010; text-align: center;
+    font: 700 12px/1 ui-monospace, monospace; letter-spacing: 3px;
+    padding: 9px 12px; text-transform: uppercase;
+  }
+  .stripe {
+    position: fixed; top: 54px; right: -70px; transform: rotate(35deg);
+    background: repeating-linear-gradient(45deg, #FF4D00 0 14px, #101010 14px 28px);
+    color: #fff; font: 900 13px/1 ui-monospace, monospace; letter-spacing: 3px;
+    padding: 10px 90px; text-transform: uppercase; z-index: 5;
+    box-shadow: 0 6px 24px rgba(0,0,0,.5);
+  }
+  .stripe span { background: #101010; padding: 4px 10px; border-radius: 4px; }
+  main { flex: 1; width: min(860px, 92%); margin: 0 auto; padding: 72px 0 48px; }
+  .eyebrow { font: 700 12px/1 ui-monospace, monospace; letter-spacing: 4px; color: #c9a24b; text-transform: uppercase; }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(38px, 7vw, 64px); line-height: 1.05; margin-top: 18px; }
+  h1 em { color: #c9a24b; }
+  .sub { margin-top: 16px; color: #b9b4a8; font-size: 16px; line-height: 1.6; max-width: 60ch; }
+  .meta { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 34px; font: 600 13px/1.4 ui-monospace, monospace; color: #8f8a7d; }
+  .meta b { display: block; color: #faf8f3; font-size: 20px; margin-top: 6px; letter-spacing: 0; }
+  .steps { margin-top: 44px; border-top: 1px solid rgba(250,248,243,.14); }
+  .step { display: flex; gap: 18px; align-items: baseline; padding: 16px 4px; border-bottom: 1px solid rgba(250,248,243,.14); }
+  .step .n { font: 700 13px/1 ui-monospace, monospace; color: #8f8a7d; width: 30px; }
+  .step .t { font-size: 17px; font-weight: 700; }
+  .step .d { color: #b9b4a8; font-size: 14px; margin-top: 4px; }
+  .tag { margin-left: auto; font: 800 11px/1 ui-monospace, monospace; letter-spacing: 2px; padding: 7px 12px; border-radius: 999px; white-space: nowrap; }
+  .done .tag { background: rgba(205,240,78,.15); color: #CDF04E; }
+  .now  .tag { background: #c9a24b; color: #101010; }
+  .wait .tag { background: rgba(250,248,243,.08); color: #8f8a7d; }
+  .now .t { color: #c9a24b; }
+  .cta { margin-top: 40px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn { padding: 15px 26px; border-radius: 999px; font-weight: 800; font-size: 14px; text-decoration: none; }
+  .btn.gold { background: #c9a24b; color: #101010; }
+  .btn.ghost { border: 1px solid rgba(250,248,243,.3); color: #faf8f3; }
+  .btn.off { opacity: .45; cursor: not-allowed; border: 1px dashed rgba(250,248,243,.35); color: #b9b4a8; }
+  footer { border-top: 1px solid rgba(250,248,243,.14); }
+  footer div { width: min(860px, 92%); margin: 0 auto; padding: 20px 0; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font: 600 12px/1.5 ui-monospace, monospace; color: #8f8a7d; }
+</style>
+</head>
+<body>
+  <div class="demo-ribbon">Halaman progres klien · mode demo — contoh isi, bukan toko sungguhan</div>
+  <div class="stripe"><span>Under Development</span></div>
+
+  <main>
+    <div class="eyebrow">Sedang dikerjakan oleh RR Devs</div>
+    <h1>Nama Toko Kamu<br><em>sedang dibangun di sini.</em></h1>
+    <p class="sub">Halaman ini adalah rumah sementara proyekmu selama pengerjaan:
+      status tahap, hari ke-, dan tautan preview harian. Begitu live,
+      alamat ini melempar ke website aslimu — dan isinya menjadi sejarah yang bisa kamu pamerkan.</p>
+
+    <div class="meta">
+      <div>HARI PENGERJAAN<b>4 / ±14</b></div>
+      <div>UPDATE TERAKHIR<b>Hari ini, 09.12 WIB</b></div>
+      <div>PIC PROYEK<b>Rafael · RR Devs</b></div>
+    </div>
+
+    <div class="steps">
+      <div class="step done"><span class="n">01</span><div><div class="t">Kickoff &amp; bahan lengkap</div><div class="d">Logo, daftar harga, foto, dan akun diterima. DP terkunci.</div></div><span class="tag">SELESAI</span></div>
+      <div class="step done"><span class="n">02</span><div><div class="t">Desain &amp; struktur</div><div class="d">Mockup halaman disetujui klien sebelum koding dimulai.</div></div><span class="tag">SELESAI</span></div>
+      <div class="step now"><span class="n">03</span><div><div class="t">Pengerjaan sistem</div><div class="d">Booking, notifikasi WhatsApp, dan dashboard dirakit. Preview harian masuk ke WA klien.</div></div><span class="tag">SEDANG JALAN</span></div>
+      <div class="step wait"><span class="n">04</span><div><div class="t">Uji coba &amp; isi konten</div><div class="d">Booking uji lintas perangkat, isi layanan &amp; kapster asli toko.</div></div><span class="tag">MENUNGGU</span></div>
+      <div class="step wait"><span class="n">05</span><div><div class="t">Handover &amp; live</div><div class="d">Pelunasan setelah klien setujui. Akun, kode, dan data diserahkan penuh.</div></div><span class="tag">MENUNGGU</span></div>
+    </div>
+
+    <div class="cta">
+      <a class="btn off" aria-disabled="true">Preview harian — aktif setelah tahap 03 selesai</a>
+      <a class="btn ghost" href="https://wa.me/6283171125657">Tanya progres via WhatsApp</a>
+    </div>
+  </main>
+
+  <footer><div>
+    <span>RR Devs · Jakarta Timur · rrdevs.my.id</span>
+    <span>Skema bayar &amp; jendela refund 3 hari: rrdevs.my.id/#harga</span>
+  </div></footer>
+</body>
+</html>
