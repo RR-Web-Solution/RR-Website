@@ -185,7 +185,7 @@ export default function StorySlidesPage() {
           <h2 className="sm">Pilih sesuai tahap bisnismu</h2>
           {PLANS.map((p, i) => (
             <div className={`prow r${i + 1} ${p.hot ? 'hot' : ''}`} key={p.name}>
-              {p.hot && <span className="flag">PALING LARIS</span>}
+              {p.hot && <span className="flag">SISTEM BOOKING</span>}
               <div><div className="pn">{p.name.toUpperCase()}</div><div className="pd">{p.sub} · {dur(p)}</div></div>
               <div className="pp">Rp{fmt(p.price)}</div>
             </div>

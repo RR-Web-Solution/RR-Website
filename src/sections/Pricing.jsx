@@ -19,7 +19,7 @@ export default function Pricing() {
           {PLANS.map((p, i) => (
             <Reveal key={p.name} delay={i * 110}>
               <div className={`plan ${p.hot ? 'hot' : ''}`}>
-                {p.hot && <span className="plan-flag">{p.flag || '★ Paling Laris'}</span>}
+                {p.hot && <span className="plan-flag">{p.flag || '★ SISTEM BOOKING'}</span>}
                 <div className="plan-top">
                   <h3>{p.name}</h3>
                   <span>{p.sub}</span>
@@ -68,9 +68,11 @@ export default function Pricing() {
             </p>
              
           </div>
-           
-          <a href={waLink('Halo, saya mau tanya skema pembayaran / garansi.')} 
-             target="_blank" rel="noreferrer" className="pricing-cta">Tanya dulu? Gratis kok →</a>
+
+          <div className="pricing-cta-container">
+             <a href={waLink('Halo, saya mau tanya skema pembayaran / garansi.')} 
+                target="_blank" rel="noreferrer" className="pricing-cta">Tanya dulu? Gratis kok →</a>
+          </div>
         </Reveal>
       </div>
     </section>

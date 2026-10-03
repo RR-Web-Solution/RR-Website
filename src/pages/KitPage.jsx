@@ -13,39 +13,6 @@ Perubahan v3.1 (sesuai kritik_desain_carousel.md):
 - Slide tertentu diberi gambar penyeimbang bawah (dasbor / notifikasi WA).
 ============================================================ */
 const CAROUSELS = {
-/* ================= POST FEED (1080×1350) ================= */
-'01-perkenalan': [
-{ chip: 'PERKENALAN', title: (<>Halo, kami <em>RR Devs</em> 👋</>), body: 'Duo pembuat website untuk UMKM Indonesia. Dua orang yang mengerjakan bisnismu dari desain sampai tayang, dan bisa kamu hubungi kapan saja.', note: 'geser untuk kenalan →' },
-{ chip: 'SIAPA KAMI', title: (<>Rafael <em>&</em> Rendy.</>), body: 'Kamu selalu tahu siapa yang mengerjakan dan siapa yang harus dihubungi. Tidak ada perantara — yang membalas chatmu, itu yang menulis kode.', cards: [{ b: 'Rafael', s: 'Full-Stack Developer · Pembangun BarberPro System' }, { b: 'Rendy', s: 'Full-Stack Developer · Sistem & Infrastruktur' }] },
-{ chip: 'MISI KAMI', title: (<>Bisnis lokal, <em>tampilan kelas atas.</em></>), body: 'Warung, barbershop, katering, bengkel — bisnis kalian sudah hebat offline. Tugas kami: orang yang mencari di Google jam 11 malam juga menemukan dan percaya pada kalian.', stats: [{ b: '14 hari', s: 'target pasang BarberPro' }, { b: '0', s: 'double-booking' }, { b: '20+', s: 'audit barbershop Sep 2026' }] },
-{ chip: 'CARA KAMI', title: (<>Sistem, bukan sekadar <em>website.</em></>), bullets: ['Booking dan order masuk langsung ke WhatsApp', 'Harga transparan di depan — tanpa takut tertipu', 'Dasbor agar kamu pegang kendali penuh'], body: 'Tanpa aplikasi rumit yang membuat pelanggan pergi.' },
-{ chip: 'FAKTA', title: (<>Kami mulai dari <em>seadanya.</em></>), body: 'Sistem booking paling kompleks kami dibangun 100% dari tablet Android tanpa laptop. Kami tidak menunggu kondisi ideal untuk memulai — kamu juga tidak perlu menunggu.', terminal: [['$ whoami', ''], ['rafael@tablet-android:~', 'm'], ['$ pkg install nodejs postgresql', ''], ['✓ terpasang — tanpa laptop', 'g'], ['$ npm run deploy', ''], ['✓ tayang di alamat asli 🚀', 'g']] },
-{ chip: 'MULAI DARI SINI', title: (<>Ceritakan bisnismu. <em>15 menit saja.</em></>), body: 'Konsultasi gratis via WhatsApp. Kami sketsakan sistem yang paling cocok untuk bisnismu — tanpa komitmen.', sticker: { url: 'https://wa.me/6283171125657?text=Halo%20RR%20Devs%2C%20saya%20mau%20konsultasi%20gratis%2015%20menit', text: 'CHAT WA — KONSULTASI GRATIS' } },
-],
-'02-theo': [
-{ chip: 'CLIENT STORY', title: (<>Dari modal nomor HP, jadi <em>mesin order.</em></>), body: 'Theo Teknik — jasa panggilan AC di Cakung, Jakarta Timur. Sebelumnya hanya mengandalkan promosi mulut ke mulut. Sampai sistem sederhana ini mengubah segalanya.', note: 'klien nyata · geser →' },
-{ chip: 'MASALAHNYA', title: (<>Pelanggan takut <em>tertipu harga.</em></>), pains: ['Harga tidak tampil di mana pun, calon klien ragu.', 'Booking lewat telepon dan chat — rawan salah catat.', 'Tidak ada bukti kerja yang bisa dicek online.'] },
-{ chip: 'SOLUSINYA', title: (<>Satu jalur booking: <em>WhatsApp.</em></>), bullets: ['Tombol WhatsApp di setiap halaman — tanpa formulir rumit.', 'Daftar harga transparan di depan.', 'Galeri sebelum-sesudah dan testimoni asli.'] },
-{ chip: 'BUKTINYA', title: (<>Begini tampilannya <em>di HP pelanggan.</em></>), img: '/images/theo-teknik-portfolio.jpg', imgAlt: 'Tangkapan layar situs Theo Teknik — jasa service AC Cakung, Jakarta Timur', note: 'coba live: theo-teknik.rrdevs.my.id' },
-{ chip: 'HASILNYA', title: (<>Kehadiran digital yang <em>meyakinkan.</em></>), body: 'Sekarang Theo Teknik tidak perlu perang harga. Siapa pun yang mencari "service AC terdekat" di Google langsung yakin sebelum menelepon.', quote: { t: 'Sejak ada web, orderan WA nambah dan pelanggan baru lebih gampang percaya.', n: 'Pemilik · Jasa teknisi AC, Jakarta Timur' } },
-{ chip: 'GILIRAN KAMU', title: (<>Usahamu cerita <em>berikutnya?</em></>), body: 'Konsultasi gratis 15 menit via WhatsApp. Kami sketsakan sistem yang paling cocok — tanpa komitmen.', sticker: { url: 'https://wa.me/6283171125657?text=Halo%20RR%20Devs%2C%20saya%20mau%20sistem%20seperti%20Theo%20Teknik', text: 'SAYA MAU SISTEM SEPERTI INI' } },
-],
-'03-edukasi': [
-{ dark: true, chip: 'EDUKASI · CEK 30 DETIK', title: (<>5 tanda bisnismu butuh website <em>sekarang juga.</em></>), body: 'Bukan menakut-nakuti: kalau 2 saja dari tanda ini kena, bisnismu sedang kehilangan pelanggan tiap hari — tanpa kamu sadar.', checks: 2, note: 'geser → cek punyamu' },
-{ chip: 'TANDA 01–02', title: (<>Kamu <em>tidak terlihat</em> saat dicari.</>), numStart: 1, numbered: ['Calon pelanggan mencari nama bisnismu di Google — yang muncul akun orang lain, atau tidak ada apa-apa.', 'Kamu mengetik jawaban yang sama setiap hari: harga, lokasi, jam buka, daftar menu.'] },
-{ chip: 'TANDA 03–04', title: (<>Kamu <em>kehilangan</em> tanpa sadar.</>), numStart: 3, numbered: ['Pesaing sebelah sudah punya website dan muncul lebih dulu di Google.', 'Order masuk dari 3 saluran (WA, DM, telepon) dan rekapnya sering keteteran.'] },
-{ chip: 'TANDA 05', title: (<>Kamu mau <em>naik kelas.</em></>), numStart: 5, numbered: ['Perusahaan besar, tender, dan calon reseller menuntut satu hal yang sama: company profile resmi yang bisa diverifikasi.'], chips: ['Ikut tender', 'Cari reseller', 'Dipercaya corporate'], body: 'Mengandalkan media sosial saja tidak cukup untuk menembus pasar B2B dan korporasi.' },
-{ chip: 'KENAPA BUKAN MEDSOS SAJA?', title: (<>Medsos = <em>kontrakan.</em> Website = <em>rumah sendiri.</em></>), bullets: ['Akun kena suspend → database pelangganmu hilang.', 'Feed tenggelam dalam 48 jam; website bekerja 24/7.', 'Website adalah aset yang kamu miliki penuh.'] },
-{ chip: 'CEK GRATIS', title: (<>Kami audit kehadiran online bisnismu. <em>1×24 jam.</em></>), body: 'Kirim kata "AUDIT" ke WhatsApp kami. Kami kirim laporan singkat: apa yang sudah bagus, apa yang membuatmu kehilangan pelanggan.', sticker: { url: 'https://wa.me/6283171125657?text=AUDIT', text: 'CHAT "AUDIT" — GRATIS' } },
-],
-'04-harga': [
-{ theme: 'orange', chip: 'HARGA', title: (<>Investasi jelas, <em>hasil berkelas.</em></>), body: 'Semua biaya tertulis di awal. Sudah termasuk domain, hosting, dan SSL tahun pertama — tanpa biaya tersembunyi.', note: 'geser → lihat 4 paket' },
-{ chip: 'BARBERPRO · PALING LARIS', title: (<>Sistem booking barbershop <em>Rp3,9 jt.</em></>), bullets: ['Slot terisi langsung terkunci otomatis', 'Notifikasi WhatsApp ke nomor toko', 'Dasbor jadwal dan estimasi omzet', 'Identitas toko diganti milikmu', 'Gratis domain + hosting + SSL 1 tahun', 'Target tayang 14 hari'] },
-{ chip: 'BASIC', title: (<>Landing page <em>Rp2,5 jt.</em></>), bullets: ['1 halaman fokus jualan', 'Tombol WhatsApp', 'Gratis domain + hosting 1 tahun', 'Revisi 2×', 'Jadi 3–7 hari'] },
-{ chip: 'CUSTOM', title: (<>Website sesuai kebutuhan <em>mulai Rp6,9 jt.</em></>), bullets: ['Dibangun dari nol, 100% milikmu', '1 fitur custom: booking, member, atau kalkulator', 'Dasbor admin', 'Garansi perbaikan 6 bulan'] },
-{ chip: 'MAINTENANCE', title: (<>Perawatan <em>Rp350 rb/bulan.</em></>), bullets: ['Backup dan pengawasan keamanan mingguan', 'Update konten 2× per bulan', 'Laporan performa bulanan', 'Konsultasi strategi 1× per bulan'] },
-{ chip: 'SKEMA BAYAR', title: (<>DP 50%, pelunasan <em>setelah jadi.</em></>), bullets: ['DP untuk mengunci slot pengerjaan', 'Progress dipantau tiap hari via tautan pratinjau', 'Pelunasan setelah website jadi dan kamu setujui', 'Tidak cocok sebelum hari ke-7? DP kembali.'], sticker: { url: 'https://wa.me/6283171125657?text=Halo%20RR%20Devs%2C%20saya%20mau%20minta%20rincian%20harga', text: 'TANYA PAKET YANG COCOK' } },
-],
 /* ================= SOROTAN / STORY (1080×1920) ================= */
 'hl-penawaran': [
 { theme: 'orange', chip: 'PENAWARAN TERBATAS', title: (<>Kuota 3 slot. Sistem booking gratis <em>1 bulan penuh.</em></>), body: 'BarberPro kami pasang tanpa biaya untuk 3 barbershop tercepat di Jabodetabek. Sistem lengkap — booking, notifikasi WhatsApp, dan dasbor — bukan versi terbatas. Termasuk setup dengan data tokomu: identitas, kapster, layanan, dan harga.', note: 'geser → isi penawaran dan caranya', img: '/images/barberpro-portfolio.png', imgAlt: 'Hero BarberPro', imgBar: 'barberpro.rrdevs.my.id', },
@@ -66,7 +33,7 @@ const CAROUSELS = {
 ],
 'hl-harga': [
 { theme: 'orange', chip: 'HARGA', title: (<>Harga tertulis di awal. <em>Tanpa kejutan.</em></>), body: 'Semua paket sudah termasuk gratis domain, hosting, dan SSL tahun pertama. Kode & data 100% milikmu — tanpa langganan bulanan ke kami.', note: 'geser → 4 paket', img: '/images/paket-harga.png', imgAlt: 'Paket Harga RR Devs', },
-{ chip: 'BARBERPRO · PALING LARIS', title: (<><span className="nb">Rp3,9 jt</span> — <em>Sistem Booking Barbershop.</em></>), 
+{ chip: 'BARBERPRO · SISTEM BOOKING', title: (<><span className="nb">Rp3,9 jt</span> — <em>Sistem Booking Barbershop.</em></>), 
   bullets: [
       'Sistem booking real-time (slot terkunci)',
       'Pelanggan pilih layanan, kapster & jam dari HP',

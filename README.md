@@ -1,16 +1,18 @@
-# 🚀 RR Devs — Agency Landing Page
+# 🚀 RR Devs — Sistem Booking Barbershop & Website UMKM
 
-> Landing page untuk **RR Devs** — studio pembuatan website profesional
-> yang melayani UMKM Indonesia. Dirancang sebagai portofolio,
-> lead-generator, dan "kartu nama digital" dalam satu aplikasi React SPA.
+> Rumah digital **RR Devs** — studio dua developer di Cakung, Jakarta Timur.
+> Fokus utama: sistem booking untuk barbershop & salon (BarberPro).
+> Fokus kedua: landing page dan website custom untuk UMKM Jabodetabek.
+> Prinsip kerja: **lihat sebelum percaya** — semua klaim di halaman ini
+> punya tautan yang bisa kamu klik dan uji sendiri.
 
 |  |  |
 |---|---|
-| **Nama** | RR Devs |
-| **Founder** | Rafael & Rendy |
-| **Target pasar** | UMKM retail & jasa di Indonesia (fokus Jabodetabek) |
+| **Nama** | RR Devs — BarberPro System |
+| **Founder** | Rafael (produk, desain, kode, konsultasi) & Rendy (infrastruktur, server, database) |
+| **Target pasar** | Pemilik barbershop/salon Jabodetabek; sekunder: UMKM jasa & retail |
 | **Status** | Live di [rrdevs.my.id](https://rrdevs.my.id) |
-| **Stack** | React 18 · Vite · React Router · Vanilla CSS |
+| **Stack** | React 19 · Vite 8 · React Router 7 · Vanilla CSS |
 
 ![Lighthouse](https://img.shields.io/badge/Lighthouse-95%2B-brightgreen)
 ![SEO](https://img.shields.io/badge/SEO-Optimized-blue)
@@ -20,406 +22,219 @@
 
 ## 📋 Daftar Isi
 
-- [Fitur Utama](#-fitur-utama)
+- [Produk & Janji Publik](#-produk--janji-publik)
+- [Situs & Portofolio Live](#-situs--portofolio-live)
+- [Halaman & Fitur](#-halaman--fitur)
 - [Arsitektur Project](#-arsitektur-project)
 - [Design System](#-design-system)
 - [Menjalankan Lokal](#-menjalankan-lokal)
 - [Manajemen Konten](#-manajemen-konten)
-- [Routing](#-routing)
-- [Deployment](#-deployment)
+- [Deployment & Konvensi Branch](#-deployment--konvensi-branch)
 - [SEO & Performance](#-seo--performance)
 - [Strategi Konten](#-strategi-konten)
-- [Lisensi](#-lisensi)
+- [Development Workflow](#-development-workflow)
+- [Analytics](#-analytics)
+- [Kontribusi](#-kontribusi)
+- [Lisensi & Kredit](#-lisensi--kredit)
 
 ---
 
-## ✨ Fitur Utama
+## 💼 Produk & Janji Publik
 
-### Landing Page (`/`)
-- **Hero interaktif** dengan browser mockup 3 demo UMKM (kopi, batik, katering)
-- **Ticker marquee** jenis layanan
-- **About section** dengan founder cards (Rafael & Rendy)
-- **Accordion layanan** — 5 layanan (Landing Page, Website Custom, Company Profile, Toko Online, Maintenance)
-- **Sticky why section** — keunggulan dengan scroll-locked sidebar
-- **Process section** — 4 langkah dari chat sampai launch
-- **Pricing grid** — 4 paket (Basic/Standar/Premium/Custom) dengan toggle perawatan bulanan
-- **Portofolio** — 2-lapis (blur + contain) untuk screenshot berbagai rasio
-- **Testimoni** — cards miring dengan hover effect
-- **Agency Partner section** — teaser white-label partnership
-- **Final CTA** — ghost marquee + WhatsApp CTA
+| Paket | Harga | Jam pengerjaan | Support |
+|---|---|---|---|
+| Basic — Landing Page | Rp2.900.000 sekali bayar | 3–7 hari kerja sejak bahan lengkap | 30 hari |
+| BarberPro — Sistem Booking Barbershop | Rp3.900.000 sekali bayar | ≤14 hari kerja sejak DP & bahan lengkap | 30 hari |
+| Custom — Website sesuai kebutuhan | mulai Rp6.900.000 sekali bayar | 2–4 minggu sejak bahan lengkap; 1 fitur custom dibatasi ukuran build 2–4 minggu | 6 bulan |
+| Maintenance (opsional) | Rp350.000/bulan | — | selama berlangganan |
 
-### Halaman `/partner`
-- Rate card program agency partner
-- Tabel harga partner vs harga jual ke klien
-- 4 aturan main (white-label, NDA, pembayaran bertahap, garansi)
-- Alur pembayaran 50/40/10
-- Download PDF rate card
+Janji yang mengikat seluruh halaman dan materi kami:
 
-### Halaman `/jabodetabek` ⭐
-Kartu nama digital untuk outreach Jabodetabek:
-- Positioning statement WA-first
-- Perbandingan cara lama vs sistem WA-first
-- Fun fact: sistem kompleks dibangun dari tablet Android
-- 5 studi kasus jujur (Capability Demo vs Client Story)
-- Mockup chat WhatsApp interaktif
-- CTA WA di dua titik strategis
+- **Kepemilikan penuh:** kode & data 100% milik klien; tanpa langganan bulanan ke RR Devs.
+- **Pembayaran:** DP 50% di depan, pelunasan setelah hasil disetujui.
+- **Jendela refund:** tidak cocok pada 3 hari kerja pertama → DP kembali 100%; mulai hari ke-4 DP menutup pekerjaan berjalan.
+- **Tanpa diskon, tanpa harga tersembunyi:** penyesuaian fitur di atas ukuran paket disampaikan transparan sebelum DP.
+- **Trial BarberPro:** gratis 1 bulan, tanpa DP/biaya/kontrak, maksimal 3 slot berjalan bersamaan.
+- **Audit kehadiran digital:** gratis, laporan PDF 1×24 jam dari halaman publik, milik penerima tanpa kewajiban.
+- **SLA balasan chat:** maksimal 2 jam pada jam kerja 09:00–18:00 WIB.
+
+---
+
+## 🌐 Situs & Portofolio Live
+
+| Alamat | Label jujur |
+|---|---|
+| [rrdevs.my.id](https://rrdevs.my.id) | Situs utama |
+| [barberpro.rrdevs.my.id](https://barberpro.rrdevs.my.id) | Demo sistem siap pakai (login demo publik: `demo@gmail.com` / `barberpro`) |
+| [theo-teknik.rrdevs.my.id](https://theo-teknik.rrdevs.my.id) | Proyek pro bono live — dibangun gratis sebagai bukti kerja, masih dipakai |
+| [architect-studio.rrdevs.my.id](https://architect-studio.rrdevs.my.id) | Demo desain |
+| [kopisenja.rrdevs.my.id](https://kopisenja.rrdevs.my.id) | Demo desain |
+| [batik.rrdevs.my.id](https://batik.rrdevs.my.id) | Demo desain |
+| [rrprint.rrdevs.my.id](https://rrprint.rrdevs.my.id) | Demo sistem custom (order percetakan) |
+
+Aturan label: demo disebut demo, pro bono disebut pro bono, klien disebut klien
+hanya bila ada izin tertulis. Testimoni tidak pernah ditulis tanpa artefak sumber.
+
+---
+
+## 🧩 Halaman & Fitur
+
+- **`/`** — landing: hero posisi spesialis, ticker, keunggulan, proses 4 langkah, pricing, portofolio berlabel, blok bukti, partner, CTA.
+- **`/barbershop`** — halaman khusus pemilik barbershop: masalah → sistem → demo dua sisi.
+- **`/kit`** — content kit: pabrik slide carousel 1080×1920 (penawaran, barberpro, harga, portofolio, bukti, proses, tim, audit, perkenalan, theo, edukasi) dengan tombol unduh PNG per slide + teks stiker tautan IG.
+- **`/audit/<slug>`** — generator halaman audit prospek dari data publik (10 slug aktif).
+- **`/partner`** — program agency partner: rate card, aturan main, alur pembayaran.
+- **`/jabodetabek`** — kartu nama digital untuk outreach wilayah.
+- **`/story-slides`**, **`/solusi`**, **`/banner`** — utilitas materi pemasaran.
+- **`/portofolio/digital-printing`** — halaman status rrprint.
 
 ---
 
 ## 🏗️ Arsitektur Project
 
-Struktur modular yang memudahkan maintenance dan penambahan halaman baru:
-
-```
-rr-web-solution/
+```text
+RR-Website/
 ├─ public/
-│  ├─ favicon.svg
-│  ├─ favicon-96x96.png
-│  ├─ apple-touch-icon.png
-│  ├─ og-image.jpg
-│  ├─ site.webmanifest
-│  ├─ robots.txt
-│  ├─ sitemap.xml
-│  └─ RR-Devs-Rate-Card-Partner-2026.pdf
+│  ├─ audit/<slug>/*.png        # bukti bertanda per prospek
+│  ├─ images/                   # screenshot produk, foto founder, aset kit
+│  ├─ favicon.*, og-image.png, site.webmanifest, robots.txt, sitemap.xml
+│  └─ RR-Devs—Rate-Card-Partner-2026.pdf
 └─ src/
-   ├─ main.jsx                    # Entry point
-   ├─ App.jsx                     # BrowserRouter + Routes
-   ├─ data/
-   │  └─ content.js               # PUSAT KONTEN (ubah teks/harga di sini)
-   ├─ utils/
-   │  └─ motion.js                # prefers-reduced-motion helper
-   ├─ hooks/
-   │  └─ useInView.js             # IntersectionObserver hook
-   ├─ components/
-   │  ├─ ui/                      # Reusable UI components
-   │  │  ├─ Reveal.jsx/.css
-   │  │  ├─ SectionHead.jsx
-   │  │  ├─ Scramble.jsx/.css
-   │  │  └─ Counter.jsx
-   │  ├─ layout/                  # Layout components
-   │  │  ├─ Nav.jsx/.css
-   │  │  ├─ Footer.jsx/.css
-   │  │  └─ ScrollManager.jsx
-   │  └─ home/
-   │     └─ BrowserMock.jsx/.css  # Interactive browser mockup
-   ├─ sections/                   # Landing page sections
-   │  ├─ Hero.jsx/.css
-   │  ├─ Ticker.jsx/.css
-   │  ├─ About.jsx/.css
-   │  ├─ Services.jsx/.css
-   │  ├─ Why.jsx/.css
-   │  ├─ Process.jsx/.css
-   │  ├─ Pricing.jsx/.css
-   │  ├─ Portfolio.jsx/.css
-   │  ├─ Testimonials.jsx/.css
-   │  ├─ AgencyPartner.jsx/.css
-   │  └─ FinalCTA.jsx/.css
-   ├─ pages/                      # Route pages
-   │  ├─ LandingPage.jsx
-   │  ├─ PartnerPage.jsx/.css
-   │  └─ JabodetabekPage.jsx/.css
-   └─ styles/
-      └─ globals.css              # Design system & reset
+   ├─ main.jsx · App.jsx        # entry + BrowserRouter & Routes
+   ├─ data/content.js           # PUSAT KONTEN: teks, harga, janji, portofolio
+   ├─ components/ (ui · layout · home)
+   ├─ sections/                 # seksi landing (satu file per seksi)
+   ├─ pages/                    # satu file per rute + CSS pasangannya
+   └─ styles.css                # design system & token
 ```
+
+Catatan kebersihan: draf mati (`*_v1.*`, `content_v1.js`, `index_v1.html`) dan
+berkas kerja pribadi (`contoh.html`, `kertas-tinggal.html`) **tidak hidup di main**;
+salinannya ada di branch `arsip/*` dan disebut di `.gitignore`.
 
 ---
 
 ## 🎨 Design System
 
-### Color Tokens
-```css
-:root {
-  --paper: #F5F1E8;      /* cream background */
-  --paper2: #ECE5D6;     /* darker cream */
-  --ink: #191613;        /* dark text */
-  --ink2: #221E18;       /* darker ink */
-  --cream: #F5F1E8;      /* text on dark */
-  --acc: #FF4D00;        /* orange accent */
-  --lime: #D8F34F;       /* lime accent */
-  --mut: #6E675C;        /* muted text */
-  --line: rgba(25, 22, 19, 0.14);
-}
-```
-
-### Typography
-- **Display**: Syne (500, 700, 800) — headings, titles
-- **Body**: Instrument Sans (400, 500, 600) — paragraphs, UI
-- **Mono**: Space Mono (400, 700) — code, labels, prices
-
-### Design Principles
-- **Neobrutalism meets editorial** — bold borders, offset shadows, rotated cards
-- **Motion with purpose** — Reveal animations, Scramble text, Counter
-- **Accessibility first** — focus-visible, reduced-motion support, semantic HTML
+Token warna: `--ink #0c0f13/#191613`, `--cream #faf8f3/#f5f1e8`, `--gold #c9a24b`
+(BarberPro), `--acc #FF4D00`, `--lime #D8F34F`. Tipografi: Syne (display),
+Instrument Sans (body), Space Mono (label & angka). Prinsip: neobrutalism-editorial,
+motion dengan tujuan, aksesibilitas (focus-visible, reduced-motion), dan
+ramah cetak hitam-putih untuk materi lapangan.
 
 ---
 
 ## 🚀 Menjalankan Lokal
 
 ```bash
-# Clone repository
-git clone https://github.com/rr-Web-Solution/RR-Website.git
-cd RR-Website
-
-# Install dependencies
-npm install
-
-# Development server
-npm run dev
-# → http://localhost:5173/
-
-# Build production
-npm run build
-# → Output di folder dist/
-
-# Preview production build
-npm run preview
+git clone https://github.com/RR-Web-Solution/RR-Website.git
+cd RR-Website && npm install
+npm run dev        # http://localhost:5173
+npm run build      # output: dist/
 ```
 
-### Environment Requirements
-- Node.js 18+
-- npm 9+
+Node.js 20+ disarankan.
 
 ---
 
 ## 📝 Manajemen Konten
 
-**Semua konten terpusat di `src/data/content.js`** — ganti teks, harga, dan kontak cukup edit file ini:
-
-```js
-// Contoh: ubah harga paket
-export const PLANS = [
-  {
-    name: 'Basic',
-    sub: 'Landing Page',
-    price: 1500000,  // ← ubah di sini
-    hot: false,
-    feats: [...],
-  },
-  // ...
-]
-
-// Contoh: ubah nomor WhatsApp
-export const WA_NUMBER = '6281234567890'  // ← ubah di sini
-```
-
-**Keuntungan:**
-- Non-developer bisa update konten (cukup edit satu file)
-- Tidak perlu rebuild untuk perubahan copy (kecuali rebuild static site)
-- Konsistensi data di seluruh aplikasi
+Semua teks, harga, janji, dan daftar portofolio hidup di **`src/data/content.js`**.
+Mengubah angka atau janji wajib mengikuti keputusan yang tercatat di ledger internal
+RR Devs — file ini satu-satunya tempat harga boleh berubah, dan setiap perubahannya
+beranak ke content kit, sorotan Instagram, dan materi cetak.
 
 ---
 
-## 🛣️ Routing
+## 🌐 Deployment & Konvensi Branch
 
-Menggunakan **React Router v6** dengan `BrowserRouter`:
+- **`main`** = produksi: push ke main memicu deploy Vercel otomatis ke rrdevs.my.id.
+- **`backup/<topik>-<tanggal>`** = snapshot sebelum main bergerak; tidak pernah dihapus.
+- **`arsip/<topik>-<tanggal>`** = rumah draf & berkas pribadi; boleh berantakan, sengaja.
+- Urutan wajib setiap perubahan: commit → push branch backup → push main → verifikasi live.
 
-```jsx
-<Routes>
-  <Route path="/" element={<LandingPage />} />
-  <Route path="/partner" element={<PartnerPage />} />
-  <Route path="/jabodetabek" element={<JabodetabekPage />} />
-  <Route path="*" element={<LandingPage />} /> {/* catch-all */}
-</Routes>
-```
-
-### Scroll Behavior
-- **Anchor links** (`/#portofolio`) → smooth scroll ke section
-- **Route change** → scroll ke top
-- **ScrollManager** component handle semua logic scroll
-
-### Cross-page Navigation
-Nav component pakai `useNavigate` untuk handle klik anchor dari halaman lain:
-- Di `/partner` klik "Tentang" → navigate ke `/` + scroll ke `#tentang`
-- Tidak ada full page reload, smooth SPA experience
-
----
-
-## 🌐 Deployment
-
-### Option 1: Vercel (Recommended)
 ```bash
-npm i -g vercel
-vercel
-```
-- Auto-detect Vite project
-- Automatic HTTPS
-- SPA fallback otomatis (tidak perlu config tambahan)
-- Custom domain: `rrdevs.my.id`
-
-### Option 2: GitHub Pages
-1. Set `base` di `vite.config.js`:
-```js
-export default defineConfig({
-  base: '/RR-Website/',
-  plugins: [react()],
-})
-```
-
-2. Buat `.github/workflows/deploy.yml`:
-```yaml
-name: Deploy to GitHub Pages
-on:
-  push:
-    branches: [main]
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - run: npm ci
-      - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
-      - uses: actions/deploy-pages@v4
-```
-
-3. Settings → Pages → Source: GitHub Actions
-
-### Option 3: Netlify
-```bash
-npm run build
-# Upload folder dist/ ke Netlify
-```
-- Set `_redirects` file untuk SPA fallback:
-```
-/*    /index.html   200
+git add -A
+git commit -m "<pesan perubahan>"
+git push origin main:backup/<topik>-<tanggal>
+git push origin main
 ```
 
 ---
 
 ## 🔍 SEO & Performance
 
-### Meta Tags (di `index.html`)
-```html
-<title>RR Devs — Jasa Pembuatan Website Profesional untuk UMKM</title>
-<meta name="description" content="RR Devs membantu UMKM Indonesia..." />
-<link rel="canonical" href="https://rrdevs.my.id/" />
+Meta & Open Graph mengikuti posisi spesialis barbershop; og-image resmi 1200×630.
+Structured data:
 
-<!-- Open Graph -->
-<meta property="og:image" content="https://rrdevs.my.id/og-image.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-```
-
-### Structured Data (JSON-LD)
 ```json
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "RR Devs",
+  "name": "RR Devs — BarberPro System",
   "url": "https://rrdevs.my.id/",
   "logo": "https://rrdevs.my.id/favicon.svg",
-  "priceRange": "Rp2.500.000+",
-  "areaServed": "Indonesia"
+  "image": "https://rrdevs.my.id/og-image.png",
+  "description": "Sistem booking barbershop dan website UMKM: pelanggan pilih jam sendiri, slot terkunci otomatis, notifikasi WhatsApp, dashboard owner. Coba demo live BarberPro sekarang.",
+  "areaServed": ["Jakarta", "Bogor", "Depok", "Tangerang", "Bekasi"],
+  "priceRange": "Rp2.900.000 - Rp6.900.000",
+  "email": "hello@rrdevs.my.id",
+  "telephone": "+6283171125657",
+  "sameAs": [
+     "https://instagram.com/rrdevs.my.id",
+     "https://facebook.com/rrdevs.my.id",
+  ],
 }
 ```
 
-### Performance Optimizations
-- **Preconnect** Google Fonts
-- **Lazy loading** images (`loading="lazy"`)
-- **Image optimization**: WebP format, proper sizing
-- **Code splitting** otomatis dari Vite
-- **CSS containment** untuk scroll performance
-
-### Core Web Vitals Target
-- LCP < 2.5s
-- FID < 100ms
-- CLS < 0.1
-
-### Sitemap & Robots
-- `public/sitemap.xml` — semua halaman ter-index
-- `public/robots.txt` — allow all, point to sitemap
+Target Core Web Vitals: LCP < 2.5s, INP < 200ms, CLS < 0.1. Font self-hosted
+(@fontsource), gambar lazy-load di bawah lipatan, tanpa icon font.
 
 ---
 
 ## 📚 Strategi Konten
 
-### Blog Posts (Planned)
-1. "Harga Pembuatan Website UMKM 2026: Panduan Lengkap"
-2. "Cara Membuat Landing Page yang Mengkonversi untuk Bisnis Kuliner"
-3. "5 Alasan UMKM Butuh Website di Era Digital"
-4. "Company Profile vs Landing Page: Mana yang Cocok untuk Bisnismu?"
-5. "Studi Kasus: Bagaimana Kopi Ruang Tunggu Naikkan Omzet 40% dengan Website"
-
-**Target**: 1 artikel/minggu, 1500+ kata, long-tail keywords
-
-### Case Studies
-- **Capability Demos** (jujur, bukan klien): BarberPro, Architect Studio, Toko Percetakan, Kopi Senja
-- **Client Stories** (nyata, dengan izin): Theo Teknik
-
-**Prinsip**: Label jujur — demo ya demo, klien ya klien. Trust > hype.
+Kanal: Instagram (carousel dari `/kit` + sorotan delapan bab), WhatsApp Business
+(gate kata `TRIAL` dan `AUDIT`), Facebook Page cermin, dan walk-in Jabodetabek.
+Kalender konten dua mingguan disusun terpisah dan diperlakukan sebagai sumber
+kebenaran periode berjalan. Blog tidak aktif; bukti lebih kami prioritaskan
+daripada volume tulisan. Studi kasus hanya diterbitkan bila ada izin tertulis
+dan artefak yang bisa ditunjuk.
 
 ---
 
 ## 🛠️ Development Workflow
 
-### Adding New Section
-1. Buat file di `src/sections/NewSection.jsx`
-2. Buat CSS di `src/sections/NewSection.css`
-3. Import & tambahkan ke `LandingPage.jsx`
-
-### Adding New Page
-1. Buat file di `src/pages/NewPage.jsx`
-2. Tambah route di `App.jsx`:
-```jsx
-<Route path="/new-page" element={<NewPage />} />
-```
-3. Tambah link di Nav/Footer jika perlu
-
-### Changing Design System
-Edit `src/styles/globals.css` — semua komponen otomatis update.
+Seksi baru: buat file di `src/sections/` lalu impor di `LandingPage.jsx`.
+Rute baru: buat file di `src/pages/`, tambah baris `<Route>` di `App.jsx`,
+serta tautan Nav/Footer bila perlu.
+Draf pribadi: kerjakan di branch `arsip/*`, jangan di main.
 
 ---
 
 ## 📊 Analytics
 
-- **Google Analytics 4** — tracking ID: `G-VJMG09317R`
-- **Google Search Console** — submit sitemap, monitor keywords
-- **WhatsApp click tracking** — via UTM parameters
+Google Analytics 4 (`G-VJMG09317R`) + Google Search Console + PostHog pada app BarberPro.
+Pelacakan klik WhatsApp via UTM.
 
 ---
 
-## 🤝 Contributing
+## 🤝 Kontribusi
 
-Project ini adalah portofolio pribadi. Pull request tidak dibuka untuk publik, tapi feedback dan saran sangat diterima via:
-- Email: hello@rrdevs.my.id
-- WhatsApp: +62 831-7112-5657
-
----
-
-## 📄 Lisensi
-
-© 2026 RR Devs — Rafael & Rendy. All rights reserved.
-
-Kode, desain, dan copywriting pada repository ini merupakan aset intelektual RR Devs. Tidak untuk digunakan ulang secara komersial tanpa izin tertulis.
+Portofolio pribadi; pull request publik tidak dibuka.
+Feedback: hello@rrdevs.my.id · WA +62 831-7112-5657.
 
 ---
 
-## 🙏 Kredit
+## 📄 Lisensi & Kredit
 
-**Design & Development:**
-- Rafael — Frontend, UI/UX Design
-- Rendy — Backend, Strategy
+© 2026 RR Devs — Rafael & Rendy. Kode, desain, dan copywriting adalah aset
+intelektual RR Devs; penggunaan ulang komersial memerlukan izin tertulis.
 
-**Inspirasi:**
-- Neobrutalism design movement
-- Editorial web design (Stripe, Linear, Vercel)
-- Indonesian UMKM stories
+Dibangun dengan ☕ dan prinsip "UMKM Indonesia naik kelas".
 
-**Technologies:**
-- React — [react.dev](https://react.dev)
-- Vite — [vitejs.dev](https://vitejs.dev)
-- React Router — [reactrouter.com](https://reactrouter.com)
-
----
-
-*Dibangun dengan ☕ dan semangat "UMKM Indonesia naik kelas".*
-
-**[rrdevs.my.id](https://rrdevs.my.id)** · [Instagram](https://instagram.com/universe.dev.id) · [TikTok](https://tiktok.com/@universe.dev.id)
+**[rrdevs.my.id](https://rrdevs.my.id)**
+<br>
+**[Instagram: @rrdevs.my.id](https://instagram.com/rrdevs.my.id)**
+<br>
+**[Facebook: @rrdevs.my.id](https://facebook.com/rrdevs.my.id)**

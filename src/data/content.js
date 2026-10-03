@@ -99,16 +99,7 @@ export const SERVICES = [
     },
   },
   {
-    n: '03', title: 'Company Profile', price: 'mulai Rp4,5 jt',
-    desc: 'Website 5 halaman yang membuat bisnismu terlihat mapan dan terpercaya di mata pelanggan, mitra, maupun calon investor.',
-    tags: ['Sampai 5 Halaman', 'Galeri & Peta', 'SEO Dasar', 'Email Bisnis'],
-    slide: {
-      sub: 'Calon klien besar googling bisnismu sebelum deal. Pastikan yang mereka temukan terlihat mapan — bukan akun medsos saja.',
-      bullets: ['Struktur jelas: Beranda, Tentang, Layanan, Galeri, Kontak', 'Optimasi dasar agar mudah ditemukan Google', 'Gratis domain + hosting 1 tahun'],
-    },
-  },
-  {
-    n: '04', title: 'Website Custom', price: 'mulai Rp6,5 jt',
+    n: '04', title: 'Website Custom', price: 'mulai Rp6,9 jt',
     desc: 'Fitur sesuai kebutuhan: booking multi-cabang, member, kalkulator harga, dashboard laporan, dll. Dibangun dari nol dan 100% jadi milikmu selamanya.',
     tags: ['Fitur Custom', 'Integrasi WA API', 'Dashboard', 'Scalable'],
     slide: {
@@ -159,7 +150,7 @@ export const PLANS = [
     ],
   },
   {
-    name: 'BarberPro', sub: 'Sistem Booking Barbershop', price: 3900000, hot: true, flag: '★ Paling Laris · Barbershop',
+    name: 'BarberPro', sub: 'Sistem Booking Barbershop', price: 3900000, hot: true, flag: '★ SISTEM BOOKING · Barbershop',
     feats: [
       'Sistem booking real-time (slot terkunci)',
       'Pelanggan pilih layanan, kapster & jam dari HP',
@@ -173,6 +164,7 @@ export const PLANS = [
       'Pengerjaan target 14 hari kerja sejak bahan lengkap',
       'Support 30 hari setelah live',
     ],
+    flag: '★ SISTEM BOOKING',
   },
   {
     name: 'Custom', sub: 'Website Impian Bisnismu', price: 6900000, hot: false,
@@ -204,7 +196,7 @@ export const CARE_FEATS = [
 export const PORTFOLIO = [
   {
     title: 'BarberPro', kind: 'product', kindLabel: 'Sistem siap pakai',
-    demoCred: 'Demo admin: demo@rrdevs.my.id / demo1234',
+    demoCred: 'Demo admin: demo@gmail.com / demo1234',
     type: 'Website Custom + Sistem Booking Real-Time + Notifikasi Otomatis + Dashboard Admin', year: '2026',
     desc: 'Barbershop yang masih mencatat booking lewat chat selalu menghadapi masalah yang sama: dua orang menempati jam yang sama, dan pemilik tidak tahu omzet hari ini sampai tutup toko. BarberPro menyelesaikan semuanya: pelanggan memilih layanan, barber favorit, dan jam kosong langsung dari HP — slot terisi otomatis terkunci sehingga double-booking mustahil terjadi. Setiap booking baru berbunyi di WhatsApp pemilik, sementara dashboard merangkum jadwal dan estimasi pendapatan.',
     tags: ['Sistem Booking Real-Time', 'Notifikasi WhatsApp', 'Dashboard Admin', 'Overlap-proof'],
@@ -273,7 +265,6 @@ export const PARTNER_PREVIEW = [
 export const RATE_ROWS = [
   { p: 'BarberPro Setup', d: 'Sistem booking barbershop + branding toko', partner: 'Rp 3.900.000', sell: 'Rp 8–10 jt', margin: '~2x' },
   { p: 'Landing Page', d: '1 halaman fokus konversi', partner: 'Rp 2.900.000', sell: 'Rp 6–8 jt', margin: '~2x' },
-  { p: 'Company Profile', d: 'Profil bisnis profesional multi-halaman', partner: 'Rp 4.500.000', sell: 'Rp 10–12 jt', margin: '~2x' },
   { p: 'Website Custom', d: 'Fitur sesuai kebutuhan klien', partner: 'Rp 6.900.000', sell: 'Rp 15–20 jt', margin: '~2x' },
   { p: 'Maintenance Bulanan', d: 'Perawatan & update berkala', partner: 'Rp 350.000/bln', sell: 'Rp 1–1,5 jt/bln', margin: '~2x' },
 ]

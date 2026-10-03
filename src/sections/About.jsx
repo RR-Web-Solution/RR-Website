@@ -13,7 +13,7 @@ export default function About() {
             yang membuat pelanggan pilih jam sendiri, slot terkunci otomatis, dan owner pegang kendali penuh atas datanya.
           </p>
           <p className="about-text">
-            Selain itu kami tetap mengerjakan landing page, company profile, dan website custom — tapi kalimat pertama
+            Selain itu kami tetap mengerjakan landing page dan website custom — tapi kalimat pertama
             kami selalu sama: <b>bukti, bukan janji</b>. Sejak awal 2026 kami merilis satu sistem booking production
             (BarberPro), satu klien nyata yang masih live, dan menyusun 20+ audit digital barbershop Jabodetabek.
           </p>

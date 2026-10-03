@@ -12,7 +12,7 @@ export default function Footer() {
           </Link>
           <p>
             Studio website milik Rafael & Rendy. Fokus kami: sistem booking barbershop yang membuat pelanggan
-            pilih jam sendiri — plus landing page, company profile, dan website custom untuk UMKM.
+            pilih jam sendiri — plus landing page dan website custom untuk UMKM.
           </p>
           <div className="foot-social">
             <a href="https://instagram.com/rrdevs.my.id" target="_blank" rel="noreferrer" aria-label="Instagram RR Devs">Instagram ↗</a>
@@ -34,7 +34,6 @@ export default function Footer() {
           <h4>Layanan</h4>
           <a href="#layanan">Sistem Booking Barbershop</a>
           <a href="#layanan">Landing Page</a>
-          <a href="#layanan">Company Profile</a>
           <a href="#layanan">Website Custom</a>
         </div>
         <div className="foot-col">
