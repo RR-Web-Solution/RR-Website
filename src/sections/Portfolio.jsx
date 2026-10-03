@@ -31,7 +31,7 @@ export default function Portfolio() {
                     <small>{p.metricLabel}</small>
                   </div>
                   {p.moving ? (
-                    <Link className="pf-disabled" to="/portofolio/digital-printing">Sedang dipindah hosting — lihat status →</Link>
+                    <Link className="pf-disabled" to="/site-move">Sedang dipindah hosting — lihat status →</Link>
                   ) : (
                     <a
                       href={p.kind === 'product' ? waLink(WA_MSG_BARBER) : waLink(`Halo, saya mau website seperti ${p.title}. Bisa dibantu?`)}

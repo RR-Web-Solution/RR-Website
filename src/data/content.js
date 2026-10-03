@@ -196,7 +196,7 @@ export const CARE_FEATS = [
 export const PORTFOLIO = [
   {
     title: 'BarberPro', kind: 'product', kindLabel: 'Sistem siap pakai',
-    demoCred: 'Demo admin: demo@gmail.com / demo1234',
+    demoCred: 'Demo admin: demo@gmail.com / barberpro',
     type: 'Website Custom + Sistem Booking Real-Time + Notifikasi Otomatis + Dashboard Admin', year: '2026',
     desc: 'Barbershop yang masih mencatat booking lewat chat selalu menghadapi masalah yang sama: dua orang menempati jam yang sama, dan pemilik tidak tahu omzet hari ini sampai tutup toko. BarberPro menyelesaikan semuanya: pelanggan memilih layanan, barber favorit, dan jam kosong langsung dari HP — slot terisi otomatis terkunci sehingga double-booking mustahil terjadi. Setiap booking baru berbunyi di WhatsApp pemilik, sementara dashboard merangkum jadwal dan estimasi pendapatan.',
     tags: ['Sistem Booking Real-Time', 'Notifikasi WhatsApp', 'Dashboard Admin', 'Overlap-proof'],
@@ -317,7 +317,7 @@ export const CASE_STUDIES = [
   },
   {
     id: 'toko-percetakan', emoji: '🖨️', title: 'Toko Percetakan Online', tagline: 'E-commerce percetakan + kalkulator harga',
-    kind: 'demo', kindLabel: 'Capability Demo · sedang dipindah',
+    kind: 'demo', kindLabel: 'Capability Demo',
     story: 'Simulasi lengkap sistem e-commerce percetakan: kalkulator harga otomatis berdasarkan ukuran & jumlah, panel admin penuh, sampai order yang otomatis terformat rapi ke WhatsApp. Saat ini sedang kami pindahkan ke hosting baru.',
     highlights: ['Kalkulator harga otomatis (ukuran × jumlah)', 'Panel admin penuh tanpa sentuh kode', 'Order auto-format rapi masuk WhatsApp'],
     stack: ['Laravel', 'MySQL', 'WhatsApp Order'],

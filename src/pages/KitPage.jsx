@@ -13,6 +13,46 @@ Perubahan v3.1 (sesuai kritik_desain_carousel.md):
 - Slide tertentu diberi gambar penyeimbang bawah (dasbor / notifikasi WA).
 ============================================================ */
 const CAROUSELS = {
+/* ================= POST FEED (1080×1350) ================= */
+'fc-tim': [
+  // ---- SLIDE 1: sampul — kami memperkenalkan diri, bukan diperkenalkan ----
+  { dark: true, chip: 'DI BALIK BARBERPRO',
+    title: (<>Kami berdua di balik <em>BarberPro.</em></>),
+    body: 'Bukan tim besar yang berganti-ganti. Kami berdua yang mengerjakan BarberPro — kami juga yang membalas chat-mu.',
+    stats: [
+      { b: '2', s: 'kepala yang mengerjakan langsung' },
+      { b: '1', s: 'jalur chat, langsung ke kami' },
+      { b: '0', s: 'perantara antara kamu dan kami' },
+    ],
+    note: 'geser → siapa mengerjakan apa' },
+
+  // ---- SLIDE 2: Rafael ----
+  { chip: 'KEPALA 1 · PRODUK',
+    title: (<>Rafael.</>),
+    photo: { src: '/images/rafael.jpg', name: 'Rafael', role: 'Konsultasi · Desain · Kode Produk' } },
+
+  // ---- SLIDE 3: Rendy ----
+  { chip: 'KEPALA 2 · INFRASTRUKTUR',
+    title: (<>Rendy.</>),
+    photo: { src: '/images/rendy.jpg', name: 'Rendy', role: 'Server · Database · Keamanan' } },
+
+  // ---- SLIDE 4: cara kami bekerja & kenapa kapasitas dibatasi ----
+  { chip: 'CARA KAMI BEKERJA',
+    title: (<>Keputusan cepat, <em>karena dua kepala.</em></>),
+    bullets: [
+      'Kamu chat langsung dengan kami yang menulis kode — tanpa perantara, tanpa rapat berjenjang.',
+      'Pengerjaan berbayar: kami pegang satu sistem BarberPro dalam satu waktu. Fokus penuh, bukan antrean panjang.',
+      'Karena kami baru, fokus kami 100% untuk proyek yang kami pegang.',
+    ],
+    note: 'geser → cara kenalan' },
+
+  // ---- SLIDE 5: CTA tunggal — kenalan, bukan beli ----
+  { theme: 'night', chip: 'KENALAN DULU',
+    title: (<>Mau kenalan langsung? <em>15 menit, gratis.</em></>),
+    body: 'Ceritakan tokomu lewat WhatsApp. Kami petakan sistem yang cocok dan tuliskan rencananya — kalau tidak berlanjut, rencana itu tetap milikmu.',
+    sticker: { url: 'https://wa.me/6283171125657?text=Halo%20Rafael%2C%20halo%20Rendy%20—%20boleh%20kenalan%2015%20menit%3F', text: 'KONSULTASI GRATIS VIA WHATSAPP (15 MENIT)' },
+    note: 'balasan maksimal 2 jam pada jam kerja 09:00–18:00 WIB' },
+],
 /* ================= SOROTAN / STORY (1080×1920) ================= */
 'hl-penawaran': [
 { theme: 'orange', chip: 'PENAWARAN TERBATAS', title: (<>Kuota 3 slot. Sistem booking gratis <em>1 bulan penuh.</em></>), body: 'BarberPro kami pasang tanpa biaya untuk 3 barbershop tercepat di Jabodetabek. Sistem lengkap — booking, notifikasi WhatsApp, dan dasbor — bukan versi terbatas. Termasuk setup dengan data tokomu: identitas, kapster, layanan, dan harga.', note: 'geser → isi penawaran dan caranya', img: '/images/barberpro-portfolio.png', imgAlt: 'Hero BarberPro', imgBar: 'barberpro.rrdevs.my.id', },
@@ -292,7 +332,7 @@ const CAROUSELS = {
 ],
 }
 export default function KitPage() {
-const [key, setKey] = useState('hl-penawaran')
+const [key, setKey] = useState('fc-tim')
 const SLIDES = CAROUSELS[key]
 const isStory = key.startsWith('hl-')
 useEffect(() => {
