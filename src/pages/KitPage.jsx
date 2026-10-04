@@ -47,11 +47,15 @@ const CAROUSELS = {
     note: 'geser → cara kenalan' },
 
   // ---- SLIDE 5: CTA tunggal — kenalan, bukan beli ----
-  { theme: 'night', chip: 'KENALAN DULU',
+    { theme: 'night', chip: 'KENALAN DULU',
     title: (<>Mau kenalan langsung? <em>15 menit, gratis.</em></>),
     body: 'Ceritakan tokomu lewat WhatsApp. Kami petakan sistem yang cocok dan tuliskan rencananya — kalau tidak berlanjut, rencana itu tetap milikmu.',
+    chips: [
+       `KOMEN / DM KAMI DENGAN KATA "KENALAN"
+       UNTUK KLAIM KONSULTASI GRATIS-MU`
+    ],
     sticker: { url: 'https://wa.me/6283171125657?text=Halo%20Rafael%2C%20halo%20Rendy%20—%20boleh%20kenalan%2015%20menit%3F', text: 'KONSULTASI GRATIS VIA WHATSAPP (15 MENIT)' },
-    note: 'balasan maksimal 2 jam pada jam kerja 09:00–18:00 WIB' },
+    note: 'kami kirim link WA konsultasi gratis 15 menit · balasan ≤2 jam pada jam kerja 09:00–18:00 WIB' },
 ],
 /* ================= SOROTAN / STORY (1080×1920) ================= */
 'hl-penawaran': [
@@ -434,10 +438,15 @@ return (
    </div>
    </div>
    <div className="kit-actions">
-   {s.sticker && (
-   <p className="kit-sticker-info">
-   🔗 Stiker tautan IG untuk slide ini (tempel manual di editor IG) — teks: <b>{s.sticker.text}</b> · URL: <code>{s.sticker.url}</code>
-   </p>
+   {s.sticker && isStory && (
+      <p className="kit-sticker-info">
+      🔗 Stiker tautan IG untuk slide ini (tempel manual di editor IG) — teks: <b>{s.sticker.text}</b> · URL: <code>{s.sticker.url}</code>
+      </p>
+      )}
+      {s.sticker && !isStory && (
+      <p className="kit-sticker-info">
+      📌 Posting feed/carousel TIDAK punya stiker tautan — CTA wajib tertulis di dalam slide (pill/note). URL di bawah hanya bahan tempel untuk caption/DM: <code>{s.sticker.url}</code>
+      </p>
    )}
    <button onClick={() => download(i)}>⬇ Unduh PNG slide {i + 1}</button>
    </div>

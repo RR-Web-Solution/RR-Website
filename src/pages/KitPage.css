@@ -121,9 +121,10 @@ font-size: 42px; font-weight: 800; color: transparent;
 /* chip pintu */
 .kit-chips { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 40px; }
 .kit-chips span {
-background: #D8F34F; color: #191613;
-font-family: var(--mono); font-weight: 700; font-size: 28px;
-padding: 16px 26px; border-radius: 999px;
+   background: #D8F34F; color: #191613;
+   font-family: var(--mono); font-weight: 700; font-size: 28px;
+   padding: 16px 26px; border-radius: 999px;
+   white-space: pre-line;
 }
 /* ===== COVER ORANGE ===== */
 .kit-slide.theme-orange { background: #FF4D00; color: #2a0e00; }
