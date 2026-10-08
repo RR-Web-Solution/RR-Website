@@ -57,6 +57,49 @@ const CAROUSELS = {
     sticker: { url: 'https://wa.me/6283171125657?text=Halo%20Rafael%2C%20halo%20Rendy%20—%20boleh%20kenalan%2015%20menit%3F', text: 'KONSULTASI GRATIS VIA WHATSAPP (15 MENIT)' },
     note: 'kami kirim link WA konsultasi gratis 15 menit · balasan ≤2 jam pada jam kerja 09:00–18:00 WIB' },
 ],
+'fc-trial': [
+  // ---- SLIDE 1: sampul — janji trial apa adanya (A5, blok F ledger) ----
+  { dark: true, chip: 'COBA DULU',
+    title: (<>Coba 1 bulan dulu.</>),
+    body: 'Tanpa DP, tanpa biaya, tanpa kontrak. Sistem penuh dengan data tokomu — kamu lihat sendiri hasilnya sebelum membayar apa pun.',
+    stats: [
+      { b: '1', s: 'bulan trial penuh' },
+      { b: '0', s: 'rupiah di muka' },
+      { b: '3', s: 'slot trial berjalan bersamaan' },
+    ],
+    note: 'geser → caranya' },
+
+  // ---- SLIDE 2: tiga langkah (form ≤5 mnt, tayang ≤5 hari kerja — blok F) ----
+  { chip: 'CARANYA',
+    title: (<>Tiga langkah, <em>lima menit.</em></>),
+    bullets: [
+      'Chat WhatsApp kata "TRIAL" — link form kami kirim saat itu juga.',
+      'Isi form sekitar 5 menit: nama toko, layanan & harga, kapster, jam buka.',
+      'Sistem trial tayang paling lama 5 hari kerja sejak data lengkap.',
+    ],
+    note: 'geser → amankan slot' },
+
+  // ---- SLIDE 3: CTA di dalam artwork (SOP D77) + turun bersih & ekspor data ----
+  { theme: 'night', chip: 'AMANKAN SLOT',
+    title: (<>Slot trial terbuka. <em>Maks 3 trial bersamaan.</em></>),
+    body: 'Kalau sesudah 30 hari sistemnya tidak membantu, trial selesai tanpa tagihan — data bookingmu kami ekspor untukmu.',
+    chips: [
+       `CHAT "TRIAL" KE WA 0831-7112-5657`
+    ],
+    sticker: { url: 'https://wa.me/6283171125657?text=TRIAL', text: 'CHAT "TRIAL" — AMANKAN SLOT' },
+    note: 'form ±5 menit · tayang ≤5 hari kerja · balasan ≤2 jam pada jam kerja 09:00–18:00 WIB' },
+],
+'fc-audit': [
+  // ---- SATU SLIDE: pintu audit (D40/D63) — angka pasangan 10 terkirim/20 disusun ----
+  { dark: true, chip: 'AUDIT GRATIS',
+    title: (<>Tombol website di Maps tokomu <em>masih bisa dibuka?</em></>),
+    body: '10 dari 20 audit yang sudah kami susun, beberapa menemukan tautan penting di Maps atau bio yang mengarah ke halaman error.',
+    chips: [
+       `CHAT "AUDIT" — LAPORAN PDF 1×24 JAM, GRATIS`
+    ],
+    sticker: { url: 'https://wa.me/6283171125657?text=AUDIT', text: 'CHAT "AUDIT" — GRATIS' },
+    note: 'laporan jadi milikmu walau kita tidak pernah bekerja sama' },
+],
 /* ================= SOROTAN / STORY (1080×1920) ================= */
 'hl-penawaran': [
 { theme: 'orange', chip: 'PENAWARAN TERBATAS', title: (<>Kuota 3 slot. Sistem booking gratis <em>1 bulan penuh.</em></>), body: 'BarberPro kami pasang tanpa biaya untuk 3 barbershop tercepat di Jabodetabek. Sistem lengkap — booking, notifikasi WhatsApp, dan dasbor — bukan versi terbatas. Termasuk setup dengan data tokomu: identitas, kapster, layanan, dan harga.', note: 'geser → isi penawaran dan caranya', img: '/images/barberpro-portfolio.png', imgAlt: 'Hero BarberPro', imgBar: 'barberpro.rrdevs.my.id', },
@@ -272,7 +315,7 @@ const CAROUSELS = {
     stats: [
       { b: '2', s: 'pengembang utama yang menangani seluruh proyek Kamu' },
       { b: '1', s: 'layanan terintegrasi mulai dari perancangan hingga sistem siap pakai' },
-      { b: '24', s: 'jam batas waktu maksimal bagi kami untuk membalas pesan Kamu' },
+      { b: '2', s: 'jam batas balasan pada jam kerja 09:00–18:00 WIB' },
     ],
     note: 'geser → kenali tim kami' },
 
@@ -335,8 +378,9 @@ const CAROUSELS = {
     note: 'laporan maksimal 1×24 jam' },
 ],
 }
+
 export default function KitPage() {
-const [key, setKey] = useState('fc-tim')
+const [key, setKey] = useState('fc-audit')
 const SLIDES = CAROUSELS[key]
 const isStory = key.startsWith('hl-')
 useEffect(() => {
