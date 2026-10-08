@@ -7,7 +7,7 @@ export default function Portfolio() {
   return (
     <section className="sec portfolio" id="portofolio">
       <div className="wrap">
-        <SectionHead no="06" kicker="Portofolio" title="Karya yang sudah kami rilis" desc="Setiap proyek dilabeli jujur: sistem siap pakai, proyek live klien, atau demo desain. Scroll pelan-pelan." />
+        <SectionHead no="06" kicker="Portofolio" title="Karya yang sudah kami rilis" desc="Setiap proyek dilabeli jujur: sistem siap pakai, proyek kerja sama, atau demo desain. Scroll pelan-pelan." />
         <div className="pf-list">
           {PORTFOLIO.map((p, i) => (
             <Reveal key={p.title}>

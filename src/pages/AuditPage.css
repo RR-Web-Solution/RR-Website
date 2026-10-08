@@ -1,5 +1,15 @@
 /* ============ LAYAR ============ */
 .audit-wrap { background: #e9e5dd; padding: 48px 16px 140px; }
+.audit-wrap-not-found {
+   background: #e9e5dd;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   padding: 0 30px;
+   text-align: center;
+}
 .audit-doc {
   max-width: 820px; margin: 0 auto; background: #FDFCF9; color: #191613;
   font-family: var(--body); font-size: 15px; line-height: 1.75;
@@ -70,8 +80,21 @@
 .a-disc { font-size: 12px; color: #6E675C; border-top: 1px solid rgba(25,22,19,.15); padding-top: 14px; }
 .a-actions { text-align: center; margin-top: 26px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
 .a-actions button { background: #191613; color: #D8F34F; font-weight: 700; padding: .9rem 1.6rem; border-radius: 999px; }
-.a-index { max-width: 600px; margin: 0 auto; font-family: var(--mono); }
-.a-index a { color: #191613; font-weight: 700; }
+.a-not-found { 
+   max-width: 600px; margin: 50px auto; font-family: var(--mono);
+   font-size: 24px;
+}
+.a-request {
+   display: flex;
+   justify-content: center;
+}
+.a-request a {
+  display: inline-flex; align-items: center; gap: .6rem;
+  padding: .95rem 1.7rem; border-radius: 999px;
+  font-weight: 600; font-size: .96rem; letter-spacing: .01em;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s, background .3s, color .3s;
+   background: #FF4D00;
+}
 
 /* ============================================================
    CETAK — satu-satunya blok print di file ini.

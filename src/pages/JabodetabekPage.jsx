@@ -116,14 +116,16 @@ export default function JabodetabekPage() {
               </Reveal>
             </div>
             <Reveal delay={120}>
-              <div className="jkt-tablet">
-                <p className="jt-kick">// BUKAN SOAL ALAT</p>
-                <p className="jt-text">
-                  Sistem booking paling kompleks di halaman ini dibangun{' '}
-                  <b>100% oleh Rafael menggunakan tablet Android via Termux — tanpa laptop</b>.
-                  Ini bukan cerita penderitaan. Ini bukti bahwa kami di RR Devs tidak pernah menunggu kondisi ideal untuk mulai mengeksekusi. Kebanyakan bisnis stuck bukan karena kurang modal atau alat, tapi karena menunda eksekusi. Bisnis Kamu pun bisa mulai melangkah minggu ini, dengan apa yang Kamu punya sekarang.
-                </p>
-              </div>
+              <div className="jkt-note">
+                 <p className="jt-kick">// KAPASITAS TERJAGA</p>
+                 <p className="jt-text">
+                   Kami sengaja membatasi kapasitas: beberapa toko saja per periode, supaya
+                   setiap toko <b>dipegang langsung oleh dua orang yang sama</b> dari audit
+                   sampai tayang. Kebanyakan bisnis stuck bukan karena kurang modal atau
+                   alat, tapi karena menunda eksekusi. Bisnis Kamu pun bisa mulai melangkah
+                   minggu ini, dengan apa yang Kamu punya sekarang.
+                 </p>
+               </div>
             </Reveal>
           </div>
         </section>
@@ -135,8 +137,8 @@ export default function JabodetabekPage() {
               <p className="kick"><span>(03)</span> — Bukti Kerja</p>
               <h2 className="h2">{CASE_STUDIES.length} project, cerita jujur apa adanya</h2>
               <p className="jkt-cases-note">
-                Kami tidak menyebut demo sebagai klien. Yang demo kami labeli demo, yang klien nyata kami
-                labeli klien — silakan cek sendiri.
+                Kami tidak menyebut demo sebagai klien. Yang demo kami labeli demo, yang proyek nyata kami
+                labeli proyek nyata — silakan cek sendiri.
               </p>
             </Reveal>
             <div className="cs-list">

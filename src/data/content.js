@@ -83,7 +83,7 @@ export const SERVICES = [
   {
     n: '01', title: 'BarberPro — Sistem Booking', price: 'Rp 3,9 jt', hot: true,
     desc: 'Produk utama kami. Pelanggan pilih layanan, kapster, dan jam dari HP. Slot yang sudah diambil terkunci otomatis (tanpa double-booking). Notifikasi langsung ke WhatsApp toko + dashboard admin.',
-    tags: ['Booking Real-Time', 'Notifikasi WA', 'Dashboard', '14 hari'],
+    tags: ['Booking Real-Time', 'Notifikasi WA', 'Dashboard', 'setup ≤14 hari kerja'],
     slide: {
       sub: 'Bukan sekadar website cantik. Ini sistem operasional yang membuat kursi tidak bentrok dan pemilik tahu omzet hari itu.',
       bullets: ['Overlap-proof di level database', 'Branding toko diganti milik kamu', 'Training singkat saat serah-terima', 'Support 30 hari setelah live'],
@@ -121,7 +121,7 @@ export const SERVICES = [
 /* ---------- Keunggulan ---------- */
 export const WHY = [
   { n: '01', title: 'Harga Jujur & Terjangkau', desc: 'Harga disepakati di depan, tertulis di invoice — tidak ada biaya siluman. DP cukup 50%, sisanya setelah website jadi dan kamu puas.' },
-  { n: '02', title: 'Pengerjaan Cepat & Terpantau', desc: 'Landing page 3–7 hari, sistem booking ±14 hari. Progress bisa kamu pantau setiap hari lewat link preview.' },
+  { n: '02', title: 'Pengerjaan Cepat & Terpantau', desc: 'Landing page 3–7 hari kerja, sistem booking ≤14 hari kerja. Progress bisa kamu pantau setiap hari lewat link preview.' },
   { n: '03', title: 'Gratis Revisi + Domain & Hosting', desc: 'Revisi 2× untuk landing dan BarberPro, sampai sesuai karakter bisnismu. Semua paket sudah termasuk domain .com dan hosting tahun pertama.' },
   { n: '04', title: 'Dukungan Setelah Jadi', desc: 'Kami tidak hilang setelah launching. Support 30 hari untuk BarberPro, plus panduan cara mengelola website sendiri.' },
 ]
@@ -204,9 +204,9 @@ export const PORTFOLIO = [
     imageUrl: 'images/barberpro-portfolio.png', liveUrl: 'https://barberpro.rrdevs.my.id',
   },
   {
-    title: 'Theo Teknik', kind: 'live', kindLabel: 'Proyek live',
+    title: 'Theo Teknik', kind: 'live', kindLabel: 'Proyek nyata',
     type: 'Landing Page + WhatsApp-first + Local SEO', year: '2026',
-    desc: 'Website jasa panggilan AC di Cakung, Jakarta Timur — klien nyata pertama kami. WhatsApp dijadikan satu-satunya jalur booking di setiap section, daftar harga transparan dipasang di depan untuk mematahkan ketakutan "kena tipu", plus bukti before-after. Sampai hari ini masih live dan dipakai.',
+    desc: 'Website jasa panggilan AC di Cakung, Jakarta Timur — Proyek kerja sama pertama kami. WhatsApp dijadikan satu-satunya jalur booking di setiap section, daftar harga transparan dipasang di depan untuk mematahkan ketakutan "kena tipu", plus bukti before-after. Sampai hari ini masih live dan dipakai.',
     tags: ['Landing Page', 'WhatsApp-first', 'Local SEO'],
     metric: '1', metricLabel: 'jalur booking tunggal via WhatsApp',
     imageUrl: 'images/theo-teknik-portfolio.jpg', liveUrl: 'https://theo-teknik.rrdevs.my.id',
@@ -248,7 +248,7 @@ export const PORTFOLIO = [
 /* ---------- Testimoni: hanya yang jujur ---------- */
 export const TESTIMONIALS = [
   {
-    name: 'Proyek live — bisnis asli', biz: 'Klien nyata · Jakarta Timur', badge: '✓ TERVERIFIKASI LIVE',
+    name: 'Proyek nyata — bisnis asli', biz: 'Proyek nyata · Jakarta Timur', badge: '✓ TERVERIFIKASI LIVE',
     text: 'Website jasa teknisi AC di Cakung, Jakarta Timur. Tombol booking ke WhatsApp, daftar harga transparan di depan, dan halaman yang siap dipakai calon pelanggan saat googling "service AC terdekat". Dikerjakan langsung oleh founder RR Devs — dan sampai hari ini masih live serta dipakai.',
     imageUrl: 'images/theo-teknik-portfolio.jpg',
     slideQuote: 'Masih live dan dipakai sampai hari ini.',
@@ -286,11 +286,10 @@ export const CASE_STUDIES = [
   {
     id: 'theo-teknik', emoji: '❄️', title: 'Theo Teknik',
     tagline: 'Landing page service AC · Cakung, Jakarta Timur',
-    kind: 'client', kindLabel: 'Client Story · Klien Nyata',
+    kind: 'client', kindLabel: 'Portofolio Klien · Proyek Nyata',
     story: 'Theo Teknik, jasa panggilan AC di Cakung, sebelumnya cuma mengandalkan promosi mulut ke mulut. Kami bangun landing page yang menaruh WhatsApp sebagai satu-satunya jalur booking di setiap section, menampilkan daftar harga transparan di depan — karena ketakutan terbesar pelanggan jasa panggilan adalah kena tipu harga — plus bukti before-after. Hasilnya: usaha yang tadinya cuma modal nomor HP sekarang punya kehadiran digital yang meyakinkan siapa pun yang googling "service AC terdekat".',
-    highlights: ['WhatsApp jadi satu-satunya jalur booking di setiap section', 'Daftar harga transparan di depan — mematahkan takut kena tipu', 'Bukti before-after + testimoni asli'],
+    highlights: ['WhatsApp jadi satu-satunya jalur booking di setiap section', 'Daftar harga transparan di depan — mematahkan takut kena tipu', 'Bukti before-after + cerita proyek nyata'],
     stack: ['Landing Page', 'WhatsApp-first', 'Local SEO'],
-    /* quote: { text: 'Sejak ada web, orderan WA nambah dan pelanggan baru lebih gampang percaya.', name: 'Pemilik', biz: 'Jasa teknisi AC · Jakarta Timur' }, */
     accent: '#0369A1', shot: '/images/theo-teknik-portfolio.jpg',
     shotNote: 'Landing page + daftar harga transparan + integrasi WhatsApp',
     live: 'https://theo-teknik.rrdevs.my.id',
@@ -337,8 +336,8 @@ export const CASE_STUDIES = [
 
 /* ---------- Stats JUJUR ---------- */
 export const STATS = [
-  { value: 14, suffix: '', label: 'hari — target pasang BarberPro di toko kamu' },
+  { value: 14, suffix: '', label: 'hari kerja — target pasang BarberPro di toko kamu' },
   { value: 0, suffix: '', label: 'double-booking — slot terkunci di level database' },
   { value: 20, suffix: '+', label: 'audit digital barbershop Jabodetabek (Sep 2026)' },
-  { value: 2, suffix: '', label: 'sistem live yang bisa kamu klik sekarang (demo + klien)' },
+  { value: 2, suffix: '', label: 'sistem live yang bisa kamu klik sekarang (demo + proyek nyata)' },
 ]

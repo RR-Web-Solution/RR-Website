@@ -36,7 +36,7 @@ export default function BrowserMock() {
           {d.feats.map((f) => (<span key={f}>✦ {f}</span>))}
         </div>
       </div>
-      <div className="chip-f chip-a">⚡ Setup 3–14 hari</div>
+      <div className="chip-f chip-a">⚡ Setup ≤14 hari kerja</div>
       <div className="chip-f chip-b">✓ Gratis domain + hosting</div>
       <svg className="spin-badge" viewBox="0 0 120 120" aria-hidden="true">
         <defs>

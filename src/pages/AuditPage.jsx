@@ -494,8 +494,13 @@ export default function AuditPage() {
 
   if (!a) {
     return (
-      <main className="audit-wrap">
-        <p className="a-index">Index audit: {Object.keys(AUDITS).map((k) => (<Link key={k} to={`/audit/${k}`}>{k} </Link>))}</p>
+      <main className="audit-wrap-not-found">
+        <p className="a-not-found">
+           Audit untuk toko ini tidak tersedia umum. Minta audit tokomu sendiri: chat "AUDIT"
+        </p>
+        <div className="a-request">
+           <a href="https://wa.me/6283171125657?text=AUDIT">CHAT "AUDIT" — GRATIS</a>
+        </div>
       </main>
     )
   }
@@ -510,6 +515,8 @@ export default function AuditPage() {
 
   return (
     <main className="audit-wrap">
+      <meta name="robots" content="noindex" /> 
+       
       <article className="audit-doc">
         <section className="a-cover">
           <header className="a-head">

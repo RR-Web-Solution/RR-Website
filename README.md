@@ -72,7 +72,7 @@ Janji yang mengikat seluruh halaman dan materi kami:
 | [batik.rrdevs.my.id](https://batik.rrdevs.my.id) | Demo desain |
 | [rrprint.rrdevs.my.id](https://rrprint.rrdevs.my.id) | Demo sistem custom (order percetakan) |
 
-Aturan label: demo disebut demo, pro bono disebut pro bono, klien disebut klien
+Aturan label: demo disebut demo, proyek kerja sama disebut kerja sama, klien disebut klien
 hanya bila ada izin tertulis. Testimoni tidak pernah ditulis tanpa artefak sumber.
 
 ---

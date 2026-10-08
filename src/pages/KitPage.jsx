@@ -62,7 +62,7 @@ const CAROUSELS = {
 { theme: 'orange', chip: 'PENAWARAN TERBATAS', title: (<>Kuota 3 slot. Sistem booking gratis <em>1 bulan penuh.</em></>), body: 'BarberPro kami pasang tanpa biaya untuk 3 barbershop tercepat di Jabodetabek. Sistem lengkap — booking, notifikasi WhatsApp, dan dasbor — bukan versi terbatas. Termasuk setup dengan data tokomu: identitas, kapster, layanan, dan harga.', note: 'geser → isi penawaran dan caranya', img: '/images/barberpro-portfolio.png', imgAlt: 'Hero BarberPro', imgBar: 'barberpro.rrdevs.my.id', },
 { chip: 'APA YANG KAMU DAPAT', title: (<>Semuanya gratis. <em>Tanpa biaya tersembunyi.</em></>), bullets: ['Sistem booking tayang 30 hari di alamat web khusus tokomu', 'Notifikasi WhatsApp asli ke nomor toko', 'Dasbor jadwal dan estimasi omzet', 'Setup penuh oleh kami — kamu tinggal pakai', 'Tanpa DP, tanpa biaya bulanan, tanpa kontrak'], img: '/images/barberpro-dashboard.png', imgAlt: 'Dasbor BarberPro: jadwal hari ini dan estimasi omzet', imgBar: 'barberpro.rrdevs.my.id/admin', },
 { chip: 'SETELAH 30 HARI', title: (<>Tiga pilihan. <em>Semua aman.</em></>), numStart: 1, numbered: ['Lanjut pakai: bayar paket BarberPro, sistem dan data pindah ke alamat web milikmu.', 'Berhenti: kami turunkan bersih, tanpa tagihan apa pun.', 'Ekspor: seluruh data booking dan pelanggan kami serahkan.'], body: 'Tidak ada perpanjangan otomatis. Tidak ada biaya tersembunyi.' },
-{ chip: 'CARA IKUT', title: (<>4 langkah, <em>mulai dari chat.</em></>), numStart: 1, numbered: ['Chat WhatsApp dengan kata "TRIAL".', 'Kirim data: logo, nama kapster, layanan, harga, dan jam buka.', 'Maksimal 5 hari: sistem tayang di alamat web khusus tokomu.', 'Pakai 30 hari penuh untuk booking nyata.'], img: '/images/barberpro-booking.png', imgAlt: 'Booking BarberPro: Pilih layanan, kapster, dan jam dari HP', imgBar: 'barberpro.rrdevs.my.id/booking', },
+{ chip: 'CARA IKUT', title: (<>4 langkah, <em>mulai dari chat.</em></>), numStart: 1, numbered: ['Chat WhatsApp dengan kata "TRIAL".', 'Kirim data: logo, nama kapster, layanan, harga, dan jam buka.', 'Maksimal 5 hari kerja: sistem tayang di alamat web khusus tokomu.', 'Pakai 30 hari penuh untuk booking nyata.'], img: '/images/barberpro-booking.png', imgAlt: 'Booking BarberPro: Pilih layanan, kapster, dan jam dari HP', imgBar: 'barberpro.rrdevs.my.id/booking', },
 { chip: 'SLOT TERBATAS', title: (<>Siapa cepat, <em>dia dapat.</em></>), body: 'Hanya untuk 3 barbershop pertama bulan ini. Ketuk link di bawah untuk amankan slot kamu sekarang.', sticker: { url: 'https://wa.me/6283171125657?text=TRIAL', text: 'CHAT "TRIAL" — AMANKAN SLOT' }, img: '/images/barberpro-portfolio.png', imgAlt: 'Hero BarberPro', imgBar: 'barberpro.rrdevs.my.id', },
 ],
 'hl-barberpro': [
@@ -173,7 +173,7 @@ const CAROUSELS = {
       url: 'https://wa.me/6283171125657?text=Halo%20RR%20Devs%2C%20saya%20mau%20konsultasi%20gratis%2015%20menit',
       text: 'KONSULTASI GRATIS VIA WA (15 MENIT)',
     },
-    note: 'kami balas kurang dari 2 jam',
+    note: 'kami balas kurang dari 2 jam pada jam kerja',
   },
 ],
 'hl-testi': [

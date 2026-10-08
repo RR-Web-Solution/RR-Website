@@ -31,8 +31,8 @@
 .cmp-card.old li::before { content: '✗'; position: absolute; left: 0; color: var(--acc); font-weight: 700; }
 .cmp-card.new li::before { content: '✓'; position: absolute; left: 0; font-weight: 700; }
 
-/* ===== FUN FACT TERMUX ===== */
-.jkt-tablet {
+/* ===== CATATAN KAPASITAS ===== */
+.jkt-note {
   margin-top: 40px; border: 2px dashed var(--ink); border-radius: 16px;
   padding: 26px 30px; background: var(--ink); color: var(--cream);
 }

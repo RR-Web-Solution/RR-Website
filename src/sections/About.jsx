@@ -15,7 +15,7 @@ export default function About() {
           <p className="about-text">
             Selain itu kami tetap mengerjakan landing page dan website custom — tapi kalimat pertama
             kami selalu sama: <b>bukti, bukan janji</b>. Sejak awal 2026 kami merilis satu sistem booking production
-            (BarberPro), satu klien nyata yang masih live, dan menyusun 20+ audit digital barbershop Jabodetabek.
+            (BarberPro), satu proyek nyata yang masih live, dan menyusun 20+ audit digital barbershop Jabodetabek.
           </p>
           <p className="about-code">// dua kepala, satu commit: kepuasan klien.</p>
         </Reveal>

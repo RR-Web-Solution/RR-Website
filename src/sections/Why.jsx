@@ -15,7 +15,7 @@ export default function Why() {
                 dari briefing sampai website-mu ramai pengunjung.
               </p>
               <div className="why-badges">
-                <span>✦ Respons &lt; 1 jam</span>
+                <span>✦ Balasan &lt; 2 jam pada jam kerja 09:00–18:00 WIB</span>
                 <span>✦ Kontrak &amp; invoice jelas</span>
                 <span>✦ Garansi support 30 hari</span>
               </div>

@@ -23,7 +23,7 @@ export default function BarbershopPage() {
             <a className="bs-btn primary" href={WA}>Obrolkan Kebutuhan Bisnismu (Gratis) →</a>
             <a className="bs-btn ghost" href="https://barberpro.rrdevs.my.id" target="_blank" rel="noopener noreferrer">Coba Demo Booking Langsung</a>
           </div>
-          <p className="bs-proof">Dipercaya oleh Theo Teknik (Cakung) · 20+ Audit Bisnis Disusun September 2026</p>
+          <p className="bs-proof">Masih dipakai harian oleh Theo Teknik (Cakung) · 20+ Audit Bisnis Disusun September 2026</p>
         </div>
       </header>
 
@@ -73,19 +73,6 @@ export default function BarbershopPage() {
       </section>
 
       <BarberPro />
-
-      {/* <section className="bs-section cream">
-        <div className="bs-wrap">
-          <h2>Bukti Sistem Kami Bekerja Nyata</h2>
-          <blockquote className="bs-quote">
-            "Sejak ada website dari RR Devs, pesanan masuk dari WA nambah terus dan pelanggan baru bilang jauh lebih gampang buat booking jadwal."
-            <cite>— Owner · Theo Teknik, Jasa AC Panggilan Cakung (Klien Pertama Kami)</cite>
-          </blockquote>
-          <p className="bs-lead">
-            Theo memang bukan usaha barbershop—dia adalah bukti nyata bahwa alur konversi sistem kami bekerja efektif. Khusus untuk bisnis pangkas rambut, Kamu bisa langsung menguji coba Demo Aplikasi BarberPro di atas.
-          </p>
-        </div>
-      </section> */}
 
       <section className="bs-section dark">
         <div className="bs-wrap">

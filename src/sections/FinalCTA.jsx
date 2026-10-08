@@ -11,7 +11,7 @@ export default function FinalCTA() {
       </div>
       <div className="wrap final-in">
         <Reveal>
-          <p className="final-kick">✦ Demo BarberPro live · setup ±14 hari</p>
+          <p className="final-kick">✦ Demo BarberPro live · setup ≤14 hari kerja</p>
           <h2 className="final-title">Siap bikin pelanggan<br />booking sendiri?</h2>
           <p className="final-sub">
             Ceritakan toko barbershopmu 5–10 menit. Kami tunjukkan demo, estimasi biaya, dan apakah cocok

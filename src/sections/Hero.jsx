@@ -39,7 +39,7 @@ export default function Hero() {
               </a>
             </span>
           </span>
-          <span className="mask"><span className="hero-note">// demo live · setup ±14 hari · Jakarta, Bogor, Depok, Tangerang, Bekasi</span></span>
+          <span className="mask"><span className="hero-note">// demo live · setup ≤14 hari kerja · Jakarta, Bogor, Depok, Tangerang, Bekasi</span></span>
           <div className="hero-stats">
             {STATS.map((s) => (
               <div key={s.label}>
