@@ -24,7 +24,9 @@
 
 .bs-sub { max-width: 640px; color: rgba(245,241,232,.78); font-size: 16px; line-height: 1.6; }
 .bs-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; align-items: center; } 
+
 .bs-btn { display: inline-block; font-weight: 700; padding: 14px 22px; border-radius: 999px; font-size: 15px; text-decoration: none; transition: all 0.2s ease; } 
+
 .bs-btn.primary { background: #FF4D00; color: #191613; }
 .bs-btn.ghost { border: 2px solid rgba(245,241,232,.4); color: #F5F1E8; }
 .bs-btn.dark { border: 2px solid #191613; color: #191613; }
@@ -72,3 +74,16 @@
 .bs-final-note { font-family: var(--mono); font-size: 11px; color: rgba(245,241,232,.5); padding-top: 12px; }
 .bs-final-alt { padding-top: 20px; font-size: 13px; }
 .bs-final-alt a { color: #D8F34F; font-weight: 700; text-decoration: underline; }
+
+/* ===== SECTION HARGA BARBERPRO (v2, 08/10) ===== */
+.bs-price-card { display: grid; grid-template-columns: minmax(260px, 5fr) minmax(260px, 7fr); gap: 26px; margin-top: 26px; border: 2px solid #191613; border-radius: 20px; padding: 26px; background: #FDFCF9; box-shadow: 10px 10px 0 rgba(255,77,0,.15); }
+.bs-price-info h3 { font-family: var(--disp); font-size: 24px; margin: 14px 0 6px; }
+.bs-price-big { font-family: var(--disp); font-weight: 800; font-size: clamp(24px, 3.3vw, 36px); line-height: 1; margin: 6px 0 4px; }
+.bs-price-desc { margin-top: 12px; font-size: 15px; line-height: 1.6; color: #4A443C; max-width: 420px; }
+.bs-price-info .bs-cta { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; }
+.bs-feats-grid { list-style: none; columns: 2; column-gap: 26px; margin: 6px 0 0; padding: 0; font-size: 14px; line-height: 1.5; }
+.bs-feats-grid li { break-inside: avoid; padding-left: 22px; position: relative; margin-bottom: 10px; }
+.bs-feats-grid li::before { content: "\2713"; position: absolute; left: 0; color: #FF4D00; font-weight: 700; }
+.bs-price-care { margin-top: 18px; font-size: 14px; color: #6E675C; max-width: 760px; }
+.bs-price-fine { margin-top: 8px; font-size: 13px; color: #6E675C; max-width: 760px; border-left: 3px solid #FF4D00; padding-left: 14px; }
+@media (max-width: 860px) { .bs-price-card { grid-template-columns: 1fr; } .bs-feats-grid { columns: 1; } }

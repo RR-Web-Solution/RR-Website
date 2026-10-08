@@ -1,8 +1,10 @@
 import './BarbershopPage.css'
 import Footer from '../components/layout/Footer'
 import BarberPro from '../sections/BarberPro'
+import { PLANS, CARE_PRICE } from '../data/content'
 import { Link } from "react-router-dom";
 
+const BARBERPRO = PLANS.find((p) => p.name === 'BarberPro')
 const WA = 'https://wa.me/6283171125657?text=Halo+RR+Devs,+saya+punya+barbershop+dan+mau+lihat+sistem+bookingnya+💈'
 const WA_AUDIT = 'https://wa.me/6283171125657?text=Halo+RR+Devs,+saya+mau+klaim+audit+gratis+💈'
 
@@ -88,16 +90,38 @@ export default function BarbershopPage() {
         </div>
       </section>
 
-      <section className="bs-section">
+      <section className="bs-section cream" id="harga-barbershop">
         <div className="bs-wrap">
           <h2>Harga Transparan. Tanpa Biaya Tersembunyi.</h2>
           <p className="bs-lead">
-            Kami menyediakan tiga paket kerja sama yang fleksibel: Landing Page Informasi, Website + Integrasi Booking WhatsApp, hingga Dashboard Multi-Cabang. Angka dan detail lengkapnya bisa Kamu cek langsung di halaman utama. Kami tidak menyembunyikan harga di balik kata "Hubungi Kami".
+            Satu harga untuk semua toko. Tidak ada diskon, tidak ada biaya tersembunyi,
+            tidak ada harga di balik kata "Hubungi Kami".
           </p>
-          <div className="bs-cta">
-            <Link className="bs-btn dark" to="/#harga">Cek Detail Paket Harga</Link>
-            <a className="bs-btn primary" href={WA}>Tanya-Tanya Dulu via WA →</a>
+          <div className="bs-price-card">
+            <div className="bs-price-info">
+              <span className="bs-tag">★ SISTEM BOOKING · BARBERSHOP</span>
+              <h3>BarberPro <span className="bs-plan-sub">· Sistem Booking Barbershop</span></h3>
+              <p className="bs-price-big">Rp{BARBERPRO.price.toLocaleString('id-ID')}</p>
+              <p className="bs-plan-once">sekali bayar · sistem milik tokomu selamanya</p>
+              <p className="bs-price-desc">
+                Booking real-time, notifikasi WhatsApp otomatis, dan dashboard
+                pendapatan — terpasang dengan data tokomu: identitas, kapster,
+                layanan, dan harga.
+              </p>
+            </div>
+             
+            <ul className="bs-feats-grid">
+              {BARBERPRO.feats.map((f) => <li key={f}>{f}</li>)}
+            </ul>
           </div>
+           
+          <div className="bs-cta">
+            <a className="bs-btn primary" href={WA}>Tanya-Tanya Dulu via WA →</a>
+            <a className="bs-btn dark" href="https://barberpro.rrdevs.my.id">Coba Demo Live →</a>
+          </div>
+           
+          <p className="bs-price-care">Perawatan opsional: Rp{CARE_PRICE.toLocaleString('id-ID')}/bulan — backup & keamanan mingguan, update konten 2×/bulan, laporan performa, dukungan teknis.</p>
+          <p className="bs-price-fine">Tidak cocok di 3 hari pertama? DP kembali 100%. Mulai hari ke-4, DP menutup pekerjaan yang sudah berjalan. Pengerjaan target 14 hari kerja sejak DP dan bahan lengkap.</p>
         </div>
       </section>
 
