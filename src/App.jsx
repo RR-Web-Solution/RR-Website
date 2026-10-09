@@ -8,7 +8,6 @@ import KitPage from './pages/KitPage'
 import SolusiPage from './pages/SolusiPage'
 import AuditPage from './pages/AuditPage'
 import BarbershopPage from './pages/BarbershopPage'
-import SiteMovePage from './pages/SiteMovePage'
 import BannerPage from './pages/BannerPage'
 
 export default function App() {
@@ -24,7 +23,7 @@ export default function App() {
         <Route path="/solusi" element={<SolusiPage />} />
         <Route path="/audit/:slug" element={<AuditPage />} />
         <Route path="/barbershop" element={<BarbershopPage />} />
-        <Route path="*" element={<SiteMovePage />} />
+        <Route path="*" element={<LandingPage />} />
         <Route path="/banner" element={<BannerPage />} />
       </Routes>
     </BrowserRouter>

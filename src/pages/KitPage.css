@@ -138,15 +138,7 @@ font-size: 42px; font-weight: 800; color: transparent;
 .kit-slide.theme-orange .kit-chip { background: #191613; color: #D8F34F; }
 .kit-slide.theme-orange .kit-title em { color: #2a0e00; }
 .kit-slide.theme-orange .kit-body em { color: #2a0e00; }
-/* ===== MODE AUDIT ===== */
-.kit-slide.audit { padding: 70px 70px 56px; }
-.kit-slide.audit .kit-mid { margin-top: 40px; }
-.kit-slide.audit .kit-chip { font-size: 22px; padding: 12px 24px; }
-.kit-slide.audit .kit-title { font-size: 62px; line-height: 1.1; margin-top: 28px; }
-.kit-slide.audit .kit-bullets { margin-top: 26px; gap: 16px; }
-.kit-slide.audit .kit-bullets li { font-size: 32px; line-height: 1.35; gap: 16px; }
-.kit-slide.audit .kit-note { margin-top: 24px; font-size: 24px; }
-.kit-slide.audit .kit-foot { margin-top: 22px; font-size: 24px; }
+
 /* ===== ALARM OVERFLOW ===== */
 .kit-slide.overflow { outline: 8px solid #FF0000; outline-offset: -8px; }
 .kit-slide.overflow::before {

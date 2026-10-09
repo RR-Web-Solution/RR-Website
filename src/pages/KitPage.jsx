@@ -100,6 +100,64 @@ const CAROUSELS = {
     sticker: { url: 'https://wa.me/6283171125657?text=AUDIT', text: 'CHAT "AUDIT" — GRATIS' },
     note: 'laporan jadi milikmu walau kita tidak pernah bekerja sama' },
 ],
+'fc-harga': [
+  { dark: true, chip: 'HARGA, DITULIS DI AWAL',
+    title: (<>Hitung sendiri <em>sebelum chat kami.</em></>),
+    body: 'Tiga paket, sekali bayar, tanpa biaya tersembunyi. Geser untuk melihat angka lengkapnya — bukan tebak-tebakan.',
+    stats: [
+      { b: '3', s: 'paket dengan angka terbuka' },
+      { b: '1×', s: 'bayar, sistem milikmu selamanya' },
+      { b: '0', s: 'biaya tersembunyi' },
+    ],
+    note: 'geser → angkanya' },
+
+  { dark: true, chip: '★ SISTEM BOOKING · BARBERSHOP',
+    title: (<>Rp3,9jt <br /> <em>Booking<br /> anti-bentrok.</em></>),
+    img: '/images/barberpro-booking.png', imgAlt: 'Halaman booking BarberPro', imgBar: 'barberpro.rrdevs.my.id',
+    bullets: [
+      'Pelanggan pilih layanan, kapster, dan jam sendiri dari HP.',
+      'Jam terisi langsung dikunci otomatis.',
+      'Notifikasi WhatsApp booking otomatis.',
+      'Dashboard pendapatan & barber tersibuk, bisa dipantau dari HP.',
+      'Branding tokomu: warna, logo, nama, dan harga sendiri.',
+    ],
+    note: 'domain + hosting + SSL 1 tahun · training + dokumentasi · target 14 hari kerja sejak DP & bahan lengkap' },
+
+  { chip: 'BASIC · LANDING PAGE',
+    title: (<>Rp2,9jt<br /> <em>Target tayang cepat.</em></>),
+    bullets: [
+      'Satu halaman desain profesional.',
+      'Responsif di HP dan laptop.',
+      'Tombol WhatsApp menempel di tiap keputusan beli.',
+      'Domain, hosting, dan SSL tahun pertama sudah termasuk.',
+      'Kode dan data 100% milikmu — tanpa langganan bulanan ke kami.',
+    ],
+    note: 'pengerjaan 3–7 hari kerja sejak bahan lengkap' },
+
+  { chip: 'CUSTOM · WEBSITE IMPIAN BISNISMU',
+    title: (<>Rp6,9jt <em>Dibangun dari nol untuk idemu.</em></>),
+    bullets: [
+      'Sesi konsultasi 1-on-1: kami bedah kebutuhan bisnismu sebelum menulis kode.',
+      'Desain eksklusif dari nol — bukan template.',
+      'Satu fitur custom apa saja: booking, member, kalkulator, atau idemu sendiri; ukuran dibatasi build 2–4 minggu.',
+      'Dashboard admin sesuai alur kerjamu sendiri.',
+      'Garansi bug-fix dan support penuh 6 bulan.',
+    ],
+    note: 'domain + hosting + SSL 1 tahun · kode & data milikmu · build 2–4 minggu' },
+
+  { theme: 'night', chip: 'SEKALI BAYAR. MILIKMU SELAMANYA.',
+    title: (<>Angka sudah jelas. <em>Sekarang giliran ceritamu.</em></>),
+    body: 'Konsultasi gratis 15 menit: kami dengar alur tokomu, kamu pulang bawa gambaran sistem yang cocok — walau tidak lanjut.',
+    bullets: [
+      'Sekali bayar — sistem, kode, dan data milik tokomu.',
+      'DP 50% di depan; pelunasan setelah hasil Kamu setujui.',
+    ],
+    chips: [
+      `KONSULTASI GRATIS 15 MENIT [WA 0831-7112-5657]`
+    ],
+    sticker: { url: 'https://wa.me/6283171125657?text=Halo%20Rafael%2C%20halo%20Rendy%20—%20boleh%20konsultasi%2015%20menit%3F', text: 'KONSULTASI GRATIS VIA WHATSAPP (15 MENIT)' },
+    note: 'balasan ≤2 jam pada jam kerja 09:00–18:00 WIB' },
+],
 /* ================= SOROTAN / STORY (1080×1920) ================= */
 'hl-penawaran': [
 { theme: 'orange', chip: 'PENAWARAN TERBATAS', title: (<>Kuota 3 slot. Sistem booking gratis <em>1 bulan penuh.</em></>), body: 'BarberPro kami pasang tanpa biaya untuk 3 barbershop tercepat di Jabodetabek. Sistem lengkap — booking, notifikasi WhatsApp, dan dasbor — bukan versi terbatas. Termasuk setup dengan data tokomu: identitas, kapster, layanan, dan harga.', note: 'geser → isi penawaran dan caranya', img: '/images/barberpro-portfolio.png', imgAlt: 'Hero BarberPro', imgBar: 'barberpro.rrdevs.my.id', },
@@ -380,7 +438,7 @@ const CAROUSELS = {
 }
 
 export default function KitPage() {
-const [key, setKey] = useState('fc-audit')
+const [key, setKey] = useState('fc-harga')
 const SLIDES = CAROUSELS[key]
 const isStory = key.startsWith('hl-')
 useEffect(() => {
